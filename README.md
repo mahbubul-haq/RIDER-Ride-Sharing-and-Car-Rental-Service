@@ -18,3 +18,8 @@ Assistant Professor\
 Dept of Computer Science & Engineering (CSE)\
 Bangladesh University of Engineering & Technology (BUET)\
 [https://saiful1105020.github.io/](https://saiful1105020.github.io/)
+
+### How to run the project
+* Clone the repository
+* Connect oracle database. In views.py all connections are made with oracle username: SYSTEM, passward: oracle.
+* Run the project with ```python manage.py runserver``` command
