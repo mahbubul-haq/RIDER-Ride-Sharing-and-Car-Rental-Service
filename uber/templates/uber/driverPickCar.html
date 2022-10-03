@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Car List</title>
+
+
+</head>
+<body>
+
+{% extends 'uber/base.html' %}
+
+
+{% block body %}
+
+     <div class = "topnav">
+     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+        <a style="float: right;" href="{%  url 'uber:driverHomePage' driverId %}">GO BACK</a>
+    </div>
+    <br><br><br>
+
+    <section id="forForm">
+        <h3 align="center"> List of Avilable cars</h3>
+        <br><br>
+
+        <section id = "signUp">
+
+            {% if carLst %}
+                {% for car in carLst %}
+
+                    {% if car.3 %}
+                        <img src="{{ car.3 }}" height="200" width="200">
+                    {% endif %}
+
+                    <p>Nameplate: {{ car.0 }}</p>
+                    {% if car.1 %}
+                        <p> Model: {{ car.1 }}</p>
+                    {% endif %}
+
+                    {% if car.2 %}
+                        <p> Color: {{ car.2 }}</p>
+                    {% endif %}
+                    {% if car.6 %}
+                        <p> Insurace Type : {{ car.6 }}</p>
+                    {% endif %}
+                    {% if car.7 %}
+                        <p> Insurace Start date: {{ car.7 }}</p>
+                        <p> Insurace End date: {{ car.8 }}</p>
+                    {% endif %}
+
+                    <form action="{% url 'uber:driverPickCar' driverId %}" method="post">
+                        {% csrf_token %}
+                        <input name="namePlate" value="{{ car.0 }}" style="display: none;">
+                        <input onclick="return confirm('Are you sure select this one?')" type="submit" value="Select">
+                    </form>
+
+                    <hr>
+
+                {% endfor %}
+            {% else %}
+                <p> Sorry! No car is available right now!</p>
+            {% endif %}
+
+        </section>
+    </section>
+
+
+{% endblock %}
+
+</body>
+</html>

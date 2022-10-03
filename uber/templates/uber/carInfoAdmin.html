@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Info</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style type="text/css">
+        th {
+            background-color: #FF0000;
+            color: white;
+            font-size: 180%;
+            font-family: "Courier New", Arial, "sans-serif";
+        }
+        tr:nth-child(even) {
+            background-color: #FFFF33;
+        }
+        tr:nth-child(odd) {
+            background-color:#FFFFFF;
+        }
+        th, td {
+            border-bottom: 1px solid rgba(103, 78, 58, 0.14);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        /*tr:hover {background-color: #f5f5f5;} */
+
+
+        td, th {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            color:#000000;
+        }
+
+        .caption {
+            font-weight: bolder;
+            font-size: 200%;
+            font-family: "Courier New", Arial, "sans-serif";
+        }
+
+        .topnav input {
+                background: #5dd4ee;
+                overflow: hidden;
+            }
+
+            .topnav input{
+                float: left;
+                color: #000000;
+                text-align: center;
+                padding: 2px 2px;
+                text-decoration: none;
+
+                font-size: 150%;
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+
+            .topnav input:hover {
+                background: #333;
+                color: #f2f2f2;
+            }
+
+            * {
+                 box-sizing: border-box;
+            }
+
+            /* Style the search field */
+            form.example input[type=text] {
+              padding: 10px;
+              font-size: 17px;
+              border: 1px solid grey;
+              float: left;
+              width: 85%;
+              background: #f1f1f1;
+            }
+
+            /* Style the submit button */
+            form.example button {
+              float: right;
+              width: 15%;
+              padding: 8px;
+
+              background: #2196F3;
+              color: white;
+              font-size: 20px;
+              border: 1px solid grey;
+              border-left: none; /* Prevent double borders */
+              cursor: pointer;
+            }
+
+            form.example button:hover {
+              background: #0b7dda;
+            }
+
+            /* Clear floats */
+            form.example::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+
+
+    </style>
+</head>
+<body onload="window.scroll(0, document.documentElement.scrollHeight);" >
+
+{% extends 'uber/base.html' %}
+{% block body %}
+
+    <div class = "topnav">
+     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+        <a style="float: right;" href="{%  url 'uber:adminHomePage' userId %}">GO BACK</a>
+    </div>
+
+    <form class="example" action="{% url 'uber:carInfoAdmin' userId %}" method="post">
+    {% csrf_token %}
+        <input type="text" name="namePlate" placeholder="Search Car by Nameplate...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    {% if data %}
+
+    <table>
+        <h2 align="center" class="caption" style="color:rgb(250,251,250);">Car Info</h2>
+        <thead>
+            <th>No</th>
+            <th>Name Plate</th>
+            <th>Model</th>
+            <th>OWNER</th>
+            <th>INS TYPE</th>
+            <th>INS END DATE</th>
+            <th>LAST PAYMENT</th>
+            <th></th>
+        </thead>
+        <tbody>
+            {% for info in data %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ info.0 }}</td>
+                    <td>{{ info.1 }}</td>
+                    <td>
+                        {% if info.2 %}
+                        {{ info.3 }}
+                        {% else %}
+                        -
+                        {% endif %}
+                    </td>
+                    <td>{{ info.4}}</td>
+                    <td>{{ info.5 }}</td>
+                    <td>{{ info.6 }}</td>
+                    <td><a href="{% url 'uber:adminDeleteCar' info.0 userId %}">delete</a> </td>
+                </tr>
+
+            {% endfor %}
+
+
+        </tbody>
+    </table>
+        {% if not Ended %}
+
+        <div class="topnav" style="float: right;">
+            <form action="{% url 'uber:carInfoAdmin' userId %}" method="post">
+                {% csrf_token %}
+
+                {% if More %}
+                    <input type="number" name = "More" value="{{ More }}" style="display: none;">
+                    <input type="submit" value="Load More">
+                {% else %}
+                    <input type="number" name = "More" value="1" style="display: none;">
+                    <input type="submit" value="Load More">
+                {% endif %}
+
+            </form>
+        </div>
+
+        {% endif %}
+    {% else %}
+        {% if search %}
+            <p style="font-size:250%">No car found!</p>
+        {% else %}
+            <p style="font-size:250%">No car to show!</p>
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
+
+<script type="text/javascript">
+
+</script>
+
+
+</body>
+</html>

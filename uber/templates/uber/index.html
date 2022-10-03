@@ -1,0 +1,88 @@
+
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>UBER</title>
+
+
+</head>
+<body>
+
+{% extends 'uber/base.html' %}
+
+
+{% block body %}
+
+     <div class = "topnav">
+        <a href="{%  url 'uber:index' %}">HOME</a>
+         {% if admin %}
+             <a style="float: right" href="{% url 'uber:adminLogin' %}">ADMIN</a>
+         {% endif %}
+    </div>
+    <br><br><br>
+
+    <section id="forForm">
+
+        <div style="margin-left: 50%;">
+
+            <label> <h2>USER  <input style="display: inline; width: 20px; height: 20px;" type = "radio" name = "userType" id = "useR" checked> </h2></label>
+            <label><h2>DRIVER  <input style="display: inline; width: 20px; height: 20px;" type = "radio" name = "userType" id = "driveR"> </h2></label>
+            {% if not admin %}
+            <label><h2>ADMIN <input style="display: inline; width: 20px; height: 20px;" type = "radio" name = "userType" id = "admin"></h2>
+                </label>
+            {% endif %}
+
+        </div>
+        <br>
+
+
+
+        <section id = "forUser" onsubmit="RadioValue()">
+            <p><h2 style="margin-left: 40%">Already got an account?</h2></p>
+            <form action = "" method="get" id="logIN">
+                {% csrf_token %}
+                <input style="display: inline-block;margin-left: 40%;" type = "submit" value = "Log In" id = "lInput">
+
+            </form>
+
+        </section>
+
+        <br><br>
+
+        <section id = "forDriver" onsubmit="RadioValue()">
+            <p><h2 style="margin-left: 40%">Don't have an account?</h2></p>
+            <form action = "" method="get" id="signUP">
+                {% csrf_token %}
+                <input style="display: inline-block; margin-left: 40%;"type = "submit" value = "Sign Up" id = "sInput">
+
+            </form>
+
+        </section>
+
+    </section>
+
+
+	<script type="text/javascript">
+		function RadioValue() {
+			if(document.getElementById("useR").checked) {
+				document.getElementById("logIN").action = "{% url 'uber:userLogin' %}";
+				document.getElementById("signUP").action = "{% url 'uber:userSignUp' %}";
+			}
+			else if (document.getElementById("driveR").checked) {
+				document.getElementById("logIN").action = "{% url 'uber:driverLogin' %}";
+				document.getElementById("signUP").action = "{% url 'uber:driverSignUp' %}";
+			}
+			else if(document.getElementById("admin").checked) {
+			    document.getElementById("logIN").action = "{% url 'uber:adminLogin' %}";
+                document.getElementById("signUP").action = "{% url 'uber:adminSignUp' %}";
+            }
+		}
+
+	</script>
+
+{% endblock %}
+
+</body>
+</html>

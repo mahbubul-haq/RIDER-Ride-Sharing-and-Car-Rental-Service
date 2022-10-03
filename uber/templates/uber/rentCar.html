@@ -1,0 +1,109 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Rent Car</title>
+
+
+</head>
+<body>
+
+{% extends 'uber/base.html' %}
+
+
+{% block body %}
+
+     <div class = "topnav">
+     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+         {% if admin %}
+             <a style="float: right;" href="{%  url 'uber:adminHomePage' admin %}">GO BACK</a>
+         {% else %}
+             <a style="float: right;" href="{%  url 'uber:userHomePage' userId %}">GO BACK</a>
+        {% endif %}
+    </div>
+    <br><br><br>
+
+    <section id="forForm">
+        <h3 align="center"><b> Enter car information</b></h3>
+        <br>
+
+
+        {% if errorLst %}
+            {% for error in errorLst %}
+                {% if error %}
+                    <p> {{ error }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+
+        <section id = "signUp" onsubmit="ifAdmin()">
+
+            <form id = "rentForm" action = "" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {% if admin %}
+                    <input type="number" name="admin" value="{{ admin }}" style="display: none;">
+                {% endif %}
+
+                <label>
+                    Upload car image
+                    <input type="file" name="document">
+                </label>
+
+                <label> Name plate:
+                    {% if errorLst %}
+                        <input type = "text" name="namePlate" id = "namePlate" value = "{{ inputLst.0 }}" required>
+                    {% else %}
+                        <input type = "text" name="namePlate" id = "namePlate" required>
+                    {% endif %}
+
+                </label>
+                <label> Model:
+                    {% if errorLst %}
+                        <input type = "text" name="model" value = "{{ inputLst.1 }}">
+                    {% else %}
+                        <input type = "text" name="model">
+                    {% endif %}
+                </label>
+                <label> Color:
+                    {% if errorLst %}
+                        <input type = "text" name="color" value = "{{ inputLst.2 }}">
+                    {% else %}
+                        <input type = "text" name="color">
+                    {% endif %}
+                </label>
+
+                <label>Insurance Type:
+                    <select name="ins_type" id="ins_type">
+                        <option value="Annual">Annual</option>
+                        <option value="Biennial">Biennial</option>
+                        <option value="Long-term">Long term(5 years)</option>
+                    </select>
+                </label>
+                {% if admin %}
+                    <input type ="submit" id="submit" value="ADD">
+                {% else %}
+                    <input type ="submit" id="submit" value="Submit for Rent">
+                {% endif %}
+
+
+            </form>
+
+        </section>
+    </section>
+
+    <script type="text/javascript">
+        function ifAdmin() {
+            {% if admin %}
+                document.getElementById("rentForm").action = "{% url 'uber:rentCar' admin %}";
+            {% else %}
+                document.getElementById("rentForm").action = "{% url 'uber:rentCar' userId %}";
+            {% endif %}
+        }
+    </script>
+
+
+{% endblock %}
+
+</body>
+</html>

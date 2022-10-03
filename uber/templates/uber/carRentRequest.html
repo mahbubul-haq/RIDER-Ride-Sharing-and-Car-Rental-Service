@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Rent Requests</title>
+
+
+</head>
+<body>
+
+{% extends 'uber/base.html' %}
+
+
+{% block body %}
+
+     <div class = "topnav">
+     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+        <a style="float: right;" href="{%  url 'uber:adminHomePage' userId %}">GO BACK</a>
+    </div>
+    <br><br>
+
+    <section id="forForm">
+        {% if carLst %}
+
+        <h3 align="center"><b>New Car Rent Requests</b> </h3>
+        <br><br>
+
+        <section id = "signUp">
+
+            {% for car in carLst %}
+
+                    {% if car.3 %}
+                        <img src="{{ car.3 }}" height="200" width="200">
+                    {% endif %}
+
+                    <p>Nameplate: {{ car.0 }}</p>
+                    {% if car.1 %}
+                        <p> Model: {{ car.1 }}</p>
+                    {% endif %}
+
+                    {% if car.2 %}
+                        <p> Color: {{ car.2 }}</p>
+                    {% endif %}
+                    {% if car.6 %}
+                        <p> Insurace Type : {{ car.6 }}</p>
+                    {% endif %}
+
+                    <details>
+                        <summary>
+                            See Owner Info
+                        </summary>
+                        <img src="{{ car.10.9 }}" height="200" width="200"><br>
+
+                        {% if car.10.2 %}
+                            {% if car.10.3 %}
+                                <p>Name: {{ car.10.1 }} {{ car.10.2 }} {{ carLst.10.3 }}</p>
+                            {% else %}
+                                <p>Name: {{ car.10.1 }} {{ car.10.2 }}</p>
+                            {% endif %}
+                        {% elif car.10.3 %}
+                            <p>Name: {{ car.10.1 }} {{ car.10.3 }}</p>
+                        {% else %}
+                            <p>Name: {{ car.10.1 }}</p>
+                        {% endif %}
+                        <p>Email: {{ car.10.6 }}</p>
+                        <P>Date of Birth: {{ car.10.10 }}</P>
+
+                        <p> Mobile Number(s): </p>
+                        {% for num in car.10.12 %}
+                            <p>{{ num }}</p>
+                        {% endfor %}
+
+                        <p>Address: {{ car.10.13.2 }}</p>
+
+                    </details>
+
+                    <form action="{% url 'uber:adminApproveCar' car.0 userId %}" method="post">
+                        {% csrf_token %}
+                        <input onclick="return confirm('Click OK to approve')" type="submit" value="Approve">
+                    </form>
+                    <form action="{% url 'uber:adminDeleteRequest' car.0 userId %}" method="post">
+                        {% csrf_token %}
+                        <input onclick="return confirm('Are you sure you want to delete?')" type="submit" value="Delete">
+                    </form>
+
+                {% endfor %}
+
+        </section>
+
+        {% else %}
+            <p style="font-size:100%"><b>There is no new car rent request!You can go back and add car.</b></p>
+        {% endif %}
+    </section>
+
+
+{% endblock %}
+
+</body>
+</html>

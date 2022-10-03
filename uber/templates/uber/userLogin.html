@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+</head>
+<body>
+
+{% extends 'uber/base.html' %}
+{% block body %}
+
+     <div class = "topnav">
+        <a href="{%  url 'uber:index' %}">HOME</a>
+    </div>
+    <br><br><br>
+
+    <section id = "forForm">
+        <h3 align="center"><b>USER LOG IN</b></h3>
+        <br><br>
+
+    {% if errorLst %}
+        {% for error in errorLst %}
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+
+
+
+        <form action="{% url 'uber:userLogin' %}" method="post">
+            {% csrf_token %}
+            <label id = "label1" for="userName">Enter email/mobile number/ username:</label>
+                {% if errorLst %}
+                    <input type = "text" name="userName" id = "userName" value = "{{ inputLst.0 }}" required>
+                {% else %}
+                    <input type = "text" name="userName" id = "userName1" required>
+                {% endif %}
+            <br>
+
+            <label> Password:
+                {% if errorLst %}
+                    <input type = "password" name="passWord" value = "{{ inputLst.1 }}" required>
+                {% else %}
+                    <input type = "password" name="passWord" required>
+                {% endif %}
+            </label>
+            <br>
+
+            <input type = "submit" value="Log In">
+
+        </form>
+    </section>
+
+
+{% endblock %}
+
+</body>
+</html>

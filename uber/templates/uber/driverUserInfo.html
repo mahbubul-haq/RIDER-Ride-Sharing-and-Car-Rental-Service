@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Info</title>
+
+</head>
+<body>
+
+{% extends 'uber/base.html' %}
+{% block body %}
+
+    <div class = "topnav">
+     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+        <a style="float: right;" href="{%  url 'uber:driverRideHistory' driverId %}">GO BACK</a>
+    </div>
+    <img src="{{ driverInfo.0 }}" height="200" width="200">
+    <p>Name: {{ driverInfo.1 }}</p>
+    <p>User Name: {{ driverInfo.2 }}</p>
+    <p>Email: {{ driverInfo.3 }}</p>
+    {% if driverInfo.5 %}
+        <p>Rating: {{ driverInfo.4 }}({{ driverInfo.5 }} ratings)</p>
+    {% else %}
+        <p>Rating: new user</p>
+    {% endif %}
+
+    <p>Date of Birth: {{ driverInfo.6 }}</p>
+    <p>Address: {{ driverInfo.7 }}</p>
+
+    <p>Mobile Number(s):</p>
+    {% for num in driverInfo.8 %}
+        <p>{{ num }}</p>
+    {% endfor %}
+
+
+
+{% endblock %}
+
+<script type="text/javascript">
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Car Info</title>
+
+
+</head>
+<body>
+
+{% extends 'uber/base.html' %}
+
+
+{% block body %}
+
+     <div class = "topnav">
+     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+        <a style="float: right;" href="{%  url 'uber:userHomePage' userId %}">GO BACK</a>
+    </div>
+    <br><br><br>
+
+    <section id="forForm">
+        <h3 align="center"><b>Your Car Information</b> </h3>
+        <br><br>
+
+        <section id = "signUp">
+
+            {% if inputLst %}
+                {% for car in inputLst %}
+
+                    {% if car.3 %}
+                        <img src="{{ car.3 }}" height="200" width="200">
+                    {% endif %}
+
+                    <p>Nameplate: {{ car.0 }}</p>
+                    {% if car.1 %}
+                        <p> Model: {{ car.1 }}</p>
+                    {% endif %}
+
+                    {% if car.2 %}
+                        <p> Color: {{ car.2 }}</p>
+                    {% endif %}
+                    {% if car.6 %}
+                        <p> Insurace Type : {{ car.6 }}</p>
+                    {% endif %}
+                    {% if car.7 %}
+                        <p> Insurace Start date: {{ car.7 }}</p>
+                        {% if car.8 %}
+                            <p> Insurace End date: {{ car.8 }}</p>
+                            <p>Due Payment: {{ car.9 }}</p>
+                        {% else %}
+                            <p>Your insurance expired!</p>
+                            <form action="{% url 'uber:updateInsurance' car.0 userId %}" method="post">
+                                {% csrf_token %}
+                                <input type="text" name="Update" value="Update" style="display: none;">
+                                <input type="submit" value="Update Insurance">
+                            </form>
+                        {% endif %}
+                    {% else %}
+                        <p>Your car is waiting to be validated!</p>
+                    {% endif %}
+
+                    <form action="{% url 'uber:userDeleteCar' car.0 userId %}" method="post">
+                        {% csrf_token %}
+                        <input onclick="return confirm('Are you sure you want to delete this car?')" type="submit" value="Delete Car">
+                    </form>
+
+                {% endfor %}
+            {% else %}
+                <p style="font-size:100%"> You have no cars!</p>
+            {% endif %}
+
+        </section>
+    </section>
+
+
+{% endblock %}
+
+</body>
+</html>

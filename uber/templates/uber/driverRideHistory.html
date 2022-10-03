@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ride History</title>
+
+    <style type="text/css">
+        th {
+            background-color: #FF0000;
+            color: white;
+            font-size: 180%;
+            font-family: "Courier New", Arial, "sans-serif";
+        }
+        tr:nth-child(even) {
+            background-color: #FFFF33;
+        }
+        tr:nth-child(odd) {
+            background-color: #FFFFFF;
+        }
+        th, td {
+            border-bottom: 1px solid rgba(103, 78, 58, 0.14);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        /*tr:hover {background-color: #f5f5f5;} */
+
+
+        td, th {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+        }
+
+        .caption {
+            font-weight: bolder;
+            font-size: 200%;
+            font-family: "Courier New", Arial, "sans-serif";
+        }
+
+        .topnav input {
+                background: #5dd4ee;
+                overflow: hidden;
+            }
+
+            .topnav input{
+                float: left;
+                color: #000;
+                text-align: center;
+                padding: 2px 2px;
+                text-decoration: none;
+
+                font-size: 150%;
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+
+            .topnav input:hover {
+                background: #333;
+                color: #f2f2f2;
+            }
+
+
+    </style>
+</head>
+<body onload="window.scroll(0, document.documentElement.scrollHeight);" >
+
+{% extends 'uber/base.html' %}
+{% block body %}
+
+    <div class = "topnav">
+     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+        <a style="float: right;" href="{%  url 'uber:driverHomePage' driverId %}">GO BACK</a>
+    </div>
+
+    {% if rides %}
+
+    <table>
+        <h2 align="center" class="caption" style="color:rgb(91,255,0);">Your Ride History</h2>
+        <thead>
+            <th>No</th>
+            <th>Pick Up Location</th>
+            <th>Destination</th>
+            <th>Ride End time</th>
+            <th>Fare</th>
+            <th>User Info</th>
+        </thead>
+        <tbody>
+            {% for ride in rides %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ ride.1 }}</td>
+                    <td>{{ ride.2 }}</td>
+                    <td>{{ ride.0 }}</td>
+                    <td>{{ ride.3 }}</td>
+                    <td ><a href="{% url 'uber:driverUserInfo' driverId ride.4 %}">{{ ride.5 }}</a></td>
+                </tr>
+
+            {% endfor %}
+
+
+        </tbody>
+    </table>
+        {% if not Ended %}
+
+        <div class="topnav" style="float: right;">
+            <form action="{% url 'uber:driverRideHistory' driverId %}" method="post">
+                {% csrf_token %}
+
+                {% if More %}
+                    <input type="number" name = "More" value="{{ More }}" style="display: none;">
+                    <input type="submit" value="Load More">
+                {% else %}
+                    <input type="number" name = "More" value="1" style="display: none;">
+                    <input type="submit" value="Load More">
+                {% endif %}
+
+            </form>
+        </div>
+
+        {% endif %}
+    {% else %}
+        <h3 style="font-size:150%">Nothing to show!</h3>
+    {% endif %}
+
+{% endblock %}
+
+<script type="text/javascript">
+
+</script>
+
+
+</body>
+</html>

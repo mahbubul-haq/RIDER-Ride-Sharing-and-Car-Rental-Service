@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+
+    <style type="text/css">
+        label, input {
+            margin-left: 40%;
+        }
+        input[type=submit] {
+            margin-left: 60%;
+        }
+
+        a {
+            text-decoration: none;
+            background: #5dd4ee;
+            color: #000;
+        }
+
+        a:hover{
+            background: #333333;
+            color: #f2f2f2;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+{% extends 'uber/base.html' %}
+{% block body %}
+
+    <div class="showUserInfo" id = "showUserInfo" style="display: none;">
+
+        <div class="topnav">
+            <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+            <a href="#" onclick="Show()" style="float: right;">CLOSE</a>
+
+        </div>
+
+        <img src="{{ userInfo.9 }}" height="200" width="200"><br>
+
+        {% if userInfo.2 %}
+            {% if userInfo.3 %}
+                <p>Name: {{ userInfo.1 }} {{ userInfo.2 }} {{ userInfo.3 }}</p>
+            {% else %}
+                <p>Name: {{ userInfo.1 }} {{ userInfo.2 }}</p>
+            {% endif %}
+        {% elif userInfo.3 %}
+            <p>Name: {{ userInfo.1 }} {{ userInfo.3 }}</p>
+        {% else %}
+            <p>Name: {{ userInfo.1 }}</p>
+        {% endif %}
+
+        <p>Username: {{ userInfo.4 }}</p>
+
+        <details>
+            <summary>Show Password</summary>
+            <p>Password: {{ userInfo.5 }}</p>
+        </details>
+        <p>Email: {{ userInfo.6 }}</p>
+        <p>Join Date: {{ userInfo.7 }}</p>
+        <p>Salary: {{ userInfo.8 }}</p>
+        <P>Date of Birth: {{ userInfo.10 }}</P>
+
+        <p> Mobile Number(s): </p>
+
+        {% if userInfo.12|length == 1 %}
+            {% for num in userInfo.12 %}
+                <p>{{ num }}</p>
+            {% endfor %}
+        {% else %}
+
+            {% for num in userInfo.12 %}
+                <p>{{ num }} <a href="{% url 'uber:adminDeleteMobile' num userInfo.0 %}">delete</a></p>
+            {% endfor %}
+        {% endif %}
+
+
+
+        <!--=============================================================================change=======================================-->
+        <p>Address: {{ userInfo.13.2 }}</p>
+
+        <form action="{% url 'uber:adminSignUp' %}" method="post">
+            {% csrf_token %}
+            <input type="number" name="updateId" value="{{ userInfo.0 }}" style="display: none;">
+            <input type="submit" value="Update Your Info">
+        </form> <br><br>
+
+        <form action="{% url 'uber:adminDeleteAccount' userInfo.0 %}" method="post">
+            {% csrf_token %}
+            <input onclick="return confirm('Are you sure you want to delete your account?')" type="submit" value="Delete Account">
+        </form>
+
+
+    </div>
+
+
+
+    <div id = "mainPage">
+
+    <div class="topnav">
+        <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
+
+        <a style="padding: 10px 10px 10px 10px; float: right;" href="#" onclick="Show1()" style="float: right;"><img src="{{ userInfo.9 }}" style="width: 80px; height: 50px; border-radius: 50%; padding-left: 15px; padding-right: 15px; margin: 0 0 0 0;" alt="{{ userInfo.1 }}"></a>
+        <a href="{% url 'uber:index' %}" style="float: right;">LOG OUT</a>
+
+
+    </div>
+    <section id="forForm">
+
+        <form method="post" action="{% url 'uber:carRentRequest' userInfo.0 %}">
+            {% csrf_token %}
+            <input type="submit" value="Car Rent Requests">
+        </form>
+
+        <form method="post" action="{% url 'uber:adminSignUp'%}">
+            {% csrf_token %}
+            <input type="number" name="adminId" value="{{ userInfo.0 }}" style="display: none;">
+            <input type="submit" value="Add Another Admin">
+        </form>
+
+        <form method="post" action="{% url 'uber:rentCar' userInfo.0 %}">
+            {% csrf_token %}
+            <input type="number" name="admin" value="{{ userInfo.0 }}" style="display: none;">
+            <input type="submit" value="Add Car">
+        </form>
+
+        <form method="post" action="{% url 'uber:carInfoAdmin' userInfo.0 %}">
+            {% csrf_token %}
+            <input type="submit" value="Car Info">
+        </form>
+
+        <form method="post" action="{% url 'uber:userInfoAdmin' userInfo.0 %}">
+            {% csrf_token %}
+            <input type="submit" value="User Info">
+        </form>
+
+        <form method="post" action="{% url 'uber:driverInfoAdmin' userInfo.0 %}">
+            {% csrf_token %}
+            <input type="submit" value="Driver Info">
+        </form>
+
+
+
+        {% if carLst %}
+            <h3>Payments to be made</h3>
+
+            {% for car in carLst %}
+                {% if car.3 %}
+                    <img src="{{ car.3 }}" height="200" width="250">
+                {% endif %}
+
+                    <p>Nameplate: {{ car.0 }}</p>
+                    {% if car.1 %}
+                        <p> Model: {{ car.1 }}</p>
+                    {% endif %}
+
+                    {% if car.2 %}
+                        <p> Color: {{ car.2 }}</p>
+                    {% endif %}
+                    {% if car.6 %}
+                        <p> Insurace Type : {{ car.6 }}</p>
+                    {% endif %}
+
+                        <p> Insurace Start date: {{ car.7 }}</p>
+                        <p> Insurace End date: {{ car.8 }}</p>
+                        <p>Due Payment: {{ car.9 }}</p>
+                        <p>Last Payment date: {{ car.10 }}</p>
+
+                    <details>
+                        <summary>See Owner Info</summary>
+                        <img src="{{ car.11.3 }}" width="200" height="200">
+                        <p>Name: {{ car.11.0 }}</p>
+                        <p>Username: {{ car.11.1 }}</p>
+                        <p>Email: {{ car.11.2 }}</p>
+                        <p>Date of Birth: {{ car.11.4 }}</p>
+                        <p>Address: {{ car.11.5 }}</p>
+                    </details>
+
+                    <form action="{% url 'uber:adminPayCar' car.0 userInfo.0 %}" method="post">
+                        {% csrf_token %}
+                        <input type="submit" value="Make Payment">
+                    </form>
+            {% endfor %}
+        {% else %}
+            <p style="font-size:100%">No payment to be made!</p>
+
+        {% endif %}
+
+    </section>
+    </div> <!-- ===================== end of mainPage ==========-->
+
+    <script type="text/javascript">
+
+        function Show() {
+            document.getElementById("mainPage").style.display = 'block';
+            document.getElementById("showUserInfo").style.display = 'none';
+        }
+
+        function Show1() {
+            document.getElementById("mainPage").style.display = 'none';
+            document.getElementById("showUserInfo").style.display = 'block';
+
+        }
+    </script>
+
+
+{% endblock %}
+
+</body>
+</html>

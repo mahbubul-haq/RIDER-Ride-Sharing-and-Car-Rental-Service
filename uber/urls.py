@@ -1,0 +1,55 @@
+from django.urls import path
+
+from . import views
+
+app_name = 'uber'
+
+urlpatterns = [
+    path('', views.index, name = 'index'),
+    path('adminSignUp/', views.adminSignUp, name='adminSignUp'),
+    path('adminLogin/', views.adminLogin, name='adminLogin'),
+    path('adminHomePage/<int:admin_id>/', views.adminHomePage, name='adminHomePage'),
+
+    path('userSignUp/', views.userSignUp, name='userSignUp'),
+    path('userLogin/', views.userLogin, name='userLogin'),
+    path('driverSignUp/', views.driverSignUp, name='driverSignUp'),
+    path('driverLogin/', views.driverLogin, name='driverLogin'),
+    path('userHomePage/<int:user_id>/', views.userHomePage, name='userHomePage'),
+    path('driverHomePage/<int:driver_id>/', views.driverHomePage, name='driverHomePage'),
+    path('newRequest/<int:user_id>/', views.newRequest, name='newRequest'),
+    path('acceptRequest/<int:request_id>/<int:driver_id>/', views.acceptRequest, name="acceptRequest"),
+    path('userCancelRequest/<int:request_id>/<int:user_id>/', views.userCancelRequest, name="userCancelRequest"),
+    path('driverCancelRequest/<int:request_id>/<int:driver_id>/', views.driverCancelRequest, name="driverCancelRequest"),
+    path('userDeleteAccount/<int:user_id>/', views.userDeleteAccount, name="userDeleteAccount"),
+    path('driverDeleteAccount/<int:driver_id>/', views.driverDeleteAccount, name="driverDeleteAccount"),
+    path('adminDeleteAccount/<int:admin_id>/', views.adminDeleteAccount, name="adminDeleteAccount"),
+    path('rentCar/<int:user_id>/', views.rentCar, name='rentCar'),
+    path('userCarInfo/<int:user_id>/', views.userCarInfo, name="userCarInfo"),
+    path('userDeleteCar/<str:nameplate>/<int:user_id>/', views.userDeleteCar, name="userDeleteCar"),
+    path('carRentRequest/<int:admin_id>/', views.carRentRequest, name="carRentRequest"),
+    path('adminApproveCar/<str:nameplate>/<int:admin_id>/', views.adminApproveCar, name="adminApproveCar"),
+    path('adminDeleteRequest/<str:nameplate>/<int:admin_id>/', views.adminDeleteRequest, name="adminDeleteRequest"),
+    path('driverPickCar/<int:driver_id>/', views.driverPickCar, name="driverPickCar"),
+    path('driverRateUser/<int:request_id>/<int:driver_id>/', views.driverRateUser, name="driverRateUser"),
+    path('completeJourney/<int:request_id>/<int:driver_id>/', views.completeJourney, name="completeJourney"),
+    path('userCancelRate/<int:user_id>/<int:request_id>/', views.userCancelRate, name="userCancelRate"),
+    path('userRateDriver/<int:user_id>/<int:request_id>/<int:driver_id>/', views.userRateDriver, name="userRateDriver"),
+    path('adminPayCar/<str:nameplate>/<int:admin_id>/', views.adminPayCar, name='adminPayCar'),
+    path('userMessageDriver/<int:user_id>/<int:driver_id>/', views.userMessageDriver, name="userMessageDriver"),
+    path('driverMessageUser/<int:driver_id>/<int:user_id>/', views.driverMessageUser, name='driverMessageUser'),
+    path('userRideHistory/<int:user_id>/', views.userRideHistory, name='userRideHistory'),
+    path('userDriverInfo/<int:user_id>/<int:driver_id>/', views.userDriverInfo, name='userDriverInfo'),
+    path('driverRideHistory/<int:driver_id>/', views.driverRideHistory, name='driverRideHistory'),
+    path('driverUserInfo/<int:driver_id>/<int:user_id>/', views.driverUserInfo, name='driverUserInfo'),
+    path('updateInsurance/<str:nameplate>/<int:user_id>/', views.updateInsurance, name='updateInsurance'),
+    path('userDeleteMobile/<str:mob_num>/<int:user_id>/', views.userDeleteMobile, name='userDeleteMobile'),
+    path('driverDeleteMobile/<str:mob_num>/<int:driver_id>/', views.driverDeleteMobile, name='driverDeleteMobile'),
+    path('adminDeleteMobile/<str:mob_num>/<int:admin_id>/', views.adminDeleteMobile, name='adminDeleteMobile'),
+    path('carInfoAdmin/<int:admin_id>/', views.carInfoAdmin, name='carInfoAdmin'),
+    path('adminDeleteCar/<str:nameplate>/<int:admin_id>/', views.adminDeleteCar, name='adminDeleteCar'),
+    path('userInfoAdmin/<int:admin_id>/', views.userInfoAdmin, name='userInfoAdmin'),
+    path('adminDeleteUser/<int:user_id>/<int:admin_id>/', views.adminDeleteUser, name='adminDeleteUser'),
+    path('driverInfoAdmin/<int:admin_id>/', views.driverInfoAdmin, name='driverInfoAdmin'),
+    path('adminDeleteDriver/<int:driver_id>/<int:admin_id>/', views.adminDeleteDriver, name='adminDeleteDriver'),
+]
+

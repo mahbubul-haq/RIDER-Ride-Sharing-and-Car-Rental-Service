@@ -1,0 +1,168 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--===============================================================================================-->
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'uber/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'uber/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'uber/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'uber/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'uber/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'uber/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'uber/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'uber/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'uber/css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'uber/css/main.css' %}">
+    {% block Style %}
+
+
+
+
+
+        <style type="text/css">
+
+            body {
+                background: #000000;
+                opacity: 1.75;
+            }
+
+            .topnav {
+                background: #343768;
+                overflow: hidden;
+            }
+
+            .topnav a {
+                float: left;
+                color: #FFFFFF;
+                text-align: center;
+                padding: 15px 15px;
+                text-decoration: none;
+
+                font-size: 150%;
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+
+            .topnav a:hover {
+                background: #000000;
+                color:#FFFFFF ;
+            }
+
+            header{
+                text-align: center;
+                color:#FFFFFF;
+            }
+            .parallax {
+
+                background-image: url("{%static 'uber/images/2.gif' %}");
+                min-height: 1000px;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                opacity: 2.75;
+            }
+            section {
+            	color: white;
+            }
+
+			label {
+
+  				color: white;
+  				font-weight: bold;
+  				padding: 4px;
+
+
+			}
+			p {
+				color: white;
+			}
+
+			button {
+				color: white;
+			}
+			summary {
+				color:red;
+			}
+            #forForm {
+                display: block;
+                height:100%;
+                width:50%;
+				font-size: 125%;
+
+            }
+
+            #forForm input {
+                display: block;
+                background: #686868;
+            }
+
+            /*#686868;*/
+
+            #forForm input[type=submit] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+
+                display: block;
+
+
+            }
+
+            #forForm input[type=submit]:hover {
+                background-color: #000000;
+                color:#FFFFFF
+            }
+        </style>
+    {% endblock %}
+
+</head>
+<body >
+    <div class="parallax">
+        {% block body%}
+        {% endblock %}
+    </div>
+
+<!--===============================================================================================-->
+	<script src="{%static 'uber/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'uber/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'uber/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{%static 'uber/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'uber/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'uber/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{%static 'uber/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'uber/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'uber/js/main.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
