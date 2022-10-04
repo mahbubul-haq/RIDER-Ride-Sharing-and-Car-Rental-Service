@@ -1,60 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Driver Login</title>
 </head>
+
 <body>
 
-{% extends 'uber/base.html' %}
-{% block body %}
+    {% extends 'uber/base.html' %}
+    {% block body %}
 
-     <div class = "topnav">
-        <a href="{%  url 'uber:index' %}">HOME</a>
+    <div class="topnav navbar d-flex align-items-center">
+        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+
+        <!-- <a class="nav-links" href="{%  url 'uber:index' %}">Home</a> -->
+        <a class="nav-links" href="{%  url 'uber:index' %}">Home</a>
+
     </div>
-    <br><br><br>
 
-    <section id = "forForm">
-        <h3 align="center"><b>DRIVER LOG IN</b></h3>
-        <br><br>
+    <div class="main-body d-flex align-items-center justify-content-center">
+        <!-- show image from static file -->
+        <div class="container-fluid main-container" style="height: 100%; width: 35%;">
+            <div class="row" style="height: 100%;">
 
-    {% if errorLst %}
-        {% for error in errorLst %}
-            {% if error %}
-                <p>{{ error }}</p>
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+                <section id="forForm" class="col col-12 d-flex align-items-center justify-content-center vstack"
+                    style="padding: 30px;">
+
+                    <div class="h4 text-center" style="color: rgb(7, 168, 217); margin-bottom: 50px;">Driver Login
+                    </div>
 
 
+                    {% if errorLst %}
+                    {% for error in errorLst %}
+                    {% if error %}
+                    <p style="color: rgb(207, 20, 20);">{{ error }}</p>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
 
 
-        <form action="{% url 'uber:driverLogin' %}" method="post">
-            {% csrf_token %}
-            <label id = "label1" for="userName">Enter email/mobile number/ username:</label>
-                {% if errorLst %}
-                    <input type = "text" name="userName" id = "userName" value = "{{ inputLst.0 }}" required>
-                {% else %}
-                    <input type = "text" name="userName" id = "userName1" required>
-                {% endif %}
-            <br>
+                    <form style="" class="w-100" action="{% url 'uber:driverLogin' %}" method="post">
+                        {% csrf_token %}
+                        <label class="form-label" id="label1" for="userName">Email/ Phone/
+                            Username</label>
+                        {% if errorLst %}
+                        <input style="width: 100%;" class="form-control" type="text" name="userName" id="userName"
+                            value="{{ inputLst.0 }}" placeholder="email/phone/username" required>
+                        {% else %}
+                        <input style="width: 100%;" class="form-control" type="text" name="userName" id="userName"
+                            placeholder="email/phone/username" required>
+                        {% endif %}
+                        <br>
 
-            <label> Password:
-                {% if errorLst %}
-                    <input type = "password" name="passWord" value = "{{ inputLst.1 }}" required>
-                {% else %}
-                    <input type = "password" name="passWord" required>
-                {% endif %}
-            </label>
-            <br>
+                        <label class="form-label" for="password"> Password </label>
+                        {% if errorLst %}
+                        <input class="form-control w-100" type="password" name="passWord" value="{{ inputLst.1 }}"
+                            placeholder="password" id="password" required>
+                        {% else %}
+                        <input class="form-control" type="password" name="passWord" placeholder="password" id="password"
+                            required>
+                        {% endif %}
 
-            <input type = "submit" value="Log In">
+                        <div class="text-center"><input style="width: 80px; margin-top:40px" role="button"
+                                class="btn btn-info" type="submit" value="Log In">
+                        </div>
 
-        </form>
-    </section>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
 
 
-{% endblock %}
+    {% endblock %}
+
 
 </body>
+
 </html>

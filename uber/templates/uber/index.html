@@ -1,88 +1,133 @@
-
-
-
 <html>
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>UBER</title>
 
 
 </head>
+
 <body>
 
-{% extends 'uber/base.html' %}
+    {% extends 'uber/base.html' %}
 
 
-{% block body %}
+    {% block body %}
 
-     <div class = "topnav">
-        <a href="{%  url 'uber:index' %}">HOME</a>
-         {% if admin %}
-             <a style="float: right" href="{% url 'uber:adminLogin' %}">ADMIN</a>
-         {% endif %}
+    <div class="topnav navbar d-flex align-items-center">
+        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+
+        <!-- <a class="nav-links" href="{%  url 'uber:index' %}">Home</a> -->
+        {% if admin %}
+        <a class="nav-links" href="{% url 'uber:adminLogin' %}">Admin</a>
+        {% endif %}
+
+
     </div>
-    <br><br><br>
 
-    <section id="forForm">
+    <div class="main-body d-flex align-items-center justify-content-center">
+        <!-- show image from static file -->
+        <div class="container-fluid main-container" style="height: 100%; width: 80%;">
+            <div class="row" style="height: 100%;">
+                <div class="col-6 d-flex align-items-center justify-content-center p-3 vstack"
+                    style="height: 100%;color: rgba(250, 250, 250, 0.85); background-color: rgb(7, 168, 217);">
 
-        <div style="margin-left: 50%;">
+                    <div class="h2 mb-4">Welcome to UBER</div>
+                    <div class="fs-5 fw-semibold mt-3 text-center">UBER is the world's best ride sharing and car rental
+                        platform.</div>
 
-            <label> <h2>USER  <input style="display: inline; width: 20px; height: 20px;" type = "radio" name = "userType" id = "useR" checked> </h2></label>
-            <label><h2>DRIVER  <input style="display: inline; width: 20px; height: 20px;" type = "radio" name = "userType" id = "driveR"> </h2></label>
-            {% if not admin %}
-            <label><h2>ADMIN <input style="display: inline; width: 20px; height: 20px;" type = "radio" name = "userType" id = "admin"></h2>
-                </label>
-            {% endif %}
+
+                </div>
+                <div class="col-6 d-flex align-items-center" style="padding: 40px;">
+                    <section id="forForm" class="d-flex justify-content-center vstack">
+                        <div class="h4 mb-4 text-center">Select your account type</div>
+                        <form class="d-flex justify-content-center mb-4">
+                            <div class="form-check form-check-inline">
+
+                                <input class="form-check-input" type="radio" name="userType" id="useR" checked>
+                                <label class="form-check-label" for="useR">
+                                    User
+                                </label>
+
+                            </div>
+                            <div class="form-check form-check-inline">
+
+                                <input class="form-check-input" type="radio" name="userType" id="driveR">
+                                <label class="form-check-label" for="driveR">
+                                    Driver
+                                </label>
+
+                            </div>
+                            {% if not admin %}
+                            <div class="form-check form-check-inline">
+
+                                <input class="form-check-input" type="radio" name="userType" id="admin">
+                                <label class="form-check-label" for="admin">
+                                    Admin
+                                </label>
+
+                            </div>
+                            {% endif %}
+
+
+
+                        </form>
+
+                        <div class="d-flex justify-content-center" style="margin-top: 50px;">
+                            <section id="forUser" onsubmit="RadioValue()" class="d-inline-block me-4">
+
+                                <form action="" method="get" id="logIN">
+                                    {% csrf_token %}
+                                    <input role="button" style="width: 80px;" class="btn btn-info" type="submit"
+                                        value="Log In" id="lInput">
+
+                                </form>
+
+                            </section>
+
+
+                            <section id="forDriver" onsubmit="RadioValue()" class="d-inline-block">
+
+                                <form action="" method="get" id="signUP">
+                                    {% csrf_token %}
+                                    <input role="button" style="width: 80px; " class="btn btn-info" type="submit"
+                                        value="Sign Up" id="sInput">
+
+                                </form>
+
+                            </section>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
 
         </div>
-        <br>
 
 
-
-        <section id = "forUser" onsubmit="RadioValue()">
-            <p><h2 style="margin-left: 40%">Already got an account?</h2></p>
-            <form action = "" method="get" id="logIN">
-                {% csrf_token %}
-                <input style="display: inline-block;margin-left: 40%;" type = "submit" value = "Log In" id = "lInput">
-
-            </form>
-
-        </section>
-
-        <br><br>
-
-        <section id = "forDriver" onsubmit="RadioValue()">
-            <p><h2 style="margin-left: 40%">Don't have an account?</h2></p>
-            <form action = "" method="get" id="signUP">
-                {% csrf_token %}
-                <input style="display: inline-block; margin-left: 40%;"type = "submit" value = "Sign Up" id = "sInput">
-
-            </form>
-
-        </section>
-
-    </section>
+    </div>
 
 
-	<script type="text/javascript">
-		function RadioValue() {
-			if(document.getElementById("useR").checked) {
-				document.getElementById("logIN").action = "{% url 'uber:userLogin' %}";
-				document.getElementById("signUP").action = "{% url 'uber:userSignUp' %}";
-			}
-			else if (document.getElementById("driveR").checked) {
-				document.getElementById("logIN").action = "{% url 'uber:driverLogin' %}";
-				document.getElementById("signUP").action = "{% url 'uber:driverSignUp' %}";
-			}
-			else if(document.getElementById("admin").checked) {
-			    document.getElementById("logIN").action = "{% url 'uber:adminLogin' %}";
+    <script type="text/javascript">
+        function RadioValue() {
+            if (document.getElementById("useR").checked) {
+                document.getElementById("logIN").action = "{% url 'uber:userLogin' %}";
+                document.getElementById("signUP").action = "{% url 'uber:userSignUp' %}";
+            }
+            else if (document.getElementById("driveR").checked) {
+                document.getElementById("logIN").action = "{% url 'uber:driverLogin' %}";
+                document.getElementById("signUP").action = "{% url 'uber:driverSignUp' %}";
+            }
+            else if (document.getElementById("admin").checked) {
+                document.getElementById("logIN").action = "{% url 'uber:adminLogin' %}";
                 document.getElementById("signUP").action = "{% url 'uber:adminSignUp' %}";
             }
-		}
+        }
 
-	</script>
+    </script>
 
-{% endblock %}
+    {% endblock %}
 
 </body>
+
 </html>

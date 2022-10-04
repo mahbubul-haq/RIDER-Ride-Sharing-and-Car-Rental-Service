@@ -2,8 +2,149 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e78a50f-010f-4e9d-8517-47d7dfe61482" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/Login_v18.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/css/main.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/css/util.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/animated.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/core.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/fixed-width.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/font-awesome.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/icons.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/larger.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/mixins.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/path.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/screen-reader.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/stacked.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/variables.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_animated.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_core.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_icons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_larger.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_list.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_path.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Black.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-BlackItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Bold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-BoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ExtraBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ExtraLight.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Italic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Light.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-LightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Medium.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-MediumItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-SemiBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Thin.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ThinItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/OFL.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Black.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-BlackItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Bold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-BoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ExtraBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ExtraLight.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Italic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Light.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-LightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Medium.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-MediumItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-SemiBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Thin.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ThinItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/2.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/bg-01.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/bg-02.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/icons/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/u.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/js/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/signup-image.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animate/animate.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animsition/css/animsition.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animsition/css/animsition.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animsition/js/animsition.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animsition/js/animsition.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-grid.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-reboot.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/popper.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/popper.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/tooltip.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/countdowntime/countdowntime.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/css-hamburgers/hamburgers.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/css-hamburgers/hamburgers.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/daterangepicker/daterangepicker.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/daterangepicker/daterangepicker.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/daterangepicker/moment.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/daterangepicker/moment.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/jquery/jquery-3.2.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/perfect-scrollbar/perfect-scrollbar.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/select2/select2.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/select2/select2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/select2/select2.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/select2/select2.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminLogin.html" afterPath="$PROJECT_DIR$/uber/templates/uber/adminLogin.html" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" afterPath="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/base.html" afterPath="$PROJECT_DIR$/uber/templates/uber/base.html" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverLogin.html" afterPath="$PROJECT_DIR$/uber/templates/uber/driverLogin.html" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/index.html" afterPath="$PROJECT_DIR$/uber/templates/uber/index.html" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userLogin.html" afterPath="$PROJECT_DIR$/uber/templates/uber/userLogin.html" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userSignUp.html" afterPath="$PROJECT_DIR$/uber/templates/uber/userSignUp.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,23 +171,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="SYSTEM: schema" type="ac44c5e0:OracleImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="SYSTEM: schema" type="ac44c5e0:OracleImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -54,38 +179,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/Functions.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uber/templates/uber/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7506">
-              <caret line="278" column="14" lean-forward="false" selection-start-line="278" selection-start-column="14" selection-end-line="278" selection-end-column="14" />
-              <folding>
-                <marker date="1664741111729" expanded="true" signature="1533:1600" ph="SELECT * FRO... LOCATION" />
-                <marker date="1664741111729" expanded="true" signature="2861:2979" ph="INSERT INTO LOCATION... " />
-                <marker date="1664741111729" expanded="true" signature="3066:3133" ph="SELECT * FRO... LOCATION" />
-                <marker date="1664741111729" expanded="true" signature="6829:6893" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-                <marker date="1664741111729" expanded="true" signature="7226:7292" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-                <marker date="1664741111729" expanded="true" signature="7622:7687" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console_2.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_2.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+            <state relative-caret-position="648">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="driverUserInfo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uber/templates/uber/driverUserInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+            <state relative-caret-position="486">
+              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userHomePage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uber/templates/uber/userHomePage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6588">
+              <caret line="244" column="18" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -94,8 +212,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UBER_PROJECT/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="80" column="16" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+            <state relative-caret-position="3375">
+              <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,8 +222,28 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uber/templates/uber/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2133">
-              <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+            <state relative-caret-position="432">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uber/static/css/base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console_3.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_3.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -114,304 +252,28 @@
       <file leaf-file-name="adminSignUp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminSignUp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2970">
-              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="3078">
+              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/views.py">
+      <file leaf-file-name="adminHomePage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminHomePage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59022">
-              <caret line="2194" column="27" lean-forward="false" selection-start-line="2194" selection-start-column="27" selection-end-line="2194" selection-end-column="27" />
-              <folding>
-                <element signature="e#249#307#0" expanded="true" />
-                <marker date="1664741056915" expanded="true" signature="753:779" ph="SELECT ADMIN... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="1577:1694" ph="SELECT FIRST... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="1577:1739" ph="SELECT FIRST... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="1577:1765" ph="SELECT FIRST... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="1577:1776" ph="SELECT FIRST... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="3673:3705" ph="SELECT USERN... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="3673:3742" ph="SELECT USERN... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="3673:3752" ph="SELECT USERN... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="3825:3878" ph="SELECT USERN... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="4537:4596" ph="SELECT * FRO... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="5089:5139" ph="SELECT EMAIL... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="5089:5159" ph="SELECT EMAIL... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="5231:5275" ph="SELECT EMAIL... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="6972:7003" ph="UPDATE ADMIN... " />
-                <marker date="1664741056915" expanded="true" signature="6972:7026" ph="UPDATE ADMIN... " />
-                <marker date="1664741056915" expanded="true" signature="6972:7114" ph="UPDATE ADMIN... " />
-                <marker date="1664741056915" expanded="true" signature="6972:7122" ph="UPDATE ADMIN... " />
-                <marker date="1664741056915" expanded="true" signature="6972:7215" ph="UPDATE ADMIN... " />
-                <marker date="1664741056915" expanded="true" signature="6972:7242" ph="UPDATE ADMIN... " />
-                <marker date="1664741056915" expanded="true" signature="7403:7692" ph="INSERT INTO ADMIN... " />
-                <marker date="1664741056915" expanded="true" signature="7885:7938" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="8061:8138" ph="UPDATE MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="8239:8317" ph="INSERT INTO MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="9124:9177" ph="SELECT _ID F... " />
-                <marker date="1664741056915" expanded="true" signature="9274:9340" ph="SELECT DRIVE... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="9437:9484" ph="SELECT DRIVE... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="9574:9626" ph="SELECT PASSW... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="10400:10445" ph="SELECT * FRO... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="10741:10807" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="11086:11186" ph="SELECT LATIT... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="11347:11514" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="12226:12371" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="13202:13402" ph="SELECT FIRST... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="15240:15320" ph="SELECT USERN... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="15419:15436" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="15419:15446" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="15419:15469" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="15419:15470" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="16104:16163" ph="SELECT * FRO... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="16655:16726" ph="SELECT EMAIL... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="16795:16842" ph="SELECT EMAIL... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="16821:16842" ph="SELECT EMAIL... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="18517:18788" ph="UPDATE DRIVER... " />
-                <marker date="1664741056915" expanded="true" signature="18949:19202" ph="INSERT INTO DRIVER... " />
-                <marker date="1664741056915" expanded="true" signature="19368:19423" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="19545:19582" ph="UPDATE MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="19545:19620" ph="UPDATE MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="19720:19797" ph="INSERT INTO MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="20553:20755" ph="SELECT FIRST... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="22598:22680" ph="SELECT USERN... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="22752:22806" ph="SELECT USERN... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="23464:23523" ph="SELECT * FRO... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="24015:24088" ph="SELECT EMAIL... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="24159:24204" ph="SELECT EMAIL... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="25882:26155" ph="UPDATE ADMIN... " />
-                <marker date="1664741056915" expanded="true" signature="26321:26572" ph="INSERT INTO DRIVER... " />
-                <marker date="1664741056915" expanded="true" signature="26743:26798" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="26922:27001" ph="UPDATE MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="27103:27184" ph="INSERT INTO MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="27946:27991" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="27946:28001" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="27946:28027" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="28098:28156" ph="SELECT USER_... " />
-                <marker date="1664741056915" expanded="true" signature="28098:28163" ph="SELECT USER_... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="28260:28304" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="28260:28309" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="28399:28452" ph="SELECT PASSW... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="29483:29538" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="29635:29702" ph="SELECT USER_... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="29799:29848" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="29938:29993" ph="SELECT PASSW... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="30836:30876" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="30836:30880" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="30836:30882" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="31186:31250" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="31522:31622" ph="SELECT LATIT... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="31730:31769" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="31730:31779" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="31730:31804" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="31730:31835" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="31730:31861" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="32096:32144" ph="SELECT * FRO... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="32515:32528" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="32515:32587" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="32515:32606" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="32755:32776" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="32755:32835" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="33115:33164" ph="SELECT * FRO... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="33266:33292" ph="SELECT * FRO... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="33266:33298" ph="SELECT * FRO... MOBILE" />
-                <marker date="1664741056915" expanded="true" signature="33266:33335" ph="SELECT * FRO... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="33506:33523" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="33506:33552" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="33681:33795" ph="SELECT MESSA... MESSAGES" />
-                <marker date="1664741056915" expanded="true" signature="33681:33837" ph="SELECT MESSA... MESSAGES" />
-                <marker date="1664741056915" expanded="true" signature="34270:34342" ph="SELECT CITY LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="34270:34370" ph="SELECT STREE... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="34632:34733" ph="SELECT STREE... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="35381:35429" ph="SELECT * FRO... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="35817:35883" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="36162:36262" ph="SELECT LATIT... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="36369:36406" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="36369:36414" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="36644:36671" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="36644:36683" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="36644:36693" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="36644:36714" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="36918:36964" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="37088:37152" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="37780:37880" ph="SELECT STREE... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="38148:38248" ph="SELECT STREE... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="38357:38513" ph="SELECT MESSA... MESSAGES" />
-                <marker date="1664741056915" expanded="true" signature="39013:39085" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="39013:39086" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="39013:39090" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="39013:39122" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="39013:39147" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="39440:39486" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="39611:39675" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="40335:40435" ph="SELECT STREE... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="40718:40818" ph="SELECT STREE... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="41398:41444" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="42451:42470" ph="INSERT INTO REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="42451:42561" ph="INSERT INTO REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="42451:42657" ph="INSERT INTO REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="43214:43253" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="43214:43297" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="43214:43316" ph="SELECT * FRO... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="43429:43469" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="43429:43479" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="43429:43493" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="43429:43514" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="43429:43580" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="44045:44102" ph="SELECT REQUE... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="44181:44243" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="44808:44865" ph="SELECT REQUE... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="44942:45004" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="45559:45602" ph="DELETE FROM APP_USER... " />
-                <marker date="1664741056915" expanded="true" signature="45559:45603" ph="DELETE FROM APP_USER... " />
-                <marker date="1664741056915" expanded="true" signature="45894:45940" ph="DELETE FROM APP_USER... " />
-                <marker date="1664741056915" expanded="true" signature="46233:46276" ph="DELETE FROM APP_USER... " />
-                <marker date="1664741056915" expanded="true" signature="47604:47651" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="47604:47660" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="48956:49133" ph="INSERT INTO CAR... " />
-                <marker date="1664741056915" expanded="true" signature="49292:49433" ph="INSERT INTO CAR... " />
-                <marker date="1664741056915" expanded="true" signature="50177:50223" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="51006:51080" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="51006:51090" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="51188:51203" ph="DELETE FROM CAR... " />
-                <marker date="1664741056915" expanded="true" signature="51188:51250" ph="DELETE FROM CAR... " />
-                <marker date="1664741056915" expanded="true" signature="51188:51261" ph="DELETE FROM CAR... " />
-                <marker date="1664741056915" expanded="true" signature="51556:51632" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="51758:51805" ph="SELECT * FRO... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="52065:52129" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-                <marker date="1664741056915" expanded="true" signature="52456:52556" ph="SELECT LATIT... LOCATION" />
-                <marker date="1664741056915" expanded="true" signature="53050:53108" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="53050:53127" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="53050:53133" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="53538:53562" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53571" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53592" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53604" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53609" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53620" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53647" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53651" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53672" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="53538:53682" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="54014:54071" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="54194:54216" ph="DELETE FROM CAR... " />
-                <marker date="1664741056915" expanded="true" signature="54194:54239" ph="DELETE FROM CAR... " />
-                <marker date="1664741056915" expanded="true" signature="54591:54634" ph="SELECT DRIVE... CAR" />
-                <marker date="1664741056915" expanded="true" signature="54591:54659" ph="SELECT DRIVE... CAR" />
-                <marker date="1664741056915" expanded="true" signature="54773:54827" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="54918:54942" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="54918:54977" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="55022:55058" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="55022:55079" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="55022:55089" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="55269:55292" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="55269:55314" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="55269:55362" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="55269:55369" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="56066:56120" ph="SELECT USER_... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="56216:56286" ph="UPDATE USER... " />
-                <marker date="1664741056915" expanded="true" signature="56216:56304" ph="UPDATE USER... " />
-                <marker date="1664741056915" expanded="true" signature="56216:56353" ph="UPDATE USER... " />
-                <marker date="1664741056915" expanded="true" signature="56454:56537" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="56998:57077" ph="SELECT REQUE... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="57175:57202" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="57175:57237" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="57585:57664" ph="SELECT REQUE... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="57769:57831" ph="UPDATE REQUEST... " />
-                <marker date="1664741056915" expanded="true" signature="58017:58073" ph="SELECT USER_... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="58169:58306" ph="UPDATE APP_USER... " />
-                <marker date="1664741056915" expanded="true" signature="58796:58828" ph="SELECT ADMIN... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="58796:58848" ph="SELECT ADMIN... ADMIN" />
-                <marker date="1664741056915" expanded="true" signature="58930:58996" ph="SELECT CAR_I... CAR" />
-                <marker date="1664741056915" expanded="true" signature="58930:59011" ph="SELECT CAR_I... CAR" />
-                <marker date="1664741056915" expanded="true" signature="58930:59030" ph="SELECT CAR_I... CAR" />
-                <marker date="1664741056915" expanded="true" signature="59176:59216" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="59176:59260" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="59689:59745" ph="SELECT DRIVE... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="59912:59989" ph="INSERT INTO MESSAGES... " />
-                <marker date="1664741056915" expanded="true" signature="59912:60047" ph="INSERT INTO MESSAGES... " />
-                <marker date="1664741056915" expanded="true" signature="60405:60457" ph="SELECT DRIVE... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="60620:60755" ph="INSERT INTO MESSAGES... " />
-                <marker date="1664741056915" expanded="true" signature="61273:61453" ph="SELECT END_T... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="61273:61489" ph="SELECT END_T... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="61273:61523" ph="SELECT END_T... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="61273:61542" ph="SELECT END_T... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="61662:61706" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="61662:61714" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="62135:62327" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="63058:63323" ph="SELECT END_T... REQUEST" />
-                <marker date="1664741056915" expanded="true" signature="63445:63499" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="63930:64114" ph="SELECT NVL(P... DRIVER" />
-                <marker date="1664741056915" expanded="true" signature="64686:64747" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="64686:64771" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="64872:64929" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="64872:64939" ph="UPDATE CAR... " />
-                <marker date="1664741056915" expanded="true" signature="65229:65309" ph="DELETE FROM MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="65229:65326" ph="DELETE FROM MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="65229:65351" ph="DELETE FROM MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="65430:65478" ph="UPDATE MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="65430:65525" ph="UPDATE MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="65832:65954" ph="DELETE FROM MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="66030:66123" ph="UPDATE MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="66434:66556" ph="DELETE FROM MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="66634:66731" ph="UPDATE MOBILE_NUMBERS... " />
-                <marker date="1664741056915" expanded="true" signature="67150:67298" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="67573:67720" ph="SELECT * FRO... CAR" />
-                <marker date="1664741056915" expanded="true" signature="68275:68320" ph="DELETE FROM CAR... " />
-                <marker date="1664741056915" expanded="true" signature="68713:68739" ph="SELECT NAME_... CAR" />
-                <marker date="1664741056915" expanded="true" signature="68713:68871" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="68713:68875" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="68713:68914" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="69206:69354" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="69206:69383" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="69850:69876" ph="DELETE FROM WHERE" />
-                <marker date="1664741056915" expanded="true" signature="69850:69894" ph="DELETE FROM APP_USER... " />
-                <marker date="1664741056915" expanded="true" signature="70285:70494" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="70786:70971" ph="SELECT USER_... APP_USER" />
-                <marker date="1664741056915" expanded="true" signature="71444:71488" ph="DELETE FROM APP_USER... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/views1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="2376">
+              <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/index.html">
+      <file leaf-file-name="userSignUp.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uber/templates/uber/userSignUp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#h2#0;n#label#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#h2#0;n#label#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#h2#0;n#label#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userCarInfo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/userCarInfo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1539">
-              <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="7317">
+              <caret line="281" column="25" lean-forward="false" selection-start-line="281" selection-start-column="25" selection-end-line="281" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -424,8 +286,8 @@
       <list>
         <option value="Python Script" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -443,9 +305,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/nominatimm.html" />
-        <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/nominatim1.html" />
         <option value="$PROJECT_DIR$/clock.html" />
         <option value="$PROJECT_DIR$/uber/views1.py" />
         <option value="$PROJECT_DIR$/test.py" />
@@ -484,8 +343,6 @@
         <option value="$PROJECT_DIR$/uber/templates/uber/userRideHistory.html" />
         <option value="$PROJECT_DIR$/uber/templates/uber/driverRideHistory.html" />
         <option value="$PROJECT_DIR$/uber/templates/uber/carInfoAdmin.html" />
-        <option value="$PROJECT_DIR$/uber/templates/uber/index.html" />
-        <option value="$PROJECT_DIR$/uber/templates/uber/base.html" />
         <option value="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" />
         <option value="$PROJECT_DIR$/uber/templates/uber/userHomePage.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console.sql" />
@@ -494,6 +351,11 @@
         <option value="$PROJECT_DIR$/uber/Functions.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_2.sql" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/uber/templates/uber/base.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/uber/templates/uber/index.html" />
+        <option value="$PROJECT_DIR$/uber/static/css/base.css" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_3.sql" />
       </list>
     </option>
   </component>
@@ -507,7 +369,7 @@
     <option name="x" value="-8" />
     <option name="y" value="1" />
     <option name="width" value="1900" />
-    <option name="height" value="1004" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -525,8 +387,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -534,10 +394,23 @@
               <item name="UBER_PROJECT" type="b2602c69:ProjectViewProjectNode" />
               <item name="UBER_PROJECT" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="UBER_PROJECT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UBER_PROJECT" type="462c0819:PsiDirectoryNode" />
+              <item name="uber" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UBER_PROJECT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UBER_PROJECT" type="462c0819:PsiDirectoryNode" />
+              <item name="uber" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -712,31 +585,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="1" width="1900" height="1004" extended-state="0" />
+    <frame x="-8" y="1" width="1900" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45057473" sideWeight="0.5292135" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28275862" sideWeight="0.49585062" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5219072" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36509758" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4806701" sideWeight="0.4707865" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57766366" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19456762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28275862" sideWeight="0.49585062" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5672727" sideWeight="0.4707865" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5769697" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18902439" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3736142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3736142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -771,6 +644,32 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -787,88 +686,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/driverLogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="58" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminLogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nominatim1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1051">
-          <caret line="225" column="13" lean-forward="false" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/carRentRequest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="79" column="24" lean-forward="false" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UBER_PROJECT/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fractional_star.js" />
-    <entry file="file://$PROJECT_DIR$/fractional_star.css" />
-    <entry file="file://$PROJECT_DIR$/fractional_star.html" />
     <entry file="file://$PROJECT_DIR$/uber/static/uber/css/rating.css" />
     <entry file="file://$PROJECT_DIR$/uber/static/uber/rating.css" />
-    <entry file="file://$PROJECT_DIR$/rating.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="45" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rating.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3429">
-          <caret line="128" column="10" lean-forward="false" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practiceHTML.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practiceHTML1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/rating.css" />
+    <entry file="file://$PROJECT_DIR$/rating.html" />
+    <entry file="file://$PROJECT_DIR$/practice.py" />
+    <entry file="file://$PROJECT_DIR$/message.html" />
+    <entry file="file://$PROJECT_DIR$/practiceHTML.html" />
+    <entry file="file://$PROJECT_DIR$/practiceHTML1.html" />
     <entry file="file://$PROJECT_DIR$/uber/templates/uber/userDriverInfo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -876,24 +701,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/driverUserInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uber/templates/uber/driverSignUp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2727">
           <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/userSignUp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="221" column="27" lean-forward="false" selection-start-line="221" selection-start-column="27" selection-end-line="221" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -937,13 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="267" column="157" lean-forward="false" selection-start-line="267" selection-start-column="157" selection-end-line="267" selection-end-column="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminHomePage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1010,52 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/userHomePage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13203">
-          <caret line="489" column="34" lean-forward="false" selection-start-line="489" selection-start-column="34" selection-end-line="489" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2133">
-          <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminSignUp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/templates/uber/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#h2#0;n#label#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#h2#0;n#label#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#h2#0;n#label#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uber/templates/uber/userCarInfo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1539">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,14 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/views1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1088,303 +842,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1605051_1705052.txt">
+    <entry file="file://$PROJECT_DIR$/1605051_1705052.txt" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_2.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10017">
-          <caret line="371" column="4" lean-forward="false" selection-start-line="371" selection-start-column="4" selection-end-line="371" selection-end-column="4" />
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="278" column="14" lean-forward="false" selection-start-line="278" selection-start-column="14" selection-end-line="278" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="2194" column="27" lean-forward="false" selection-start-line="2194" selection-start-column="27" selection-end-line="2194" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/views1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/static/uber/js/main.js" />
+    <entry file="file://$PROJECT_DIR$/uber/static/uber/signup-image.jpg" />
+    <entry file="file://$PROJECT_DIR$/uber/static/uber/css/main.css" />
+    <entry file="file://$PROJECT_DIR$/uber/static/uber/index.html" />
+    <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminHomePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/templates/uber/userSignUp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7317">
+          <caret line="281" column="25" lean-forward="false" selection-start-line="281" selection-start-column="25" selection-end-line="281" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminSignUp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UBER_PROJECT/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="80" column="16" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+        <state relative-caret-position="3375">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uber/views.py">
+    <entry file="file://$PROJECT_DIR$/uber/templates/uber/userHomePage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59022">
-          <caret line="2194" column="27" lean-forward="false" selection-start-line="2194" selection-start-column="27" selection-end-line="2194" selection-end-column="27" />
-          <folding>
-            <element signature="e#249#307#0" expanded="true" />
-            <marker date="1664741056915" expanded="true" signature="753:779" ph="SELECT ADMIN... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="1577:1694" ph="SELECT FIRST... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="1577:1739" ph="SELECT FIRST... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="1577:1765" ph="SELECT FIRST... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="1577:1776" ph="SELECT FIRST... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="3673:3705" ph="SELECT USERN... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="3673:3742" ph="SELECT USERN... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="3673:3752" ph="SELECT USERN... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="3825:3878" ph="SELECT USERN... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="4537:4596" ph="SELECT * FRO... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="5089:5139" ph="SELECT EMAIL... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="5089:5159" ph="SELECT EMAIL... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="5231:5275" ph="SELECT EMAIL... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="6972:7003" ph="UPDATE ADMIN... " />
-            <marker date="1664741056915" expanded="true" signature="6972:7026" ph="UPDATE ADMIN... " />
-            <marker date="1664741056915" expanded="true" signature="6972:7114" ph="UPDATE ADMIN... " />
-            <marker date="1664741056915" expanded="true" signature="6972:7122" ph="UPDATE ADMIN... " />
-            <marker date="1664741056915" expanded="true" signature="6972:7215" ph="UPDATE ADMIN... " />
-            <marker date="1664741056915" expanded="true" signature="6972:7242" ph="UPDATE ADMIN... " />
-            <marker date="1664741056915" expanded="true" signature="7403:7692" ph="INSERT INTO ADMIN... " />
-            <marker date="1664741056915" expanded="true" signature="7885:7938" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="8061:8138" ph="UPDATE MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="8239:8317" ph="INSERT INTO MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="9124:9177" ph="SELECT _ID F... " />
-            <marker date="1664741056915" expanded="true" signature="9274:9340" ph="SELECT DRIVE... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="9437:9484" ph="SELECT DRIVE... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="9574:9626" ph="SELECT PASSW... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="10400:10445" ph="SELECT * FRO... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="10741:10807" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="11086:11186" ph="SELECT LATIT... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="11347:11514" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="12226:12371" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="13202:13402" ph="SELECT FIRST... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="15240:15320" ph="SELECT USERN... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="15419:15436" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="15419:15446" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="15419:15469" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="15419:15470" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="16104:16163" ph="SELECT * FRO... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="16655:16726" ph="SELECT EMAIL... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="16795:16842" ph="SELECT EMAIL... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="16821:16842" ph="SELECT EMAIL... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="18517:18788" ph="UPDATE DRIVER... " />
-            <marker date="1664741056915" expanded="true" signature="18949:19202" ph="INSERT INTO DRIVER... " />
-            <marker date="1664741056915" expanded="true" signature="19368:19423" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="19545:19582" ph="UPDATE MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="19545:19620" ph="UPDATE MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="19720:19797" ph="INSERT INTO MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="20553:20755" ph="SELECT FIRST... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="22598:22680" ph="SELECT USERN... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="22752:22806" ph="SELECT USERN... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="23464:23523" ph="SELECT * FRO... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="24015:24088" ph="SELECT EMAIL... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="24159:24204" ph="SELECT EMAIL... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="25882:26155" ph="UPDATE ADMIN... " />
-            <marker date="1664741056915" expanded="true" signature="26321:26572" ph="INSERT INTO DRIVER... " />
-            <marker date="1664741056915" expanded="true" signature="26743:26798" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="26922:27001" ph="UPDATE MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="27103:27184" ph="INSERT INTO MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="27946:27991" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="27946:28001" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="27946:28027" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="28098:28156" ph="SELECT USER_... " />
-            <marker date="1664741056915" expanded="true" signature="28098:28163" ph="SELECT USER_... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="28260:28304" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="28260:28309" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="28399:28452" ph="SELECT PASSW... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="29483:29538" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="29635:29702" ph="SELECT USER_... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="29799:29848" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="29938:29993" ph="SELECT PASSW... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="30836:30876" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="30836:30880" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="30836:30882" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="31186:31250" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="31522:31622" ph="SELECT LATIT... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="31730:31769" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="31730:31779" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="31730:31804" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="31730:31835" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="31730:31861" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="32096:32144" ph="SELECT * FRO... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="32515:32528" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="32515:32587" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="32515:32606" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="32755:32776" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="32755:32835" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="33115:33164" ph="SELECT * FRO... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="33266:33292" ph="SELECT * FRO... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="33266:33298" ph="SELECT * FRO... MOBILE" />
-            <marker date="1664741056915" expanded="true" signature="33266:33335" ph="SELECT * FRO... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="33506:33523" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="33506:33552" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="33681:33795" ph="SELECT MESSA... MESSAGES" />
-            <marker date="1664741056915" expanded="true" signature="33681:33837" ph="SELECT MESSA... MESSAGES" />
-            <marker date="1664741056915" expanded="true" signature="34270:34342" ph="SELECT CITY LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="34270:34370" ph="SELECT STREE... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="34632:34733" ph="SELECT STREE... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="35381:35429" ph="SELECT * FRO... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="35817:35883" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="36162:36262" ph="SELECT LATIT... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="36369:36406" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="36369:36414" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="36644:36671" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="36644:36683" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="36644:36693" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="36644:36714" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="36918:36964" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="37088:37152" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="37780:37880" ph="SELECT STREE... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="38148:38248" ph="SELECT STREE... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="38357:38513" ph="SELECT MESSA... MESSAGES" />
-            <marker date="1664741056915" expanded="true" signature="39013:39085" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="39013:39086" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="39013:39090" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="39013:39122" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="39013:39147" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="39440:39486" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="39611:39675" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="40335:40435" ph="SELECT STREE... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="40718:40818" ph="SELECT STREE... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="41398:41444" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="42451:42470" ph="INSERT INTO REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="42451:42561" ph="INSERT INTO REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="42451:42657" ph="INSERT INTO REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="43214:43253" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="43214:43297" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="43214:43316" ph="SELECT * FRO... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="43429:43469" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="43429:43479" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="43429:43493" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="43429:43514" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="43429:43580" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="44045:44102" ph="SELECT REQUE... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="44181:44243" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="44808:44865" ph="SELECT REQUE... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="44942:45004" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="45559:45602" ph="DELETE FROM APP_USER... " />
-            <marker date="1664741056915" expanded="true" signature="45559:45603" ph="DELETE FROM APP_USER... " />
-            <marker date="1664741056915" expanded="true" signature="45894:45940" ph="DELETE FROM APP_USER... " />
-            <marker date="1664741056915" expanded="true" signature="46233:46276" ph="DELETE FROM APP_USER... " />
-            <marker date="1664741056915" expanded="true" signature="47604:47651" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="47604:47660" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="48956:49133" ph="INSERT INTO CAR... " />
-            <marker date="1664741056915" expanded="true" signature="49292:49433" ph="INSERT INTO CAR... " />
-            <marker date="1664741056915" expanded="true" signature="50177:50223" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="51006:51080" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="51006:51090" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="51188:51203" ph="DELETE FROM CAR... " />
-            <marker date="1664741056915" expanded="true" signature="51188:51250" ph="DELETE FROM CAR... " />
-            <marker date="1664741056915" expanded="true" signature="51188:51261" ph="DELETE FROM CAR... " />
-            <marker date="1664741056915" expanded="true" signature="51556:51632" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="51758:51805" ph="SELECT * FRO... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="52065:52129" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-            <marker date="1664741056915" expanded="true" signature="52456:52556" ph="SELECT LATIT... LOCATION" />
-            <marker date="1664741056915" expanded="true" signature="53050:53108" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="53050:53127" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="53050:53133" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="53538:53562" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53571" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53592" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53604" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53609" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53620" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53647" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53651" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53672" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="53538:53682" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="54014:54071" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="54194:54216" ph="DELETE FROM CAR... " />
-            <marker date="1664741056915" expanded="true" signature="54194:54239" ph="DELETE FROM CAR... " />
-            <marker date="1664741056915" expanded="true" signature="54591:54634" ph="SELECT DRIVE... CAR" />
-            <marker date="1664741056915" expanded="true" signature="54591:54659" ph="SELECT DRIVE... CAR" />
-            <marker date="1664741056915" expanded="true" signature="54773:54827" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="54918:54942" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="54918:54977" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="55022:55058" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="55022:55079" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="55022:55089" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="55269:55292" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="55269:55314" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="55269:55362" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="55269:55369" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="56066:56120" ph="SELECT USER_... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="56216:56286" ph="UPDATE USER... " />
-            <marker date="1664741056915" expanded="true" signature="56216:56304" ph="UPDATE USER... " />
-            <marker date="1664741056915" expanded="true" signature="56216:56353" ph="UPDATE USER... " />
-            <marker date="1664741056915" expanded="true" signature="56454:56537" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="56998:57077" ph="SELECT REQUE... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="57175:57202" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="57175:57237" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="57585:57664" ph="SELECT REQUE... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="57769:57831" ph="UPDATE REQUEST... " />
-            <marker date="1664741056915" expanded="true" signature="58017:58073" ph="SELECT USER_... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="58169:58306" ph="UPDATE APP_USER... " />
-            <marker date="1664741056915" expanded="true" signature="58796:58828" ph="SELECT ADMIN... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="58796:58848" ph="SELECT ADMIN... ADMIN" />
-            <marker date="1664741056915" expanded="true" signature="58930:58996" ph="SELECT CAR_I... CAR" />
-            <marker date="1664741056915" expanded="true" signature="58930:59011" ph="SELECT CAR_I... CAR" />
-            <marker date="1664741056915" expanded="true" signature="58930:59030" ph="SELECT CAR_I... CAR" />
-            <marker date="1664741056915" expanded="true" signature="59176:59216" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="59176:59260" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="59689:59745" ph="SELECT DRIVE... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="59912:59989" ph="INSERT INTO MESSAGES... " />
-            <marker date="1664741056915" expanded="true" signature="59912:60047" ph="INSERT INTO MESSAGES... " />
-            <marker date="1664741056915" expanded="true" signature="60405:60457" ph="SELECT DRIVE... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="60620:60755" ph="INSERT INTO MESSAGES... " />
-            <marker date="1664741056915" expanded="true" signature="61273:61453" ph="SELECT END_T... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="61273:61489" ph="SELECT END_T... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="61273:61523" ph="SELECT END_T... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="61273:61542" ph="SELECT END_T... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="61662:61706" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="61662:61714" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="62135:62327" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="63058:63323" ph="SELECT END_T... REQUEST" />
-            <marker date="1664741056915" expanded="true" signature="63445:63499" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="63930:64114" ph="SELECT NVL(P... DRIVER" />
-            <marker date="1664741056915" expanded="true" signature="64686:64747" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="64686:64771" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="64872:64929" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="64872:64939" ph="UPDATE CAR... " />
-            <marker date="1664741056915" expanded="true" signature="65229:65309" ph="DELETE FROM MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="65229:65326" ph="DELETE FROM MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="65229:65351" ph="DELETE FROM MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="65430:65478" ph="UPDATE MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="65430:65525" ph="UPDATE MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="65832:65954" ph="DELETE FROM MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="66030:66123" ph="UPDATE MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="66434:66556" ph="DELETE FROM MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="66634:66731" ph="UPDATE MOBILE_NUMBERS... " />
-            <marker date="1664741056915" expanded="true" signature="67150:67298" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="67573:67720" ph="SELECT * FRO... CAR" />
-            <marker date="1664741056915" expanded="true" signature="68275:68320" ph="DELETE FROM CAR... " />
-            <marker date="1664741056915" expanded="true" signature="68713:68739" ph="SELECT NAME_... CAR" />
-            <marker date="1664741056915" expanded="true" signature="68713:68871" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="68713:68875" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="68713:68914" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="69206:69354" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="69206:69383" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="69850:69876" ph="DELETE FROM WHERE" />
-            <marker date="1664741056915" expanded="true" signature="69850:69894" ph="DELETE FROM APP_USER... " />
-            <marker date="1664741056915" expanded="true" signature="70285:70494" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="70786:70971" ph="SELECT USER_... APP_USER" />
-            <marker date="1664741056915" expanded="true" signature="71444:71488" ph="DELETE FROM APP_USER... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uber/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7506">
-          <caret line="278" column="14" lean-forward="false" selection-start-line="278" selection-start-column="14" selection-end-line="278" selection-end-column="14" />
-          <folding>
-            <marker date="1664741111729" expanded="true" signature="1533:1600" ph="SELECT * FRO... LOCATION" />
-            <marker date="1664741111729" expanded="true" signature="2861:2979" ph="INSERT INTO LOCATION... " />
-            <marker date="1664741111729" expanded="true" signature="3066:3133" ph="SELECT * FRO... LOCATION" />
-            <marker date="1664741111729" expanded="true" signature="6829:6893" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-            <marker date="1664741111729" expanded="true" signature="7226:7292" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-            <marker date="1664741111729" expanded="true" signature="7622:7687" ph="SELECT MOBIL... MOBILE_NUMBERS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        <state relative-caret-position="6588">
+          <caret line="244" column="18" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+        <state relative-caret-position="621">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/templates/uber/driverUserInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/templates/uber/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/templates/uber/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uber/static/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
           <folding />
         </state>
       </provider>

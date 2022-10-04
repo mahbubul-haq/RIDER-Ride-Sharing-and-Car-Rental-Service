@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  position: relative;
+  overflow: auto;
+}
+
+.topnav {
+  background-color: rgb(7, 168, 217);
+  /* box shadow at the bottom of the nav bar */
+  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 40px 0 40px;
+  height: 52px;
+}
+
+.nav-brand {
+  font-family: "Lobster", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links {
+  color: black;
+  text-decoration: none;
+  font-size: 120%;
+  margin: 0px 0 0 30px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.nav-links:hover {
+  color: rgb(243, 243, 243);
+  text-decoration: underline;
+}
+
+.main-body {
+  height: 100vh;
+  margin-top: -52px;
+  padding: 102px 70px 50px 70px;
+  overflow: hidden;
+  /* add background image from static files */
+
+  /* background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  background-color: rgb(222, 245, 248);
+}
+
+.main-container {
+  background-color: rgb(236, 249, 253);
+  border-radius: 2px;
+  /* add big significant box shadow around the main container */
+  box-shadow: 0 0 6px 4px rgb(159, 212, 238);
+}
+
+.main-body1 {
+  padding: 102px 70px 50px 70px;
+  background-color: rgb(222, 245, 248);
+  height: 100vh;
+  margin-top: -52px;
+  overflow: auto;
+}
+
+.main-container1 {
+  background-color: rgb(236, 249, 253);
+  border-radius: 2px;
+  /* add big significant box shadow around the main container */
+  box-shadow: 0 0 6px 4px rgb(159, 212, 238);
+  padding: 30px 30px 30px 30px;
+}
