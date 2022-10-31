@@ -2,152 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e78a50f-010f-4e9d-8517-47d7dfe61482" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/Login_v18.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/css/util.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/css/font-awesome.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/animated.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/core.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/fixed-width.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/font-awesome.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/icons.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/larger.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/list.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/mixins.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/path.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/screen-reader.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/stacked.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/less/variables.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_animated.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_core.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_icons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_larger.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_list.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_path.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/_variables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Black.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-BlackItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Bold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-BoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ExtraBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ExtraLight.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Italic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Light.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-LightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Medium.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-MediumItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-SemiBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-Thin.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/Montserrat-ThinItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/montserrat/OFL.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Black.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-BlackItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Bold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-BoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ExtraBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ExtraLight.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Italic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Light.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-LightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Medium.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-MediumItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-SemiBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-Thin.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/fonts/poppins/Poppins-ThinItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/2.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/bg-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/bg-02.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/icons/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/images/u.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/signup-image.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animate/animate.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animsition/css/animsition.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animsition/css/animsition.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animsition/js/animsition.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/animsition/js/animsition.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-grid.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-reboot.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/popper.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/popper.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/bootstrap/js/tooltip.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/countdowntime/countdowntime.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/css-hamburgers/hamburgers.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/css-hamburgers/hamburgers.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/daterangepicker/daterangepicker.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/daterangepicker/daterangepicker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/daterangepicker/moment.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/daterangepicker/moment.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/jquery/jquery-3.2.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/perfect-scrollbar/perfect-scrollbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/select2/select2.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/select2/select2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/select2/select2.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/static/uber/vendor/select2/select2.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminLogin.html" afterPath="$PROJECT_DIR$/uber/templates/uber/adminLogin.html" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" afterPath="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/base.html" afterPath="$PROJECT_DIR$/uber/templates/uber/base.html" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverLogin.html" afterPath="$PROJECT_DIR$/uber/templates/uber/driverLogin.html" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/index.html" afterPath="$PROJECT_DIR$/uber/templates/uber/index.html" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userLogin.html" afterPath="$PROJECT_DIR$/uber/templates/uber/userLogin.html" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userSignUp.html" afterPath="$PROJECT_DIR$/uber/templates/uber/userSignUp.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/uber/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/adminLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverSignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userHomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userSignUp.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,110 +40,6 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="driverUserInfo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/driverUserInfo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userHomePage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/userHomePage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6588">
-              <caret line="244" column="18" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UBER_PROJECT/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3375">
-              <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/static/css/base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console_3.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_3.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminSignUp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminSignUp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3078">
-              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminHomePage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/adminHomePage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2376">
-              <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userSignUp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uber/templates/uber/userSignUp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7317">
-              <caret line="281" column="25" lean-forward="false" selection-start-line="281" selection-start-column="25" selection-end-line="281" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -345,7 +105,6 @@
         <option value="$PROJECT_DIR$/uber/templates/uber/carInfoAdmin.html" />
         <option value="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" />
         <option value="$PROJECT_DIR$/uber/templates/uber/userHomePage.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console.sql" />
         <option value="$PROJECT_DIR$/UBER_PROJECT/settings.py" />
         <option value="$PROJECT_DIR$/uber/views.py" />
         <option value="$PROJECT_DIR$/uber/Functions.py" />
@@ -356,8 +115,14 @@
         <option value="$PROJECT_DIR$/uber/templates/uber/index.html" />
         <option value="$PROJECT_DIR$/uber/static/css/base.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_3.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console.sql" />
       </list>
     </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="UBER_PROJECT/invalid/Django" />
+    </ignored-facets>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -365,12 +130,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="1" />
     <option name="width" value="1900" />
     <option name="height" value="1053" />
   </component>
+  <component name="ProjectId" id="2GfelJKfk4Max0FPWIP5hVkk4qk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -387,6 +156,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -409,33 +180,25 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/djangoRest" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/MEGA/Level2Term2/CSE216/Project/UBER/UBER_PROJECT/venv1&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
   <component name="RunManager" selected="Python.practice">
     <configuration name="blob_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UBER_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -446,15 +209,18 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UBER_PROJECT" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../images/blob_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="geopy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UBER_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -465,15 +231,18 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UBER_PROJECT" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/geopy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="practice" type="PythonConfigurationType" factoryName="Python">
+      <module name="UBER_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -484,15 +253,18 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UBER_PROJECT" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/practice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="pyGeoPractice" type="PythonConfigurationType" factoryName="Python">
+      <module name="UBER_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -503,15 +275,18 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UBER_PROJECT" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyGeoPractice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UBER_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -522,15 +297,18 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UBER_PROJECT" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/uber/views.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="UBER_PROJECT" type="Python.DjangoServer" factoryName="Django server">
+      <module name="UBER_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -541,7 +319,6 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="UBER_PROJECT" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
       <option name="host" value="" />
@@ -551,26 +328,25 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method v="2" />
     </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Python.pyGeoPractice" />
-      <item index="1" class="java.lang.String" itemvalue="Django server.UBER_PROJECT" />
-      <item index="2" class="java.lang.String" itemvalue="Python.practice" />
-      <item index="3" class="java.lang.String" itemvalue="Python.geopy" />
-      <item index="4" class="java.lang.String" itemvalue="Python.blob_test" />
-      <item index="5" class="java.lang.String" itemvalue="Python.views" />
+    <list>
+      <item itemvalue="Django Server.UBER_PROJECT" />
+      <item itemvalue="Python.pyGeoPractice" />
+      <item itemvalue="Python.practice" />
+      <item itemvalue="Python.geopy" />
+      <item itemvalue="Python.blob_test" />
+      <item itemvalue="Python.views" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.views" />
-        <item index="1" class="java.lang.String" itemvalue="Python.blob_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.geopy" />
+      <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.blob_test" />
+        <item itemvalue="Python.geopy" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -581,33 +357,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604551061541</updated>
+      <workItem from="1666976537992" duration="4033000" />
+      <workItem from="1666981873159" duration="5658000" />
+      <workItem from="1667035000303" duration="2049000" />
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="1" width="1900" height="1053" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45057473" sideWeight="0.5292135" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5219072" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36509758" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28275862" sideWeight="0.49585062" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5672727" sideWeight="0.4707865" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5769697" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18902439" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5219072" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3648485" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4690909" sideWeight="0.4707865" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20454545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3736142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5769697" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -639,7 +417,7 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
@@ -649,29 +427,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -681,12 +441,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/uber/static/uber/css/rating.css" />
     <entry file="file://$PROJECT_DIR$/uber/static/uber/rating.css" />
     <entry file="file://$PROJECT_DIR$/rating.css" />
     <entry file="file://$PROJECT_DIR$/rating.html" />
@@ -828,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -886,15 +636,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
           <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uber/templates/uber/userSignUp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7317">
-          <caret line="281" column="25" lean-forward="false" selection-start-line="281" selection-start-column="25" selection-end-line="281" selection-end-column="25" />
-          <folding />
+          <caret line="282" column="25" lean-forward="false" selection-start-line="282" selection-start-column="25" selection-end-line="282" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -902,7 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3078">
           <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,7 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3375">
           <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6588">
           <caret line="244" column="18" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,14 +706,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_3.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
+          <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console_4.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db32fdd5-753b-4025-960e-8033b0acd8af/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="21" />
           <folding />
         </state>
       </provider>

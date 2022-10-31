@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>User</title>
@@ -11,454 +12,517 @@
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
 
     <!-- =====================end of map ============ -->
-
-
-    <style type="text/css">
-        label, input {
-            margin-left: 40%;
-        }
-        input[type=submit] {
-            margin-left: 60%;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-
-        a:hover{
-            background: #333333;
-            color: #f2f2f2;
-        }
-
-        /*============for map ============*/
-
-        html, body {
-            width:100%;
-            padding:0;
-            margin:0;
-        }
-
-        #lat, #lon {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #lat,
+        #lon {
             text-align: right;
         }
 
         .container {
-            width:50%;
-            max-width:980px;
-            padding:1% 2%;
-            margin:0 auto;
+            width: 50%;
+            max-width: 980px;
+            padding: 0;
+            margin: 0;
 
         }
+
         #map {
-            width:80%;
-            height: 60%;
-            padding:0;
-            margin:0;
+            width: 80%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+
         }
+
         .address {
-            cursor:pointer;
+            cursor: pointer;
         }
-        .address:hover{
+
+        .address:hover {
             color: #AA0000;
             text-decoration: underline;
         }
 
         @keyframes fade {
-            from {opacity: 0.3;}
+            from {
+                opacity: 0.3;
+            }
         }
 
         .blinking {
             animation: fade 2s infinite alternate;
-            color:#CCFF00;
+            color: #CCFF00;
         }
 
-        .noblink{
+        .noblink {}
 
-        }
-
-        /*=================end of map===============*/
-
-        /* Chat containers */
         .chatcontainer {
-          border: 2px solid #dedede;
-          background-color: #f1f1f1;
-          border-radius: 5px;
-          padding-top: 10px;
-          margin: 10px 0;
-          color:#000000;
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding-top: 10px;
+            margin: 10px 0;
+            color: #000000;
         }
 
         /* Darker chat container */
         .darker {
-          border-color: #ccc;
-          background-color: #000000;
+            border-color: #ccc;
+            background-color: #000000;
         }
 
         /* Clear floats */
         .chatcontainer::after {
-          content: "";
-          clear: both;
-          display: table;
+            content: "";
+            clear: both;
+            display: table;
         }
 
         /* Style images */
         .chatcontainer img {
-          float: left;
-          max-width: 60px;
+            float: left;
+            max-width: 60px;
             max-height: 60px;
             height: 60px;
             width: 60px;
 
-          margin-right: 20px;
-          border-radius: 50%;
+            margin-right: 20px;
+            border-radius: 50%;
         }
 
         /* Style the right image */
         .chatcontainer img.right {
-          float: right;
-          margin-left: 20px;
-          margin-right:0;
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
         }
 
         /* Style time text */
         .time-right {
-          float: right;
-          color: #aaa;
+            float: right;
+            color: #aaa;
         }
 
         /* Style time text */
         .time-left {
-          float: left;
-          color: #999;
+            float: left;
+            color: #999;
         }
 
         #message {
             border: 2px solid #ccc;
             border-radius: 5px;
-            color:#000000;
+            color: #000000;
         }
-
-        .Refresh {
-            display: inline-block;
-            float: right;
-            text-decoration: none;
-            height: 20px;
-            padding-bottom: 10px;
-            background: #5dd4ee;
-            color: #000;
-            margin-right: 10px;
-            border-radius: 3px;
-            font-family: Arial, "sans-serif";
-        }
-
-        .Refresh:hover{
-            background: #000;
-            color: #f2f2f2;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-
-        a:hover{
-            background: #333333;
-            color: #f2f2f2;
-        }
-
     </style>
+
 </head>
+
 <body>
 
 
-{% extends 'uber/base.html' %}
-{% block body %}
+    {% extends 'uber/base.html' %}
+    {% block body %}
 
-    <div class="showUserInfo" id = "showUserInfo" style="display: none;">
 
-        <div class="topnav">
-            <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-            <a href="#" onclick="Show()" style="float: right;">CLOSE</a>
+
+    <div class="showUserInfo" id="showUserInfo" style="display: none;">
+
+        <div class="topnav navbar d-flex align-items-center">
+            <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+            <a href="#" onclick="Show()" class="nav-links">Close</a>
+
+        </div>
+        <div class="text-center d-flex justify-content-center" style="width: 100%;">
+            <div class="user-driver-info"  style="font-size: 110%;">
+                <div class="h3 text-center mb-4" style="color: #067e52;;">Your Profile</div>
+                <div style="display: grid; grid-template-columns: 50% 50%" class="mb-2 mt-2">
+                    <div>
+                        <img style="width: 100%; height: 100%; object-fit: cover;" src="{{ userInfo.9 }}">
+                    </div>
+                    <div class="text-start ps-4" >
+
+                        {% if userInfo.2 %}
+                        {% if userInfo.3 %}
+                        <p class="h3">{{ userInfo.1 }} {{ userInfo.2 }} {{ userInfo.3 }}</p>
+                        {% else %}
+                        <p class="h3">{{ userInfo.1 }} {{ userInfo.2 }}</p>
+                        {% endif %}
+                        {% elif userInfo.3 %}
+                        <p class="h3">{{ userInfo.1 }} {{ userInfo.3 }}</p>
+                        {% else %}
+                        <p class="h3">{{ userInfo.1 }}</p>
+                        {% endif %}
+
+                        <p class="h6">Username: {{ userInfo.4 }}</p>
+
+                        <details>
+                            <summary>Show Password</summary>
+                            <p>Password: {{ userInfo.5 }}</p>
+                        </details>
+                        <p>Email: {{ userInfo.6 }}</p>
+                        <P>Date of Birth: {{ userInfo.10 }}</P>
+
+                        <p class="h6"> Mobile Number(s): </p>
+                        {% if userInfo.12|length == 1 %}
+                        {% for num in userInfo.12 %}
+                        <p>{{ num }}</p>
+                        {% endfor %}
+                        {% else %}
+
+                        {% for num in userInfo.12 %}
+                        <p>{{ num }} <a href="{% url 'uber:userDeleteMobile' num userInfo.0 %}"><b>delete</b></a></p>
+                        {% endfor %}
+                        {% endif %}
+                        <p>Address: {{ userInfo.13.2 }}</p>
+                    </div>
+
+                </div>
+                <hr>
+                    <!--=============================================================================change=======================================-->
+                   
+                    <div class="p-4 pb-0 d-flex gap-2 justify-content-start align-items-center">
+                    <form action="{% url 'uber:userSignUp' %}" method="post">
+                        {% csrf_token %}
+                        <input type="number" name="updateId" value="{{ userInfo.0 }}" style="display: none;">
+                        <input type="submit" value="Update Your Info" role="button" class="btn btn-success">
+                    </form>
+                    
+
+                    <form action="{% url 'uber:userDeleteAccount' userInfo.0 %}" method="post">
+                        {% csrf_token %}
+                        <input onclick="return confirm('Are you sure you want to delete your account?')" type="submit"
+                            value="Delete Account" role="button" class="btn btn-success">
+                    </form>
+
+                    <a href="{%  url 'uber:index' %}" role="button" class="btn btn-success">Log Out</a>
+                </div>
+
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="mainPage" style="">
+        <div class="topnav navbar d-flex align-items-center">
+            <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+            <a class="nav-links" style="margin-right: 30px;" href="{% url 'uber:userHomePage' userInfo.0 %}">
+                reload <i class="fa fa-refresh" aria-hidden="true"></i>
+            </a>
+            <a role="button" class="btn btn-success fw-bold custom-rent-car" href="{% url 'uber:rentCar' userInfo.0 %}">
+                Rent Car and Earn Money
+            </a>
+            <a class="nav-links" href="{% url 'uber:userRideHistory' userInfo.0 %}">Ride History</a>
+            <a class="nav-links" href="{% url 'uber:userCarInfo' userInfo.0 %}">My Cars</a>
+            <a class="nav-links nav-img-container" style="" href="#" onclick="Show1()"><img src="{{ userInfo.9 }}"
+                    class="img img-fluid nav-image" style=" border-radius:
+                    50%; box-shadow: 0 0 4px 0px #067e52" alt=" {{ userInfo.1 }}" title="profile"></a>
 
         </div>
 
-        <img src="{{ userInfo.9 }}" height="200" width="200"><br>
 
-        {% if userInfo.2 %}
-            {% if userInfo.3 %}
-                <p>Name: {{ userInfo.1 }} {{ userInfo.2 }} {{ userInfo.3 }}</p>
-            {% else %}
-                <p>Name: {{ userInfo.1 }} {{ userInfo.2 }}</p>
-            {% endif %}
-        {% elif userInfo.3 %}
-            <p>Name: {{ userInfo.1 }} {{ userInfo.3 }}</p>
-        {% else %}
-            <p>Name: {{ userInfo.1 }}</p>
-        {% endif %}
+        <section id="forForm" style="width: 100%; padding: 40px;">
 
-        <p>Username: {{ userInfo.4 }}</p>
+            {% if unratedData %}
+            <div class="user-unrated-data">
+                <p class="h5" style="color: #067e52; color: black; text-align: center;">You have completed these rides
+                    recently but have not
+                    rated yet!</p>
+                {% for data in unratedData %}
+                <div class="user-unrated-row">
 
-        <details>
-            <summary>Show Password</summary>
-            <p>Password: {{ userInfo.5 }}</p>
-        </details>
-        <p>Email: {{ userInfo.6 }}</p>
-        <P>Date of Birth: {{ userInfo.10 }}</P>
-
-        <p> Mobile Number(s): </p>
-        {% if userInfo.12|length == 1 %}
-            {% for num in userInfo.12 %}
-                <p>{{ num }}</p>
-            {% endfor %}
-        {% else %}
-
-            {% for num in userInfo.12 %}
-                <p>{{ num }} <a href="{% url 'uber:userDeleteMobile' num userInfo.0 %}"><b>delete</b></a></p>
-            {% endfor %}
-        {% endif %}
+                    <h3>{{ forloop.counter }}.</h3>
+                    <details>
+                        <summary class="h3">See ride Info</summary>
+                        <div class="">
+                            <div class="mb-4" style="display: grid; grid-template-columns: 20% 60% 20%;">
+                                <div></div>
+                                <div class="text-start" style="display: grid; grid-template-columns: 60% 40%;">
+                                    {% if data.8.9 %}
+                                    <div class="text-end">
+                                        <img src="{{ data.8.9 }}" height="200" width="200" style="height: 100%;">
+                                    </div>
 
 
+                                    {% endif %}
+                                    {% if data.8.7 %}
 
-        <!--=============================================================================change=======================================-->
-        <p>Address: {{ userInfo.13.2 }}</p>
-
-        <form action="{% url 'uber:userSignUp' %}" method="post">
-            {% csrf_token %}
-            <input type="number" name="updateId" value="{{ userInfo.0 }}" style="display: none;">
-            <input type="submit" value="Update Your Info">
-        </form>
-        <br><br>
-
-        <form action="{% url 'uber:userDeleteAccount' userInfo.0 %}" method="post">
-            {% csrf_token %}
-            <input onclick="return confirm('Are you sure you want to delete your account?')" type="submit" value="Delete Account">
-        </form>
+                                    <div class="text-start" style="padding-left: 20px;">
+                                        <p class="h4">{{ data.8.1 }}</p>
+                                        <p class="h5">{{ data.8.7 }} <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        </p>
+                                        <p>{{ data.8.8 }} ratings </p>
+                                    </div>
+                                    {% else %}
+                                    <div class="text-start">
+                                        <p class="h4">{{ data.8.1 }}</p>
+                                    </div>
 
 
-    </div>
-
-
-
-    <div id = "mainPage">
-
-    <div class="topnav">
-        <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-
-        <a style="padding: 10px 10px 10px 10px; float: right;" href="#" onclick="Show1()" style="float: right;"><img src="{{ userInfo.9 }}" style="width: 80px; height: 50px; border-radius: 50%; padding-left: 15px; padding-right: 15px; margin: 0 0 0 0;" alt="{{ userInfo.1 }}"></a>
-        <a href="{% url 'uber:index' %}" style="float: right;">LOG OUT</a>
-        <a href="{% url 'uber:userCarInfo' userInfo.0 %}" style="float: right;">YOUR CARS</a>
-        <a style="float: right;" href="{% url 'uber:userRideHistory' userInfo.0 %}">Ride History</a>
-
-
-    </div>
-    <a href="{% url 'uber:rentCar' userInfo.0 %}" style=" font-size: 250%; padding-left: 2%; display: block; font-weight: bold; font-family: Arial, sans-serif;"><p style=" font-size: 120%" class="blinking" style="display: inline;" ><b>RENT A CAR AND EARN MONEY!</b></p></a>
-    <br>
-
-    <section id="forForm">
-    <form action="{% url 'uber:userHomePage' userInfo.0 %}" method="post">
-        {% csrf_token %}
-        <input type="submit" value="Refresh">
-    </form>
-
-    {% if unratedData %}
-        <p>You have completed these rides recently but have not rated yet!</p>
-        {% for data in unratedData %}
-            <h3>{{ forloop.counter }}.</h3>
-            <details>
-                <summary>See ride Info:</summary>
-                <p>Rider Name: {{ data.8.1 }}</p>
-                {% if data.8.9 %}
-                    <img src="{{ data.8.9 }}" height="200" width="200">
-                {% endif %}
-                {% if data.8.7 %}
-                    <p>Rating: {{ data.8.7 }}({{ data.8.8 }} ratings) </p>
-                {% endif %}
-                <p>Start Time: {{ data.1 }}, End Time: {{ data.2 }}, Approx Fare: {{ data.5 }}</p>
-
-            </details>
-            <form action="{% url 'uber:userRateDriver' userInfo.0 data.0 data.8.0 %}" method="post">
-                {% csrf_token %}
-                <input type="submit" value="Rate Now!">
-            </form>
-
-            <form action="{% url 'uber:userCancelRate' userInfo.0 data.0 %}" method="post">
-                {% csrf_token %}
-                <input type="submit" value="I don't want to rate">
-            </form>
-
-        {% endfor %}
-    {% endif %}
-
-
-    {% if requestData %}
-        <form> <!-- dummy form -->
-        {% csrf_token %}
-        <input type="text" name="lat" id = "lat" size="30" value="" style="display: none;">
-        <input type = "text" name="lon" id="lon" size="30" value="30" style="display: none;">
-        <input type="text" name="destlat" id = "destlat" size="30" value="" style="display: none;">
-        <input type = "text" name="destlon" id="destlon" size="30" value="30" style="display: none;">
-        </form>
-
-        <!--newly added -->
-
-        <form action="{% url 'uber:userCancelRequest' requestData.0 userInfo.0 %}" method="post">
-            {% csrf_token %}
-            <input type="submit" value = "Cancel Request">
-        </form>
-
-        <!--newly added end -->
-
-        <h2 align="center"> Ride Info: </h2>
-        <!--=============================================================================change=======================================-->
-        <p>Pickup Location: {{ requestData.9.2 }}</p>
-        <p>Destination: {{ requestData.10.2 }}</p>
-
-        <b>See Pick up location and destionation in the map below</b> <br>
-        <b>Blue marker is the pick up point and green marker is the destination</b> </br>
-
-        <p style="font-size: 150%; font-weight: bolder;"> Approximate Fare: {{ requestData.5 }}</p>
-        <br>
-
-        {% if riderInfo %}
-
-            <div id="chatbox" style="height: 400px; width: 400px; overflow: auto; float: right; border: 3px solid #000; border-radius: 3px; background: rgba(192,229,228,0.03);position: relative;">
-                {% if messages %}
-                    {% for message in messages %}
-                        {% if message.1 %}
-                            <div class="chatcontainer">
-                                  <img src="{{ riderInfo.9 }}" alt="Driver">
-                                <p style="color: #000000; opacity: 1.5;"><b>{{ message.0 }}</b></p>
-                                  <span class="time-left">{{ message.2 }}</span>
+                                    {% endif %}
+                                </div>
+                                <div></div>
                             </div>
-                        {% else %}
-                            <div class="chatcontainer darker">
-                                  <img src="{{ userInfo.9 }}" alt="You" class="right">
-                                  <p style="color: #FF0000">{{ message.0 }}</p>
-                                  <span class="time-left">{{ message.2 }}</span>
+                            <div class="mb-3" style="display: grid; grid-template-columns: 33% 33% 33%;">
+                                <div>
+                                    <b>Start Time:</b> {{ data.1 }}
+                                </div>
+                                <div>
+                                    <b>End Time:</b> {{ data.2 }}
+                                </div>
+                                <div>
+                                    <b>Fare:</b> {{ data.5 }}
+                                </div>
                             </div>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
+                        </div>
 
-                <div >
-                    <textarea form="chatform" id="message" name="message" rows="4" cols="40" placeholder="type new message here" maxlength="500"></textarea>
-
-                    <a class="Refresh" href="{% url 'uber:userHomePage' userInfo.0 %}">Reload</a>
-
-                    <form id = "chatform" action="{% url 'uber:userMessageDriver' userInfo.0 riderInfo.0 %}" method="post">
+                    </details>
+                    <form action="{% url 'uber:userRateDriver' userInfo.0 data.0 data.8.0 %}" method="post">
                         {% csrf_token %}
-                        <input style="float: right;" type="submit" value="Send">
+                        <input type="submit" role="button" class="btn btn-outline-success" value="Rate Now!">
+                    </form>
+
+                    <form action="{% url 'uber:userCancelRate' userInfo.0 data.0 %}" method="post">
+                        {% csrf_token %}
+                        <input type="submit" role="button" class="btn btn-outline-success" value="I don't want to rate">
                     </form>
                 </div>
 
+                {% endfor %}
             </div>
+            {% endif %}
 
-            <!--end of chatbox-->
 
-            <p> We have got a rider for you!</p>
-            <details>
-                    <summary>Show Car & Rider Info</summary>
-                    <p>Name: {{ riderInfo.1 }}</p>
-                    {% if riderInfo.8 %}
-                        <p>Rating: {{ riderInfo.7 }} / {{ riderInfo.8 }}({{ riderInfo.8}} ratings)</p>
-                    {% else %}
-                        <p>Rating: New Rider!</p>
-                    {% endif %}
-                    <p> Mobile Number(s): </p>
-                    {% for num in riderInfo.12 %}
-                        <p>{{ num }}</p>
+            <div class="ride-request">
+                {% if requestData %}
+                <form>
+                    <!-- dummy form -->
+                    {% csrf_token %}
+                    <input type="text" name="lat" id="lat" size="30" value="" style="display: none;">
+                    <input type="text" name="lon" id="lon" size="30" value="30" style="display: none;">
+                    <input type="text" name="destlat" id="destlat" size="30" value="" style="display: none;">
+                    <input type="text" name="destlon" id="destlon" size="30" value="30" style="display: none;">
+                </form>
+
+                <!--newly added -->
+
+
+
+                <!--newly added end -->
+
+                <h2 class="text-center"> Ride Info </h2>
+                <!--=============================================================================change=======================================-->
+                <p class="fs-5"><b>Pickup Location:</b> {{ requestData.9.2 }}</p>
+                <p class="fs-5"> <b>Destination:</b> {{ requestData.10.2 }}</p>
+
+                <p class="text-center text-success mb-0 fs-5">See Pick up location and destionation in the map</p>
+                <p class="text-center text-success mt-0 fs-5">Blue marker is the pick up point and green marker is the
+                    destination</p>
+
+                <p style="font-size: 150%; font-weight: bold; text-align: center;"> <b>Approximate Fare:</b>
+                    {{requestData.5 }}</p>
+
+                <div class="text-center mt-0">
+                    <form action="{% url 'uber:userCancelRequest' requestData.0 userInfo.0 %}" method="post">
+                        {% csrf_token %}
+                        <input role="button" class="btn btn-success" type="submit" value="Cancel Request">
+                    </form>
+                </div>
+
+
+
+                {% if riderInfo %}
+
+                <div class="got-a-rider"
+                    style="display: grid; grid-template-columns: auto 400px; margin-top: 30px; width: 181.7%; box-shadow: 0 0px 30px 0px rgba(63, 63, 91, 0.258); padding: 30px; margin-top: 80px;">
+
+                    <div class="order-2" id="chatbox"
+                        style="height: 400px; width: 100%; overflow: auto;border: 2px solid #067e52; border-radius: 3px; position: relative; padding: 5px 5px 0 5px;">
+
+                        <div style="">
+                            {% if messages %}
+                            {% for message in messages %}
+                            {% if message.1 %}
+                            <div class="chatcontainer" style="padding: 5px;">
+                                <img src="{{ riderInfo.9 }}" alt="Driver">
+                                <p style="color: #000000; opacity: 1.5;"><b>{{ message.0 }}</b></p>
+                                <span class="time-left">{{ message.2 }}</span>
+                            </div>
+                            {% else %}
+                            <div class="chatcontainer darker" style="padding: 5px; background-color: #067e52;">
+                                <img src="{{ userInfo.9 }}" alt="You" class="right">
+                                <p style="color: #ffffff">{{ message.0 }}</p>
+                                <span class="time-left">{{ message.2 }}</span>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                        </div>
+
+                        <div class="" style=" position: sticky; bottom: 0; background-color: white;">
+                            <textarea form="chatform" id="message" name="message" rows="4" cols="40"
+                                placeholder="type new message here" maxlength="500"
+                                style="width: 100%; height: 80px;"></textarea>
+                            <div class="d-flex justify-content-end" style="width: 100%; padding: 5px 0px 5px 0px;">
+                                <a class="Refresh btn btn-success btn-sm" role="button"
+                                    href="{% url 'uber:userHomePage' userInfo.0 %}">Reload</a>
+
+                                <form id="chatform" action="{% url 'uber:userMessageDriver' userInfo.0 riderInfo.0 %}"
+                                    method="post">
+                                    {% csrf_token %}
+                                    <input role="button" class="btn btn-success btn-sm"
+                                        style="float: right; margin-left: 5px;" type="submit" value="Send">
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--end of chatbox-->
+
+
+                    <div>
+                        <p class="text-center fs-5 fw-semibold" style="margin-top: 0px;"> We have got a rider for you!
+                        </p>
+                        <div
+                            style="display: grid; grid-template-columns: 40% 60%; margin-top: 0px; padding-top: 25px;  ">
+                            <div style="padding: 10px;">
+                                <p class="h5 text-center">Driver Info</p>
+                                <p class="text-center">Name: {{ riderInfo.1 }}</p>
+                                {% if riderInfo.8 %}
+                                <p class="text-center">Rating: {{ riderInfo.7 }} / {{ riderInfo.8 }}({{ riderInfo.8}}
+                                    ratings)</p>
+                                {% else %}
+                                <p class="text-center">Rating: New Rider!</p>
+                                {% endif %}
+                                <p class="text-center"> Mobile Number(s): </p>
+                                {% for num in riderInfo.12 %}
+                                <p class="text-center">{{ num }}</p>
+                                {% endfor %}
+                            </div>
+                            <div>
+
+                                <p class="h5 text-center">Car Info </p>
+
+                                {% if car.3 %}
+                                <div class="text-center"><img class="" src="{{ car.3 }}"
+                                        style="width: 250px; height: auto;"></div>
+                                {% endif %}
+
+                                <p class="text-center">Nameplate: {{ car.0 }}</p>
+                                {% if car.1 %}
+                                <p class="text-center"> Model: {{ car.1 }}</p>
+                                {% endif %}
+
+                                {% if car.2 %}
+                                <p class="text-center"> Color: {{ car.2 }}</p>
+                                {% endif %}
+                                {% if car.6 %}
+                                <!-- <p class="text-center"> Insurace Type : {{ car.6 }}</p>
+                            {% endif %}
+                            {% if car.7 %}
+                            <p class="text-center"> Insurace Start date: {{ car.7 }}</p>
+                            <p class="text-center"> Insurace End date: {{ car.8 }}</p> -->
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                {% else %}
+                <p id="riderSearch">We are searching a rider for you...</p>
+                <p style="display: none;" id="showTimeOut"><b>Sorry, there is no available rider around you! <br />
+                        Please
+                        refresh the page.</b></p>
+                <progress style="width: 100%; height: 10px; background-color: #067e52; color: red; border-radius: 5px;"
+                    id='progressbar' value='' max='600'></progress>
+
+                {% endif %}
+
+                {% else %}
+                <div class="need-ride">
+
+                    <h2 class="text-center"> Need a ride?</h2>
+                    <b class="text-center fs-5" style="color: #067e52;"> Select pick up location and destination
+                        location
+                        from the map.</b>
+                    <b class="text-center fs-5" style="color: #067e52;"> *Drag blue marker to Pick up location and green
+                        marker to destination location</b> <br>
+                    {% for error in errorLst %}
+                    <p>{{ error }}</p>
                     {% endfor %}
 
-                    <p>Car Info: </p>
+                    <form class="text-center" action="{% url 'uber:newRequest' userInfo.0 %}" method="post">
+                        {% csrf_token %}
 
-                    {% if car.3 %}
-                        <img src="{{ car.3 }}" height="200" width="200">
-                    {% endif %}
+                        <input type="text" name="lat" id="lat" size="30" value="" style="display: none;">
+                        <input type="text" name="lon" id="lon" size="30" value="30" style="display: none;">
+                        <input type="text" name="destlat" id="destlat" size="30" value="" style="display: none;">
+                        <input type="text" name="destlon" id="destlon" size="30" value="30" style="display: none;">
 
-                    <p>Nameplate: {{ car.0 }}</p>
-                    {% if car.1 %}
-                        <p> Model: {{ car.1 }}</p>
-                    {% endif %}
+                        <input role="button" class="btn btn-success" style="margin-left: 0%;" type="submit"
+                            value="Send Request">
 
-                    {% if car.2 %}
-                        <p> Color: {{ car.2 }}</p>
-                    {% endif %}
-                    {% if car.6 %}
-                        <p> Insurace Type : {{ car.6 }}</p>
-                    {% endif %}
-                    {% if car.7 %}
-                        <p> Insurace Start date: {{ car.7 }}</p>
-                        <p> Insurace End date: {{ car.8 }}</p>
-                    {% endif %}
+                    </form>
+                </div>
 
-                </details>
-        {% else %}
-            <p id="riderSearch">We are searching a rider for you...</p>
-            <p style="display: none;" id = "showTimeOut"><b>Sorry, there is no available rider around you! <br/> Please refresh the page.</b></p>
-            <progress id ='progressbar' value = '' max = '600'></progress>
+                {% endif %}
+            </div>
+            <!-- ================for map================= -->
 
-        {% endif %}
+            <div style="float:right;" class="user-map-container">
+                <div class="container">
 
-    {% else %}
-        <h2 align="center"> Wanna Go Somewhere?</h2>
-        <h2 align="center"> Need a ride?</h2>
-        <b> Select Pick up location and destination location from the map below</b> <br>
-        <b> *Drag blue marker to Pick up location and green marker to destination location</b> <br>
-        {% for error in errorLst %}
-            <p>{{ error }}</p>
-        {% endfor %}
+                    <p id="addr_lookup" class="text-center h5">Address Lookup</p>
 
-        <form action="{% url 'uber:newRequest' userInfo.0 %}" method="post">
-            {% csrf_token %}
+                    <div id="search" class="row mb-2">
+                        <div class="col col-8">
+                            <input class="form-control" type="text" name="addr" id="addr" value=""
+                                placeholder="enter pickup location">
+                        </div>
+                        <button class="btn btn-success col-4" type="button" onclick="addr_search(1);"> Search Pick up
+                            Point</button>
+                        <div id="results">
 
-            <input type="text" name="lat" id = "lat" size="30" value="" style="display: none;">
-            <input type = "text" name="lon" id="lon" size="30" value="30" style="display: none;">
-            <input type="text" name="destlat" id = "destlat" size="30" value="" style="display: none;">
-            <input type = "text" name="destlon" id="destlon" size="30" value="30" style="display: none;">
+                        </div>
 
-            <input align="center" style="margin-left: 0%;" type ="submit" value = "Submit Request">
+                    </div>
 
-        </form>
+                    <div id="destsearch" class="row">
+                        <div class="col col-8">
+                            <input class="form-control" type="text" name="destaddr" id="destaddr" value=""
+                                placeholder="enter destination location">
+                        </div>
+                        <button class="btn btn-success col col-4" type="button" onclick="addr_search(2);"> Search
+                            Destination</button>
+                        <div id="destresults">
 
-    {% endif %}
-    <!-- ================for map================= -->
+                        </div>
 
-    <div class = "container">
+                    </div>
 
-        <b id="addr_lookup">Address Lookup</b>
 
-        <div id="search">
-            <input type = "text" name="addr" id = "addr" value="addr" size="58">
-            <button type="button" onclick="addr_search(1);"> Search Pick up Point</button>
-            <div id="results">
 
+                    <br />
+
+                    <div id="map" class="home-map" style="height: 300px; width: 100%; ">
+
+                    </div>
+
+                </div>
             </div>
 
-        </div>
+            <!-- ======================= end of map ================-->
 
-        <div id="destsearch">
-            <input type = "text" name="destaddr" id = "destaddr" value="destaddr" size="58">
-            <button type="button" onclick="addr_search(2);"> Search Destination</button>
-            <div id="destresults">
-
-            </div>
-
-        </div>
-
-
-
-        <br/>
-
-        <div id="map">
-
-        </div>
-
-    </div>
-
-    <!-- ======================= end of map ================-->
-
-    </section>
+        </section>
     </div> <!-- ===================== end of mainPage ==========-->
 
     <script type="text/javascript">
@@ -466,31 +530,31 @@
 
         /* ====================for map================*/
 
-        var startLat=23.72951605;
-        var startLon=90.38224222;
+        var startLat = 23.72951605;
+        var startLon = 90.38224222;
         var destStartLat = 23.74707065;
         var destStartLon = 90.37574651;
 
         {% if pickupLoc %}
-            startLat = {{ pickupLoc.0 }};
-            startLon = {{ pickupLoc.1 }};
-            destStartLat = {{ destLoc.0 }};
-            destStartLon = {{ destLoc.1 }};
+        startLat = {{ pickupLoc.0 }};
+        startLon = {{ pickupLoc.1 }};
+        destStartLat = {{ destLoc.0 }};
+        destStartLon = {{ destLoc.1 }};
         {% endif %}
 
 
         {% if requestData %}
-            startLat = {{ requestData.9.1 }};
-            startLon = {{ requestData.9.0 }};
-            destStartLat = {{ requestData.10.1 }};
-            destStartLon = {{ requestData.10.0 }};
-            document.getElementById("search").style.display= 'none';
-            document.getElementById("destsearch").style.display='none';
-            document.getElementById("addr_lookup").style.display='none';
-            {% if not riderInfo %}
-                updateProgress();
-                setInterval(updateProgress, 1000);
-            {% endif %}
+        startLat = {{ requestData.9.1 }};
+        startLon = {{ requestData.9.0 }};
+        destStartLat = {{ requestData.10.1 }};
+        destStartLon = {{ requestData.10.0 }};
+        document.getElementById("search").style.display = 'none';
+        document.getElementById("destsearch").style.display = 'none';
+        document.getElementById("addr_lookup").style.display = 'none';
+        {% if not riderInfo %}
+        updateProgress();
+        setInterval(updateProgress, 1000);
+        {% endif %}
         {% endif %}
 
         var options = {
@@ -498,159 +562,159 @@
             zoom: 12
         };
 
-        document.getElementById('lat').value=startLat;
-        document.getElementById('lon').value=startLon;
+        document.getElementById('lat').value = startLat;
+        document.getElementById('lon').value = startLon;
 
-        document.getElementById('destlat').value=destStartLat;
-        document.getElementById('destlon').value=destStartLon;
+        document.getElementById('destlat').value = destStartLat;
+        document.getElementById('destlon').value = destStartLon;
 
-        var map=L.map('map', options);
+        var map = L.map('map', options);
         var nzoom = 12;
 
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OSM'}).addTo(map);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: 'OSM' }).addTo(map);
 
         var greenIcon = new L.Icon({
-              iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-              shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-              iconSize: [25, 41],
-              iconAnchor: [12, 41],
-              popupAnchor: [1, -34],
-              shadowSize: [41, 41]
-            });
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
 
 
 
-        var myMarker1 = L.marker([destStartLat, destStartLon], {title: "Destination", alt: "Destination", draggable:true, icon:greenIcon}).addTo(map).on('dragend', function() {
-            var destlat=myMarker1.getLatLng().lat.toFixed(8);
-             var destlon = myMarker1.getLatLng().lng.toFixed(8);
-             var czoom = map.getZoom();
-             //if (czoom < 18) {nzoom = czoom;}
-             //if (nzoom > 18) {nzoom = 18; }
-             nzoom =czoom;
-             if (czoom != 9) {
-                 map.setView([destlat, destlon], nzoom);
-             }
-             else {
-                 map.setView([destlat, destlon],nzoom);
-             }
+        var myMarker1 = L.marker([destStartLat, destStartLon], { title: "Destination", alt: "Destination", draggable: true, icon: greenIcon }).addTo(map).on('dragend', function () {
+            var destlat = myMarker1.getLatLng().lat.toFixed(8);
+            var destlon = myMarker1.getLatLng().lng.toFixed(8);
+            var czoom = map.getZoom();
+            //if (czoom < 18) {nzoom = czoom;}
+            //if (nzoom > 18) {nzoom = 18; }
+            nzoom = czoom;
+            if (czoom != 9) {
+                map.setView([destlat, destlon], nzoom);
+            }
+            else {
+                map.setView([destlat, destlon], nzoom);
+            }
 
-             document.getElementById('destlat').value=destlat;
-             document.getElementById('destlon').value=destlon;
-             myMarker1.bindPopup("Destination: <br />(" + destlat + ", " + destlon + ")").openPopup();
-         });
-
-
-         var myMarker = L.marker([startLat, startLon], {title: "Pick up Point", alt: "Pick up Point", draggable: true}).addTo(map).on('dragend', function() {
-             var lat=myMarker.getLatLng().lat.toFixed(8);
-             var lon = myMarker.getLatLng().lng.toFixed(8);
-             var czoom = map.getZoom();
-             //if (czoom < 18) {nzoom = czoom;}
-             //if (nzoom > 18) {nzoom = 18; }
-             nzoom =czoom;
-             if (czoom != 9) {
-                 map.setView([lat, lon], nzoom);
-             }
-             else {
-                 map.setView([lat, lon],nzoom);
-             }
-
-             document.getElementById('lat').value=lat;
-             document.getElementById('lon').value=lon;
-             myMarker.bindPopup("Pick Up Point: <br />(" + lat + ", " + lon + ")").openPopup();
-         });
+            document.getElementById('destlat').value = destlat;
+            document.getElementById('destlon').value = destlon;
+            myMarker1.bindPopup("Destination: <br />(" + destlat + ", " + destlon + ")").openPopup();
+        });
 
 
-         /*myMarker1.remove();
-        myMarker1.options.draggable = !myMarker1.options.draggable;
-        myMarker1.addTo(map);*/
+        var myMarker = L.marker([startLat, startLon], { title: "Pick up Point", alt: "Pick up Point", draggable: true }).addTo(map).on('dragend', function () {
+            var lat = myMarker.getLatLng().lat.toFixed(8);
+            var lon = myMarker.getLatLng().lng.toFixed(8);
+            var czoom = map.getZoom();
+            //if (czoom < 18) {nzoom = czoom;}
+            //if (nzoom > 18) {nzoom = 18; }
+            nzoom = czoom;
+            if (czoom != 9) {
+                map.setView([lat, lon], nzoom);
+            }
+            else {
+                map.setView([lat, lon], nzoom);
+            }
+
+            document.getElementById('lat').value = lat;
+            document.getElementById('lon').value = lon;
+            myMarker.bindPopup("Pick Up Point: <br />(" + lat + ", " + lon + ")").openPopup();
+        });
+
+
+        /*myMarker1.remove();
+       myMarker1.options.draggable = !myMarker1.options.draggable;
+       myMarker1.addTo(map);*/
 
         {% if requestData %}
-             myMarker1.remove();
-             myMarker1.options.draggable = false;
-             myMarker1.addTo(map);
+        myMarker1.remove();
+        myMarker1.options.draggable = false;
+        myMarker1.addTo(map);
 
-             myMarker.remove();
-             myMarker.options.draggable = false;
-             myMarker.addTo(map);
+        myMarker.remove();
+        myMarker.options.draggable = false;
+        myMarker.addTo(map);
         {% endif %}
 
 
-         function  chooseAddr(lat1, lng1, dest) {
-             if (dest == 1) {
-                 myMarker.closePopup();
-             }
-             else {
-                 myMarker1.closePopup();
-             }
+        function chooseAddr(lat1, lng1, dest) {
+            if (dest == 1) {
+                myMarker.closePopup();
+            }
+            else {
+                myMarker1.closePopup();
+            }
 
-             map.setView([lat1, lng1], map.getZoom());
-             if (dest == 1) myMarker.setLatLng([lat1, lng1]);
-             else myMarker1.setLatLng([lat1, lng1]);
+            map.setView([lat1, lng1], map.getZoom());
+            if (dest == 1) myMarker.setLatLng([lat1, lng1]);
+            else myMarker1.setLatLng([lat1, lng1]);
 
-             if (dest == 1) {
-                 lat = lat1.toFixed(8);
-                 lon=lng1.toFixed(8);
-                 document.getElementById('lat').value=lat;
-                 document.getElementById('lon').value=lon;
-                 myMarker.bindPopup("Pick Up Point: <br />(" + lat + ", " + lon + ")").openPopup();
-             }
-             else {
-                 destlat = lat1.toFixed(8);
-                 destlon=lng1.toFixed(8);
-                 document.getElementById('destlat').value=destlat;
-                 document.getElementById('destlon').value=destlon;
-                 myMarker1.bindPopup("Destination: <br />(" + destlat + ", " + destlon + ")").openPopup();
-             }
-         }
+            if (dest == 1) {
+                lat = lat1.toFixed(8);
+                lon = lng1.toFixed(8);
+                document.getElementById('lat').value = lat;
+                document.getElementById('lon').value = lon;
+                myMarker.bindPopup("Pick Up Point: <br />(" + lat + ", " + lon + ")").openPopup();
+            }
+            else {
+                destlat = lat1.toFixed(8);
+                destlon = lng1.toFixed(8);
+                document.getElementById('destlat').value = destlat;
+                document.getElementById('destlon').value = destlon;
+                myMarker1.bindPopup("Destination: <br />(" + destlat + ", " + destlon + ")").openPopup();
+            }
+        }
 
-         function myFunction(arr, dest) {
-             var out = "<br />";
-             var i;
+        function myFunction(arr, dest) {
+            var out = "<br />";
+            var i;
 
-             if (arr.length > 0) {
-                 for (i = 0; i < arr.length; i++) {
-                     out += "<div class='address' title='Show Location and Coordinates' onclick='chooseAddr(" + arr[i].lat + ", " + arr[i].lon + ", " + dest + ");return false;'>" + arr[i].display_name + "</div>";
-                 }
-                 if (dest == 1) document.getElementById('results').innerHTML = out;
-                 else document.getElementById('destresults').innerHTML = out;
-             }
-             else {
-                 if (dest == 1) document.getElementById('results').innerHTML = "Sorry, no results...";
-                 else document.getElementById('destresults').innerHTML = "Sorry, no results...";
-             }
-         }
+            if (arr.length > 0) {
+                for (i = 0; i < arr.length; i++) {
+                    out += "<div class='address' title='Show Location and Coordinates' onclick='chooseAddr(" + arr[i].lat + ", " + arr[i].lon + ", " + dest + ");return false;'>" + arr[i].display_name + "</div>";
+                }
+                if (dest == 1) document.getElementById('results').innerHTML = out;
+                else document.getElementById('destresults').innerHTML = out;
+            }
+            else {
+                if (dest == 1) document.getElementById('results').innerHTML = "Sorry, no results...";
+                else document.getElementById('destresults').innerHTML = "Sorry, no results...";
+            }
+        }
 
-         function addr_search(dest) {
-             var inp = document.getElementById("addr");
-             if (dest == 2) inp = document.getElementById("destaddr");
+        function addr_search(dest) {
+            var inp = document.getElementById("addr");
+            if (dest == 2) inp = document.getElementById("destaddr");
 
-             var xmlhttp = new XMLHttpRequest();
-             var url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + inp.value;
-             xmlhttp.onreadystatechange = function () {
-                 if (this.readyState == 4 && this.status == 200) {
-                     var myArr = JSON.parse(this.responseText);
-                     myFunction(myArr, dest);
-                 }
-             };
-             xmlhttp.open("GET", url, true);
-             xmlhttp.send();
-         }
+            var xmlhttp = new XMLHttpRequest();
+            var url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + inp.value;
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    myFunction(myArr, dest);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
 
         /* ===================== end of map ===================== */
 
         function updateProgress() {
             var curTime = new Date();
             var endTime = new Date({{ for_js }});
-            if (endTime > curTime) {
-                var diffMs = endTime - curTime;
-                diffMs = diffMs / 1000;
-                document.getElementById("progressbar").value=600 - diffMs;
-            }
-            else {
-                document.getElementById("progressbar").value = 600;
-                document.getElementById("showTimeOut").style.display = 'block';
-                 document.getElementById("riderSearch").style.display = 'none';
-            }
+        if (endTime > curTime) {
+            var diffMs = endTime - curTime;
+            diffMs = diffMs / 1000;
+            document.getElementById("progressbar").value = 600 - diffMs;
+        }
+        else {
+            document.getElementById("progressbar").value = 600;
+            document.getElementById("showTimeOut").style.display = 'block';
+            document.getElementById("riderSearch").style.display = 'none';
+        }
         }
 
         function Show() {
@@ -664,7 +728,7 @@
 
         }
 
-        window.onload=function () {
+        window.onload = function () {
             var objDiv = document.getElementById("chatbox");
             objDiv.scrollTop = objDiv.scrollHeight;
         }
@@ -672,7 +736,8 @@
     </script>
 
 
-{% endblock %}
+    {% endblock %}
 
 </body>
+
 </html>

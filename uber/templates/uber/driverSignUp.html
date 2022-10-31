@@ -1,7 +1,8 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
-	<title>Sign Up</title>
+    <title>Sign Up</title>
 
     <!-- ===================for map =================-->
     <!-- ================== map doesn't work for <!DOCTYPE html> -->
@@ -12,237 +13,315 @@
     <!-- =====================end of map ============ -->
 
     <style type="text/css">
-
-
         /*============for map ============*/
 
-        html, body {
-            width:100%;
-            padding:0;
-            margin:0;
+        html,
+        body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
         }
 
-        #lat, #lon {
+        #lat,
+        #lon {
             text-align: right;
         }
 
         .container {
-            width:50%;
-            max-width:980px;
-            padding:1% 2%;
-            margin:0 auto;
+            width: 50%;
+            max-width: 980px;
+            padding: 1% 2%;
+            margin: 0 auto;
 
         }
+
         #map {
-            width:80%;
+            width: 80%;
             height: 60%;
-            padding:0;
-            margin:0;
+            padding: 0;
+            margin: 0;
         }
+
         .address {
-            cursor:pointer;
+            cursor: pointer;
         }
-        .address:hover{
+
+        .address:hover {
             color: #AA0000;
             text-decoration: underline;
         }
 
         @keyframes fade {
-            from {opacity: 0.5;}
+            from {
+                opacity: 0.5;
+            }
         }
 
         .blinking {
             animation: fade 1s infinite alternate;
         }
 
-        .noblink{
-
-        }
+        .noblink {}
 
         /*=================end of map===============*/
-
     </style>
 
 </head>
+
 <body>
 
-{% extends 'uber/base.html' %}
+    {% extends 'uber/base.html' %}
+    {% load static %}
+
+    {% block body %}
+
+   
+
+    <div class="main-body1 text-center">
+        <div class="topnav navbar d-flex align-items-center">
+            <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+    
+            <a class="nav-links" href="{%  url 'uber:index' %}">Home</a>
+            {% if updateId %}
+            <a class="nav-links" href="{% url 'uber:driverHomePage' updateId %}">Go Back</a>
+            {% endif %}
+    
+        </div>
+        <!-- show image from static file -->
+        <div class="container-fluid main-container1" style="width: 85%; ">
+            <div class="row" style="">
+
+                <section id="forForm" class="col col-12">
 
 
-{% block body %}
+                    {% if not noError %}
 
-     <div class = "topnav">
-        <a href="{%  url 'uber:index' %}">HOME</a>
+                    {% if errorLst %}
+                    {% for error in errorLst %}
+                    {% if error %}
+                    <p style="color: rgb(177, 33, 33);"> {{ error }}</p>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    {% endif %}
 
-        {% if updateId %}
-            <a style="float: right;" href="{% url 'uber:driverHomePage' updateId %}">GO BACK</a>
-        {% endif %}
+
+                    <section id="signUp">
+
+                        <form class="row g-3" action="{% url 'uber:driverSignUp' %}" method="post"
+                            enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            <div class="col-12">
+                                {% if updateId %}
+                                <input type="number" name="updateId" value="{{ updateId }}" style="display: none;">
+                                <div class="h2 mb-4" style="color: #067e52;"> Update Your Info</div>
+                                {% else %}
+                                <div class="h2 mb-4" style="color: #067e52;"> Driver Sign Up</div>
+                                {% endif %}
+                            </div>
+
+                            <!-- <input type="file" id="imgupload" style="display:none" />
+                                    <label for='imgupload'> <button id="OpenImgUpload">Image Upload</button></label> -->
+
+                            <!-- show an image from static files static folder -->
+
+
+
+                            <div class="text-center col-12">
+                                <label class="text-center">
+                                    {% if inputLst.10 %}
+                                    <img id="signUpImage" src="{{ inputLst.10 }}"
+                                        style="cursor: pointer; height: 150px; width: 150px; border-radius: 50%;">
+                                    <input type="text" name="image" value="{{ inputLst.10 }}" style="display: none;">
+                                    {% else %}
+                                    <img id="signUpImage1" src="{% static 'images/dummy.webp' %}"
+                                        style="cursor: pointer;height: 150px; width: 150px; border-radius: 50%;">
+                                    {% endif %}
+                                    <br>
+                                    <div class="text-center"><input class="mt-2" type="file" name="document"
+                                            onchange="readURL(this);" style="display: none">
+                                        Upload Photo
+                                    </div>
+
+                                </label>
+                            </div>
+                            <div class="col-4 text-start">
+                                <label class="form-label" for="firstName"> First Name*</label>
+                                {% if errorLst %}
+                                <input class="form-control" type="text" name="firstName" id="firstName"
+                                    value="{{ inputLst.0 }}" required>
+                                {% else %}
+                                <input class="form-control" type="text" name="firstName" id="firstName" required>
+                                {% endif %}
+
+
+                            </div>
+                            <div class="col-4 text-start">
+                                <label class="form-label" for="middleName"> Middle Name</label>
+                                {% if errorLst %}
+                                <input class="form-control" type="text" name="middleName" id="middleName"
+                                    value="{{ inputLst.1 }}">
+                                {% else %}
+                                <input class="form-control" type="text" name="middleName" id="middleName">
+                                {% endif %}
+
+                            </div>
+                            <div class="col-4 text-start">
+                                <label class="form-label" for="lastName"> Last Name </label>
+                                {% if errorLst %}
+                                <input class="form-control" type="text" name="lastName" id="lastName"
+                                    value="{{ inputLst.2 }}">
+                                {% else %}
+                                <input class="form-control" type="text" name="lastName" id="lastName">
+                                {% endif %}
+
+                            </div>
+                            <div class="col-4 text-start">
+                                <label class="form-label" for="userName">Username* </label>
+                                {% if errorLst %}
+                                <input class="form-control" id="userName" type="text" name="userName"
+                                    value="{{ inputLst.3 }}" required>
+                                {% else %}
+                                <input class="form-control" id="userName" type="text" name="userName" required>
+                                {% endif %}
+
+                            </div>
+                            <div class="col-4 text-start">
+                                <label class="form-label" for="passWord"> Password* </label>
+                                {% if errorLst %}
+                                <input class="form-control" id="passWord" type="password" name="passWord"
+                                    value="{{ inputLst.4 }}" required>
+                                {% else %}
+                                <input class="form-control" id="passWord" type="password" name="passWord" required>
+                                {% endif %}
+
+                            </div>
+                            <div class="col-4 text-start">
+                                <label class="form-label" for="mobileNumber"> Mobile Number* </label>
+                                {% if errorLst %}
+                                <input class="form-control" id="mobileNumber" type="text" name="mobileNumber"
+                                    value="{{ inputLst.5 }}" required>
+                                {% else %}
+                                <input class="form-control" id="mobileNumber" type="text" name="mobileNumber" required>
+                                {% endif %}
+
+                            </div>
+                            <div class="col-6 text-start">
+
+
+                                <label class="form-label" for="email"> Email*</label>
+                                {% if errorLst %}
+                                <input class="form-control" id="email" type="email" name="email"
+                                    value="{{ inputLst.6 }}" required>
+                                {% else %}
+                                <input class="form-control" id="email" type="email" name="email" required>
+                                {% endif %}
+
+                            </div>
+                            <div class="col-6 text-start">
+                                <label class="form-label" for="birthDay"> Date of Birth*</label>
+                                {% if errorLst %}
+                                <input class="form-control" id="birthDay" type="date" name="birthDay"
+                                    value="{{ inputLst.7 }}" required>
+                                {% else %}
+                                <input class="form-control" id="birthDay" type="date" name="birthDay" required>
+                                {% endif %}
+
+                            </div>
+
+
+                            <!--needs to be designed later-->
+                            <!--this part is for location map-->
+
+
+                            <div class="container mt-4 d-flex justify-content-center vstack text-center">
+
+                                <div class=" h3 text-center mb-4"> Enter your current address </div>
+                                <div class="row mb-2">
+                                    <div class="col-6 text-start">
+                                        <label class="form-label" for="lat">
+                                            Address Latitude </label>
+
+                                        <input class="form-control" type="text" name="lat" id="lat" size="30" value="">
+                                    </div>
+                                    <div class="col-6 text-start">
+                                        <label class="form-label" for="lon">
+                                            Address Longitude </label>
+                                        <input class="form-control" type="text" name="lon" id="lon" size="30" value="">
+                                    </div>
+                                </div>
+
+                                <div id="row search mt-2 text-start d-flex justify-content-start vstack">
+                                    <div class="text-start"><label class="form-label text-start" for="addr">
+                                            Address </label></div>
+                                    <input class="form-control" type="text" name="addr" id="addr" value="" size="58"
+                                        placeholder="search address by location name">
+                                    <button class="color-button mt-2" type="button" onclick="addr_search();">
+                                        Search</button>
+                                    <div id="results">
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="h5"> Drag the blue marker to your location.</div>
+                                <div class="border border-2 rounded border-success border-radius-1" id="map"
+                                    style="height: 300px; width: 100%;">
+
+                                </div>
+
+
+                                <!--map ends here-->
+                            </div>
+
+
+
+                            {% if updateId %}
+                            <input role="button" class="color-button" type="submit" id="submit" value="Update" style="width: 100%; height: 50px;">
+                            {% else%}
+                            <input role="button" class="color-button" type="submit" id="submit" value="Sign Up" style="width: 100%; height: 50px;">
+                            {% endif %}
+
+
+                        </form>
+
+                    </section>
+                </section>
+            </div>
+        </div>
     </div>
-    <br><br><br>
-
-    <section id="forForm">
-
-
-        {% if not noError %}
-
-        {% if errorLst %}
-            {% for error in errorLst %}
-                {% if error %}
-                    <p> {{ error }}</p>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-        {% endif %}
-
-
-        <section id = "signUp">
-
-            <form action = "{% url 'uber:driverSignUp' %}" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-
-                {% if updateId %}
-                    <input type = "number" name="updateId" value="{{ updateId }}" style="display: none;">
-                {% endif %}
-
-                <p><h1>DRIVER SIGN UP</h1></p>
-                <br>
-
-                <label>
-                    Upload your image
-                    <input type="file" name="document">
-
-                    {% if inputLst.10 %}
-                        <img src="{{ inputLst.10 }}" width="200" height="200">
-                        <input type = "text" name="image" value="{{ inputLst.10 }}" style="display: none;">
-                        <br>
-                    {% endif %}
-
-                </label>
-
-                <label> First Name*:
-                    {% if errorLst %}
-                        <input type = "text" name="firstName" id = "firstName" value = "{{ inputLst.0 }}" required>
-                    {% else %}
-                        <input type = "text" name="firstName" id = "firstName" required>
-                    {% endif %}
-
-                </label>
-                <label> Middle Name:
-                    {% if errorLst %}
-                        <input type = "text" name="middleName" value = "{{ inputLst.1 }}">
-                    {% else %}
-                        <input type = "text" name="middleName">
-                    {% endif %}
-                </label>
-                <label> Last Name:
-                    {% if errorLst %}
-                        <input type = "text" name="lastName" value = "{{ inputLst.2 }}">
-                    {% else %}
-                        <input type = "text" name="lastName">
-                    {% endif %}
-                </label>
-
-                <label>Username*:
-                    {% if errorLst %}
-                        <input type = "text" name="userName" value = "{{ inputLst.3 }}" required>
-                    {% else %}
-                        <input type = "text" name="userName" required>
-                    {% endif %}
-                </label>
-
-                <label> Password*:
-                    {% if errorLst %}
-                        <input type = "password" name="passWord" value = "{{ inputLst.4 }}" required>
-                    {% else %}
-                        <input type = "password" name="passWord" required>
-                    {% endif %}
-                </label>
-
-                <label> Mobile Number*:
-                    {% if errorLst %}
-                        <input type = "text" name="mobileNumber" value = "{{ inputLst.5 }}" required>
-                    {% else %}
-                        <input type = "text" name="mobileNumber" required>
-                    {% endif %}
-                </label>
-
-                <label> Email*:
-                    {% if errorLst %}
-                        <input type = "email" name="email" value = "{{ inputLst.6 }}" required>
-                    {% else %}
-                        <input type = "email" name="email" required>
-                    {% endif %}
-                </label>
-
-                <label> Date of Birth*:
-                    {% if errorLst %}
-                        <input type = "date" name="birthDay" value = "{{ inputLst.7 }}" required>
-                    {% else %}
-                        <input type = "date" name="birthDay" required>
-                    {% endif %}
-                </label>
-
-
-                <!--needs to be designed later-->
-                <!--this part is for location map-->
-                <label>
-                    Your address coordinates*:
-
-                <input type="text" name="lat" id = "lat" size="30" value="">
-                <input type = "text" name="lon" id="lon" size="30" value="">
-                </label>
-
-                <div class = "container">
-
-                    <b> Enter your current address from the map below.</b> <br>
-
-                    <b>Search by Location Name</b>
-
-                    <div id="search">
-                        <input type = "text" name="addr" id = "addr" value="addr" size="58">
-                        <button type="button" onclick="addr_search();"> Search</button>
-                        <div id="results">
-
-                        </div>
-
-                    </div>
-
-                    <br/>
-                    <b> Drag the blue marker to your location.</b>
-                    <div id="map">
-
-                    </div>
-
-                </div>
-                <!--map ends here-->
-
-
-                {% if updateId %}
-                    <input type ="submit" id="submit" value="Update">
-                {% else%}
-                    <input type ="submit" id="submit" value="Sign Up">
-                {% endif %}
-
-
-            </form>
-
-        </section>
-    </section>
 
 
 
     <script type="text/javascript">
 
-
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#signUpImage1')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(150);
+                    $('#signUpImage')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(150);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 
         /*=====================for map========================*/
 
-        var startLat=23.72951605;
-        var startLon=90.38224222;
+        var startLat = 23.72951605;
+        var startLon = 90.38224222;
 
         {% if errorLst %}
-            startLat = {{ inputLst.8 }};
-            startLon = {{ inputLst.9 }};
+        startLat = {{ inputLst.8 }};
+        startLon = {{ inputLst.9 }};
         {% endif %}
 
         var options = {
@@ -250,85 +329,86 @@
             zoom: 9
         };
 
-        document.getElementById('lat').value=startLat;
-        document.getElementById('lon').value=startLon;
+        document.getElementById('lat').value = startLat;
+        document.getElementById('lon').value = startLon;
 
-        var map=L.map('map', options);
+        var map = L.map('map', options);
         var nzoom = 9;
 
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OSM'}).addTo(map);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: 'OSM' }).addTo(map);
 
-         var myMarker = L.marker([startLat, startLon], {title: "Your Location", alt: "Your Location", draggable: true}).addTo(map).on('dragend', function() {
-             var lat=myMarker.getLatLng().lat.toFixed(8);
-             var lon = myMarker.getLatLng().lng.toFixed(8);
-             var czoom = map.getZoom();
-             //if (czoom < 18) {nzoom = czoom;}
-             //if (nzoom > 18) {nzoom = 18; }
-             nzoom =czoom;
-             if (czoom != 9) {
-                 map.setView([lat, lon], nzoom);
-             }
-             else {
-                 map.setView([lat, lon],nzoom);
-             }
+        var myMarker = L.marker([startLat, startLon], { title: "Your Location", alt: "Your Location", draggable: true }).addTo(map).on('dragend', function () {
+            var lat = myMarker.getLatLng().lat.toFixed(8);
+            var lon = myMarker.getLatLng().lng.toFixed(8);
+            var czoom = map.getZoom();
+            //if (czoom < 18) {nzoom = czoom;}
+            //if (nzoom > 18) {nzoom = 18; }
+            nzoom = czoom;
+            if (czoom != 9) {
+                map.setView([lat, lon], nzoom);
+            }
+            else {
+                map.setView([lat, lon], nzoom);
+            }
 
-             document.getElementById('lat').value=lat;
-             document.getElementById('lon').value=lon;
-              myMarker.bindPopup("Your Location <br />(" + lat + ", " + lon + ")").openPopup();
-         });
+            document.getElementById('lat').value = lat;
+            document.getElementById('lon').value = lon;
+            myMarker.bindPopup("Your Location <br />(" + lat + ", " + lon + ")").openPopup();
+        });
 
-         function  chooseAddr(lat1, lng1) {
-             myMarker.closePopup();
-             map.setView([lat1, lng1], map.getZoom());
-             myMarker.setLatLng([lat1, lng1]);
-             lat = lat1.toFixed(8);
-             lon=lng1.toFixed(8);
+        function chooseAddr(lat1, lng1) {
+            myMarker.closePopup();
+            map.setView([lat1, lng1], map.getZoom());
+            myMarker.setLatLng([lat1, lng1]);
+            lat = lat1.toFixed(8);
+            lon = lng1.toFixed(8);
 
-             document.getElementById('lat').value=lat;
-             document.getElementById('lon').value=lon;
-             myMarker.bindPopup("Your Location <br />(" + lat + ", " + lon + ")").openPopup();
-         }
+            document.getElementById('lat').value = lat;
+            document.getElementById('lon').value = lon;
+            myMarker.bindPopup("Your Location <br />(" + lat + ", " + lon + ")").openPopup();
+        }
 
-         function myFunction(arr) {
-             var out = "<br />";
-             var i;
+        function myFunction(arr) {
+            var out = "<br />";
+            var i;
 
-             if (arr.length > 0) {
-                 for (i = 0; i < arr.length; i++) {
-                     out += "<div class='address' title='Show Location and Coordinates' onclick='chooseAddr(" + arr[i].lat + ", " + arr[i].lon + ");return false;'>" + arr[i].display_name + "</div>";
-                 }
-                 document.getElementById('results').innerHTML = out;
-             }
-             else {
-                 document.getElementById('results').innerHTML = "Sorry, no results...";
-             }
-         }
+            if (arr.length > 0) {
+                for (i = 0; i < arr.length; i++) {
+                    out += "<div class='address' title='Show Location and Coordinates' onclick='chooseAddr(" + arr[i].lat + ", " + arr[i].lon + ");return false;'>" + arr[i].display_name + "</div>";
+                }
+                document.getElementById('results').innerHTML = out;
+            }
+            else {
+                document.getElementById('results').innerHTML = "Sorry, no results...";
+            }
+        }
 
-         function addr_search() {
-             var inp = document.getElementById("addr");
-             var xmlhttp = new XMLHttpRequest();
-             var url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + inp.value;
-             xmlhttp.onreadystatechange = function () {
-                 if (this.readyState == 4 && this.status == 200) {
-                     var myArr = JSON.parse(this.responseText);
-                     myFunction(myArr);
-                 }
-             };
-             xmlhttp.open("GET", url, true);
-             xmlhttp.send();
-         }
+        function addr_search() {
+            var inp = document.getElementById("addr");
+            var xmlhttp = new XMLHttpRequest();
+            var url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + inp.value;
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    myFunction(myArr);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
 
-         function getLocation() {
-             document.getElementsByClassName("container")[0].style.display='block';
-         }
-         function ok() {
-             document.getElementsByClassName("container")[0].style.display='none';
-         }
+        function getLocation() {
+            document.getElementsByClassName("container")[0].style.display = 'block';
+        }
+        function ok() {
+            document.getElementsByClassName("container")[0].style.display = 'none';
+        }
          /*==========================end of map ==============*/
 
     </script>
 
-{% endblock %}
+    {% endblock %}
 
 </body>
+
 </html>

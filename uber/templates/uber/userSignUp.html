@@ -76,18 +76,19 @@
 
     {% block body %}
 
-    <div class="topnav navbar d-flex align-items-center">
-        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
-
-        <a class="nav-links" href="{%  url 'uber:index' %}">Home</a>
-        {% if updateId %}
-        <a class="nav-links" href="{% url 'uber:userHomePage' updateId %}">Go Back</a>
-        {% endif %}
-
-    </div>
+    
 
 
     <div class="main-body1 text-center">
+        <div class="topnav navbar d-flex align-items-center">
+            <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+    
+            <a class="nav-links" href="{%  url 'uber:index' %}">Home</a>
+            {% if updateId %}
+            <a class="nav-links" href="{% url 'uber:userHomePage' updateId %}">Go Back</a>
+            {% endif %}
+    
+        </div>
         <!-- show image from static file -->
         <div class="container-fluid main-container1" style="width: 85%; ">
             <div class="row" style="">
@@ -115,9 +116,9 @@
                             <div class="col-12">
                                 {% if updateId %}
                                 <input type="number" name="updateId" value="{{ updateId }}" style="display: none;">
-                                <div class="h2 mb-4" style="color: rgb(7, 168, 217);"> Update Your Info</div>
+                                <div class="h2 mb-4" style="color: #067e52;;"> Update Your Info</div>
                                 {% else %}
-                                <div class="h2 mb-4" style="color: rgb(7, 168, 217);"> User Sign Up</div>
+                                <div class="h2 mb-4" style="color: #067e52;;"> User Sign Up</div>
                                 {% endif %}
                             </div>
 
@@ -255,9 +256,9 @@
                                 <div id="row search mt-2 text-start d-flex justify-content-start vstack">
                                     <div class="text-start"><label class="form-label text-start" for="addr">
                                             Address </label></div>
-                                    <input class="form-control" type="text" name="addr" id="addr" value="addr" size="58"
+                                    <input class="form-control" type="text" name="addr" id="addr" value="" size="58"
                                         placeholder="search address by location name">
-                                    <button class="btn btn-primary mt-2" type="button" onclick="addr_search();">
+                                    <button class="color-button mt-2" type="button" onclick="addr_search();">
                                         Search</button>
                                     <div id="results">
 
@@ -267,8 +268,8 @@
 
 
                                 <div class="h5"> Drag the blue marker to your location.</div>
-                                <div class="border border-2 rounded border-info border-radius-1" id="map"
-                                    style="height: 300px; width: 100%;">
+                                <div class="border border-2 rounded border-success border-radius-1" id="map"
+                                    style="height: 300px; width: 100%; border-color: #067e52;">
 
                                 </div>
 
@@ -279,9 +280,11 @@
 
 
                             {% if updateId %}
-                            <input role="button" class="btn btn-info btn-lg" type="submit" id="submit" value="Update">
+                            <input role="button" class="color-button" type="submit" id="submit" value="Update"
+                            style="width: 100%; height: 50px;">
                             {% else%}
-                            <input role="button" class="btn btn-info btn-lg" type="submit" id="submit" value="Sign Up">
+                            <input role="button" class="color-button" type="submit" id="submit" value="Sign Up"
+                            style="width: 100%; height: 50px;">
                             {% endif %}
 
 
