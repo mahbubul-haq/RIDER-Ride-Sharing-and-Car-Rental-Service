@@ -1,79 +1,92 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
-	<title>Car Info</title>
+    <title>Car Info</title>
 
 
 </head>
+
 <body>
 
-{% extends 'uber/base.html' %}
+    {% extends 'uber/base.html' %}
 
 
-{% block body %}
+    {% block body %}
 
-     <div class = "topnav">
-     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-        <a style="float: right;" href="{%  url 'uber:userHomePage' userId %}">GO BACK</a>
+
+    <div class="topnav navbar d-flex align-items-center">
+        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+        <a class="nav-links" href="{%  url 'uber:userHomePage' userId %}">Go Back</a>
+
     </div>
-    <br><br><br>
 
-    <section id="forForm">
-        <h3 align="center"><b>Your Car Information</b> </h3>
-        <br><br>
 
-        <section id = "signUp">
+    <section id="forForm" class="d-flex justify-content-center">
+        <div class="user-cars-info">
+            <p class="h3 text-center" style="color: #067e52;">Your Cars</p>
+
+
 
             {% if inputLst %}
-                {% for car in inputLst %}
-
+            {% for car in inputLst %}
+            <section id="signUp" class="" style="display: grid; grid-template-columns: 50% 50%; margin-top: 40px;">
+                <div>
                     {% if car.3 %}
-                        <img src="{{ car.3 }}" height="200" width="200">
+
+                    <img style="width: 100%; height: 100%; object-fit: cover;" src="{{ car.3 }}" >
                     {% endif %}
+                </div>
+                <div class="ps-4">
 
                     <p>Nameplate: {{ car.0 }}</p>
                     {% if car.1 %}
-                        <p> Model: {{ car.1 }}</p>
+                    <p> Model: {{ car.1 }}</p>
                     {% endif %}
 
                     {% if car.2 %}
-                        <p> Color: {{ car.2 }}</p>
+                    <p> Color: {{ car.2 }}</p>
                     {% endif %}
                     {% if car.6 %}
-                        <p> Insurace Type : {{ car.6 }}</p>
+                    <p> Insurace Type : {{ car.6 }}</p>
                     {% endif %}
                     {% if car.7 %}
-                        <p> Insurace Start date: {{ car.7 }}</p>
-                        {% if car.8 %}
-                            <p> Insurace End date: {{ car.8 }}</p>
-                            <p>Due Payment: {{ car.9 }}</p>
-                        {% else %}
-                            <p>Your insurance expired!</p>
-                            <form action="{% url 'uber:updateInsurance' car.0 userId %}" method="post">
-                                {% csrf_token %}
-                                <input type="text" name="Update" value="Update" style="display: none;">
-                                <input type="submit" value="Update Insurance">
-                            </form>
-                        {% endif %}
+                    <p> Insurace Start date: {{ car.7 }}</p>
+                    {% if car.8 %}
+                    <p> Insurace End date: {{ car.8 }}</p>
+                    <p>Due Payment: {{ car.9 }}</p>
                     {% else %}
-                        <p>Your car is waiting to be validated!</p>
+                    <p>Your insurance expired!</p>
+                    <form action="{% url 'uber:updateInsurance' car.0 userId %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" name="Update" value="Update" style="display: none;">
+                        <input role="button" class="btn btn-success"  type="submit" value="Update Insurance">
+                    </form>
+                    {% endif %}
+                    {% else %}
+                    <p>Your car is waiting to be validated!</p>
                     {% endif %}
 
                     <form action="{% url 'uber:userDeleteCar' car.0 userId %}" method="post">
                         {% csrf_token %}
-                        <input onclick="return confirm('Are you sure you want to delete this car?')" type="submit" value="Delete Car">
+                        <input role="button" class="btn btn-success" onclick="return confirm('Are you sure you want to delete this car?')" type="submit"
+                            value="Delete Car">
                     </form>
+                </div>
+            </section>
 
-                {% endfor %}
+            {% endfor %}
             {% else %}
-                <p style="font-size:100%"> You have no cars!</p>
+            <p class="h4 text-center mt-4"> You have no cars!</p>
             {% endif %}
 
-        </section>
+
+        </div>
     </section>
 
 
-{% endblock %}
+    {% endblock %}
 
 </body>
+
 </html>

@@ -179,7 +179,14 @@ body {
 
 .user-driver-info {
   padding: 30px;
-  margin: 30px;
+  margin: 40px 30px 30px 30px;
+  box-shadow: 0 0px 30px 0px rgba(63, 63, 91, 0.258);
+  width: 900px;
+}
+
+.user-cars-info, .rent-car {
+  padding: 30px;
+  margin: 40px 30px 30px 30px;
   box-shadow: 0 0px 30px 0px rgba(63, 63, 91, 0.258);
   width: 900px;
 }

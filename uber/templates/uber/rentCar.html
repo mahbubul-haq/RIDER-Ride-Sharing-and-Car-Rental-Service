@@ -1,90 +1,115 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
-	<title>Rent Car</title>
+    <title>Rent Car</title>
 
 
 </head>
+
 <body>
 
-{% extends 'uber/base.html' %}
+    {% extends 'uber/base.html' %}
+    {% load static %}
+
+    {% block body %}
 
 
-{% block body %}
-
-     <div class = "topnav">
-     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-         {% if admin %}
-             <a style="float: right;" href="{%  url 'uber:adminHomePage' admin %}">GO BACK</a>
-         {% else %}
-             <a style="float: right;" href="{%  url 'uber:userHomePage' userId %}">GO BACK</a>
+    <div class="topnav navbar d-flex align-items-center">
+        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+        {% if admin %}
+        <a class="nav-links" href="{%  url 'uber:adminHomePage' admin %}">Close</a>
+        {% else %}
+        <a class="nav-links" href="{%  url 'uber:userHomePage' userId %}">Close</a>
         {% endif %}
+
     </div>
-    <br><br><br>
 
     <section id="forForm">
-        <h3 align="center"><b> Enter car information</b></h3>
-        <br>
 
 
-        {% if errorLst %}
-            {% for error in errorLst %}
-                {% if error %}
-                    <p> {{ error }}</p>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
 
+        <section id="signUp" class="d-flex justify-content-center" onsubmit="ifAdmin()">
 
-        <section id = "signUp" onsubmit="ifAdmin()">
-
-            <form id = "rentForm" action = "" method="post" enctype="multipart/form-data">
+            <form class="rent-car" id="rentForm" action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
 
-                {% if admin %}
-                    <input type="number" name="admin" value="{{ admin }}" style="display: none;">
+                <h3 class="text-center mb-4" style="color: #067e52;">Enter car information</h3>
+
+
+
+                {% if errorLst %}
+                {% for error in errorLst %}
+                {% if error %}
+                <p class="text-center mb-2"> {{ error }}</p>
+                {% endif %}
+                {% endfor %}
                 {% endif %}
 
-                <label>
-                    Upload car image
-                    <input type="file" name="document">
-                </label>
 
-                <label> Name plate:
-                    {% if errorLst %}
-                        <input type = "text" name="namePlate" id = "namePlate" value = "{{ inputLst.0 }}" required>
-                    {% else %}
-                        <input type = "text" name="namePlate" id = "namePlate" required>
-                    {% endif %}
-
-                </label>
-                <label> Model:
-                    {% if errorLst %}
-                        <input type = "text" name="model" value = "{{ inputLst.1 }}">
-                    {% else %}
-                        <input type = "text" name="model">
-                    {% endif %}
-                </label>
-                <label> Color:
-                    {% if errorLst %}
-                        <input type = "text" name="color" value = "{{ inputLst.2 }}">
-                    {% else %}
-                        <input type = "text" name="color">
-                    {% endif %}
-                </label>
-
-                <label>Insurance Type:
-                    <select name="ins_type" id="ins_type">
-                        <option value="Annual">Annual</option>
-                        <option value="Biennial">Biennial</option>
-                        <option value="Long-term">Long term(5 years)</option>
-                    </select>
-                </label>
                 {% if admin %}
-                    <input type ="submit" id="submit" value="ADD">
-                {% else %}
-                    <input type ="submit" id="submit" value="Submit for Rent">
+                <input type="number" name="admin" value="{{ admin }}" style="display: none;">
                 {% endif %}
+                <div style="display: grid; grid-template-columns: 50% 50%;">
+                    <div class="d-flex justify-content-center align-items-center p-0 m-0">
+                        <label class="text-center"
+                            style="cursor: pointer; padding: 0; margin: 0; height: 400px; width: 100%; position: relative;">
+
+                            <img id="rentCarImage" src="{% static 'images/dummy_car.webp' %}"
+                                style="cursor: pointer; width: 100%;height: 100%;  object-fit: cover;">
+
+                            <div id="carImageUpload" class="text-center" style=" position: absolute; left: 50%; bottom: 18%; z-index: 10;
+                            transform: translateX(-50%);
+                            color: #535a58;
+                            font-size: 150%;
+                            font-weight: bold;
+                            ">
+                                <input class="mt-2" type="file" name="document" onchange="readURLrentCar(this);"
+                                    style="display: none">
+                                Upload Car Image
+                            </div>
+
+                        </label>
+                    </div>
+                    <div class="ps-4">
+                        <div class="form-label" for="namePlate"> Name plate </div>
+                        {% if errorLst %}
+                        <input class="form-control" type="text" name="namePlate" id="namePlate" value="{{ inputLst.0 }}"
+                            required>
+                        {% else %}
+                        <input class="form-control" type="text" name="namePlate" id="namePlate" required>
+                        {% endif %}
+
+
+                        <div class="form-label mt-3" for="model"> Model </div>
+                        {% if errorLst %}
+                        <input class="form-control" type="text" name="model" value="{{ inputLst.1 }}">
+                        {% else %}
+                        <input class="form-control" type="text" name="model">
+                        {% endif %}
+
+                        <div class="form-label mt-3"> Color </div>
+                        {% if errorLst %}
+                        <input class="form-control" type="text" name="color" value="{{ inputLst.2 }}">
+                        {% else %}
+                        <input class="form-control" type="text" name="color">
+                        {% endif %}
+
+
+                        <div class="form-label mt-3" for="ins_type">Insurance Type</div>
+                        <select class="form-select mb-4" name="ins_type" id="ins_type">
+                            <option value="Annual">Annual</option>
+                            <option value="Biennial">Biennial</option>
+                            <option value="Long-term">Long term(5 years)</option>
+                        </select>
+                        {% if admin %}
+                        <input role="button" class="btn btn-success" type="submit" id="submit" value="Add">
+                        {% else %}
+                        <input role="button" class="btn btn-success" type="submit" id="submit" value="Request for Rent">
+                        {% endif %}
+
+
+                    </div>
 
 
             </form>
@@ -93,17 +118,32 @@
     </section>
 
     <script type="text/javascript">
+
+        function readURLrentCar(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#rentCarImage')
+                        .attr('src', e.target.result);
+
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+            document.getElementById("carImageUpload").style.display = "none";
+        }
+
         function ifAdmin() {
             {% if admin %}
-                document.getElementById("rentForm").action = "{% url 'uber:rentCar' admin %}";
+            document.getElementById("rentForm").action = "{% url 'uber:rentCar' admin %}";
             {% else %}
-                document.getElementById("rentForm").action = "{% url 'uber:rentCar' userId %}";
+            document.getElementById("rentForm").action = "{% url 'uber:rentCar' userId %}";
             {% endif %}
         }
     </script>
 
 
-{% endblock %}
+    {% endblock %}
 
 </body>
+
 </html>
