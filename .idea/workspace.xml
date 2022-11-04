@@ -4,13 +4,18 @@
     <list default="true" id="4e78a50f-010f-4e9d-8517-47d7dfe61482" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uber/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/uber/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/adminLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/adminSignUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverSignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/adminHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/adminHomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/carInfoAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/carInfoAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/carRentRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/carRentRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverHomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverInfoAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverInfoAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverPickCar.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverPickCar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverRideHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverRideHistory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/driverUserInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/driverUserInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userCarInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userCarInfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uber/templates/uber/userHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userHomePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userSignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userInfoAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userInfoAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber/templates/uber/userRideHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/uber/templates/uber/userRideHistory.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +365,8 @@
       <workItem from="1666976537992" duration="4033000" />
       <workItem from="1666981873159" duration="5658000" />
       <workItem from="1667035000303" duration="2049000" />
-      <workItem from="1667244602920" duration="774000" />
+      <workItem from="1667244602920" duration="818000" />
+      <workItem from="1667395776849" duration="8697000" />
     </task>
     <servers />
   </component>

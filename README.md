@@ -4,7 +4,7 @@
 
 #### UBER is an online ride sharing service which provides ride sharing and car rental service.
 
-Demonstration video:
+Demonstration video: [https://youtu.be/N2EQFUwZ0GY](https://youtu.be/N2EQFUwZ0GY)
 
 ### Contributor
 

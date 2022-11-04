@@ -12,26 +12,30 @@
 
 {% block body %}
 
-     <div class = "topnav">
-     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-        <a style="float: right;" href="{%  url 'uber:adminHomePage' userId %}">GO BACK</a>
-    </div>
-    <br><br>
+    
+    <div class="topnav navbar d-flex align-items-center">
+        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+        <a class="nav-links" href="{%  url 'uber:adminHomePage' userId %}">Go Back</a>
 
-    <section id="forForm">
+    </div>
+
+    <section id="forForm" class="d-flex justify-content-center">
+        <div class="user-cars-info">
+            <p class="h3 text-center" style="color: #067e52;">New Car Rent Requests</p>
         {% if carLst %}
 
-        <h3 align="center"><b>New Car Rent Requests</b> </h3>
-        <br><br>
-
-        <section id = "signUp">
+        
 
             {% for car in carLst %}
+            <section id="signUp" class="" style="display: grid; grid-template-columns: 50% 50%; margin-top: 40px;">
 
+                <div>
                     {% if car.3 %}
-                        <img src="{{ car.3 }}" height="200" width="200">
-                    {% endif %}
 
+                    <img style="width: 100%; height: 100%; max-height: 400px; object-fit: cover;" src="{{ car.3 }}" alt="Car Image Not Found" >
+                    {% endif %}
+                </div>
+                <div class="ps-4">
                     <p>Nameplate: {{ car.0 }}</p>
                     {% if car.1 %}
                         <p> Model: {{ car.1 }}</p>
@@ -48,18 +52,18 @@
                         <summary>
                             See Owner Info
                         </summary>
-                        <img src="{{ car.10.9 }}" height="200" width="200"><br>
+                        <div class="text-center"><img src="{{ car.10.9 }}" height="150" width="150" style="border-radius: 50%;"></div>
 
                         {% if car.10.2 %}
                             {% if car.10.3 %}
-                                <p>Name: {{ car.10.1 }} {{ car.10.2 }} {{ carLst.10.3 }}</p>
+                                <p class="h4 text-center">{{ car.10.1 }} {{ car.10.2 }} {{ carLst.10.3 }}</p>
                             {% else %}
-                                <p>Name: {{ car.10.1 }} {{ car.10.2 }}</p>
+                                <p class="h4 text-center">{{ car.10.1 }} {{ car.10.2 }}</p>
                             {% endif %}
                         {% elif car.10.3 %}
-                            <p>Name: {{ car.10.1 }} {{ car.10.3 }}</p>
+                            <p class="h4 text-center">{{ car.10.1 }} {{ car.10.3 }}</p>
                         {% else %}
-                            <p>Name: {{ car.10.1 }}</p>
+                            <p class="h4 text-center">{{ car.10.1 }}</p>
                         {% endif %}
                         <p>Email: {{ car.10.6 }}</p>
                         <P>Date of Birth: {{ car.10.10 }}</P>
@@ -72,24 +76,29 @@
                         <p>Address: {{ car.10.13.2 }}</p>
 
                     </details>
-
+                    <div class="d-flex">
                     <form action="{% url 'uber:adminApproveCar' car.0 userId %}" method="post">
                         {% csrf_token %}
-                        <input onclick="return confirm('Click OK to approve')" type="submit" value="Approve">
+                        <input role="button" class="btn btn-success me-2" onclick="return confirm('Click OK to approve')" type="submit" value="Approve">
                     </form>
                     <form action="{% url 'uber:adminDeleteRequest' car.0 userId %}" method="post">
                         {% csrf_token %}
-                        <input onclick="return confirm('Are you sure you want to delete?')" type="submit" value="Delete">
+                        <input role="button" class="btn btn-success" onclick="return confirm('Are you sure you want to delete?')" type="submit" value="Delete">
                     </form>
+                </div>
+                </div>
+            </section>
 
                 {% endfor %}
 
-        </section>
+        
 
         {% else %}
-            <p style="font-size:100%"><b>There is no new car rent request!You can go back and add car.</b></p>
+            <p style="font-size:150% " class="text-center mt-2 h3">There is no new car rent request!</p>
         {% endif %}
-    </section>
+            
+    </div>
+</section>
 
 
 {% endblock %}

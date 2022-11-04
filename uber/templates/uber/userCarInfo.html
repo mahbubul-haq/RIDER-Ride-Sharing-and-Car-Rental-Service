@@ -60,7 +60,7 @@
                     <form action="{% url 'uber:updateInsurance' car.0 userId %}" method="post">
                         {% csrf_token %}
                         <input type="text" name="Update" value="Update" style="display: none;">
-                        <input role="button" class="btn btn-success"  type="submit" value="Update Insurance">
+                        <input role="button" class="btn btn-success mb-2"  type="submit" value="Update Insurance">
                     </form>
                     {% endif %}
                     {% else %}

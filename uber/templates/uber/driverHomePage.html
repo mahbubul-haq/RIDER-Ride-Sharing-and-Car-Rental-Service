@@ -10,22 +10,13 @@
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
 
     <!-- =====================end of map ============ -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
-        label, input {
-            margin-left: 40%;
-        }
-        input[type=submit] {
-            margin-left: 60%;
-        }
+        
 
         /*============for map ============*/
 
-        html, body {
-            width:100%;
-            padding:0;
-            margin:0;
-        }
+        
 
         #lat, #lon {
             text-align: right;
@@ -125,34 +116,8 @@
             color:#000000;
         }
 
-        .Refresh {
-            display: inline-block;
-            float: right;
-            text-decoration: none;
-            height: 20px;
-            padding-bottom: 10px;
-            background: #5dd4ee;
-            color: #000;
-            margin-right: 10px;
-            border-radius: 3px;
-            font-family: Arial, "sans-serif";
-        }
 
-        .Refresh:hover{
-            background: #000;
-            color: #f2f2f2;
-        }
-
-        a {
-            text-decoration: none;
-            background: #5dd4ee;
-            color: #000;
-        }
-
-        a:hover{
-            background: #333333;
-            color: #f2f2f2;
-        }
+       
 
 
 /* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
@@ -173,61 +138,99 @@
 
     <div class="showDriverInfo" id = "showDriverInfo" style="display: none;">
 
-        <div class="topnav">
-            <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-            <a href="#" onclick="Show()" style="float: right;">CLOSE</a>
+        <div class="topnav navbar d-flex align-items-center">
+            <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+            <a href="#" onclick="Show()" class="nav-links">Close</a>
 
         </div>
+        <div class="text-center d-flex justify-content-center" style="width: 100%;">
+            <div class="user-driver-info" >
+                <div class="h3 text-center mb-4" style="color: #067e52;;">Your Profile</div>
+                <div style="display: grid; grid-template-columns: 50% 50%" class="mb-2 mt-2">
 
-        <img src="{{ driverInfo.9 }}" height="200" width="200"><br>
+                    <div>
+                        <img style="width: 100%; height: 100%; max-height: 400px; object-fit: cover;" src="{{ driverInfo.9 }}">
+                    </div>
+                    <div class="text-start ps-4" >
+                        {% if driverInfo.2 %}
+                            {% if driverInfo.3 %}
+                                <p class="h3">{{ driverInfo.1 }} {{ driverInfo.2 }} {{ driverInfo.3 }}</p>
+                            {% else %}
+                                <p class="h3">{{ driverInfo.1 }} {{ driverInfo.2 }}</p>
+                            {% endif %}
+                        {% elif driverInfo.3 %}
+                            <p class="h3">{{ driverInfo.1 }} {{ driverInfo.3 }}</p>
+                        {% else %}
+                            <p class="h3">{{ driverInfo.1 }}</p>
+                        {% endif %}
 
-        {% if driverInfo.2 %}
-            {% if driverInfo.3 %}
-                <p>Name: {{ driverInfo.1 }} {{ driverInfo.2 }} {{ driverInfo.3 }}</p>
-            {% else %}
-                <p>Name: {{ driverInfo.1 }} {{ driverInfo.2 }}</p>
-            {% endif %}
-        {% elif driverInfo.3 %}
-            <p>Name: {{ driverInfo.1 }} {{ driverInfo.3 }}</p>
-        {% else %}
-            <p>Name: {{ driverInfo.1 }}</p>
-        {% endif %}
+                        <p class="h6">Username: {{ driverInfo.4 }}</p>
 
-        <p>Username: {{ driverInfo.4 }}</p>
+                        <details>
+                            <summary>Show Password</summary>
+                            <p>Password: {{ driverInfo.5 }}</p>
+                        </details>
+                        <p>Email: {{ driverInfo.6 }}</p>
 
-        <details>
-            <summary>Show Password</summary>
-            <p>Password: {{ driverInfo.5 }}</p>
-        </details>
-        <p>Email: {{ driverInfo.6 }}</p>
+                        {% if driverInfo.7 %}
+                            <p>Rating: {{ driverInfo.7 }} ({{ driverInfo.8 }} ratings)</p>
+                        {% endif %}
+                        <P>Date of Birth: {{ driverInfo.10 }}</P>
 
-        {% if driverInfo.7 %}
-            <p>Rating: {{ driverInfo.7 }} ({{ driverInfo.8 }} ratings)</p>
-        {% endif %}
-        <P>Date of Birth: {{ driverInfo.10 }}</P>
+                        <p class="h6"> Mobile Number(s): </p>
+                        {% if driverInfo.12|length == 1 %}
+                            {% for num in driverInfo.12 %}
+                                <p>{{ num }}</p>
+                            {% endfor %}
+                        {% else %}
 
-        <p> Mobile Number(s): </p>
-        {% if driverInfo.12|length == 1 %}
-            {% for num in driverInfo.12 %}
-                <p>{{ num }}</p>
-            {% endfor %}
-        {% else %}
+                            {% for num in driverInfo.12 %}
+                                <p>{{ num }} <a href="{% url 'uber:driverDeleteMobile' num driverInfo.0 %}">delete</a></p>
+                            {% endfor %}
+                        {% endif %}
 
-            {% for num in driverInfo.12 %}
-                <p>{{ num }} <a href="{% url 'uber:driverDeleteMobile' num driverInfo.0 %}">delete</a></p>
-            {% endfor %}
-        {% endif %}
+                        <!--=============================================================================change=======================================-->
+                        <p>Address: {{ driverInfo.13.2 }}</p>
+                    </div>
+                </div>
 
-        <!--=============================================================================change=======================================-->
-        <p>Address: {{ driverInfo.13.2 }}</p>
+                <hr>
+                    <!--=============================================================================change=======================================-->
+                   
+                    <div class="p-4 pt-0 pb-0 d-flex gap-2 justify-content-start align-items-center">
+                    <form action="{% url 'uber:driverSignUp' %}" method="post">
+                        {% csrf_token %}
+                        <input type="number" name="updateId" value="{{ driverInfo.0 }}" style="display: none;">
+                        <input type="submit" value="Update Your Info" role="button" class="btn btn-success">
+                    </form>
+                    
+
+                    <form action="{% url 'uber:driverDeleteAccount' driverInfo.0 %}" method="post">
+                        {% csrf_token %}
+                        <input onclick="return confirm('Are you sure you want to delete your account?')" type="submit"
+                            value="Delete Account" role="button" class="btn btn-success">
+                    </form>
+
+                    <a href="{%  url 'uber:index' %}" role="button" class="btn btn-success">Log Out</a>
+                </div>
+            
+
+
 
         {% if car %}
-            <h3 style="color:#FF0000">Your Car Info</h3>
+            <hr>
+            <h3 style="" class="text-center mb-4">Your Car Info</h3>
+            <div style="display: grid; grid-template-columns: 50% 50%" class="mb-2 mt-2">
 
-            {% if car.3 %}
-                <img src="{{ car.3 }}" height="200" width="200">
-            {% endif %}
-
+            
+                <div>
+                    {% if car.3 %}
+                
+                        <img src="{{ car.3 }} "style="width: 100%; height: 100%; object-fit: cover;">
+                    
+                    {% endif %}
+                 </div>
+                 <div class="text-start ps-4">
             <p>Nameplate: {{ car.0 }}</p>
             {% if car.1 %}
                 <p> Model: {{ car.1 }}</p>
@@ -245,205 +248,226 @@
             {% else %}
                 <p>Your Car Insurace is expired! Please change your car!</p>
             {% endif %}
+        </div>
+        </div>
 
         {% endif %}
 
-        <form action="{% url 'uber:driverSignUp' %}" method="post">
-            {% csrf_token %}
-            <input type="number" name="updateId" value="{{ driverInfo.0 }}" style="display: none;">
-            <input type="submit" value="Update Your Info">
-        </form>
-        <br><br>
-
-        <form action="{% url 'uber:driverDeleteAccount' driverInfo.0 %}" method="post">
-            {% csrf_token %}
-            <input onclick="return confirm('Are you sure you want to delete your account?')" type="submit" value="Delete Account">
-        </form>
-
-
+        
+    </div>
+</div>
     </div>
 <div id = "mainPage">
-    <div class="topnav">
-        <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-        <a style="padding: 10px 10px 10px 10px; float: right;" href="#" onclick="Show1()" style="float: right;"><img src="{{ driverInfo.9 }}" style="width: 80px; height: 50px; border-radius: 50%; padding-left: 15px; padding-right: 15px; margin: 0 0 0 0;" alt="{{ driverInfo.1 }}"></a>
-        <a href="{% url 'uber:index' %}" style="float:right">LOG OUT</a>
-        <a id = "pickCar" href="{% url 'uber:driverPickCar' driverInfo.0 %}" style="float: right;">PICK A CAR</a>
-        <a style="float: right;" href="{% url 'uber:driverRideHistory' driverInfo.0 %}">Ride History</a>
+
+    <div class="topnav navbar d-flex align-items-center">
+        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+        <a class="nav-links" style="" href="{% url 'uber:driverHomePage' driverInfo.0 %}">
+            reload <i class="fa fa-refresh" aria-hidden="true"></i>
+        </a>
+
+        <a class="nav-links" href="{% url 'uber:driverRideHistory' driverInfo.0 %}">Ride History</a>
+        <a class="nav-links" href="{% url 'uber:driverPickCar' driverInfo.0 %}">Pick a Car</a>
+        <a class="nav-links nav-img-container" style="" href="#" onclick="Show1()"><img src="{{ driverInfo.9 }}"
+                class="img img-fluid nav-image" style=" border-radius:
+                50%; box-shadow: 0 0 4px 0px #067e52" alt=" {{ driverInfo.1 }}" title="profile"></a>
+
     </div>
+
 
 
 
     <section id = "forForm">
 
-    <form action="{% url 'uber:driverHomePage' driverInfo.0 %}" method="post">
-        {% csrf_token %}
-        <input type="submit" value="Refresh">
-    </form>
+    
 
     {% if not car %}
-        <p style="font-size:100%">Please pick a car first to get ride request...</p>
+        <p class="text-center h2 mt-5">Please pick a car first to get ride request...</p>
     {% elif not car.8 %}
-        <p>Please pick a new car for ride request</p>
+        <p class="text-center h2 mt-5">Please pick a new car for ride request</p>
     {% else %}
 
+    <div style="width: 100%; padding: 50px; display: grid; grid-template-columns: 60% 40%">
+        <div class = "container order-2" style="box-shadow: 0 0px 30px 0px rgba(63, 63, 91, 0.258); padding: 30px; height: 400px;">
+            <form> <!-- dummy form -->
+            {% csrf_token %}
+            <input type="text" name="lat" id = "lat" size="30" value="" style="display: none;">
+            <input type = "text" name="lon" id="lon" size="30" value="30" style="display: none;">
+            <input type="text" name="destlat" id = "destlat" size="30" value="" style="display: none;">
+            <input type = "text" name="destlon" id="destlon" size="30" value="30" style="display: none;">
+            </form>
 
+            <b id="addr_lookup">Address Lookup</b>
 
-    <div class = "container">
-        <form> <!-- dummy form -->
-        {% csrf_token %}
-        <input type="text" name="lat" id = "lat" size="30" value="" style="display: none;">
-        <input type = "text" name="lon" id="lon" size="30" value="30" style="display: none;">
-        <input type="text" name="destlat" id = "destlat" size="30" value="" style="display: none;">
-        <input type = "text" name="destlon" id="destlon" size="30" value="30" style="display: none;">
-        </form>
+            <div id="search">
+                <input type = "text" name="addr" id = "addr" value="addr" size="58">
+                <button type="button" onclick="addr_search(1);"> Search Pick up Point</button>
+                <div id="results">
 
-        <b id="addr_lookup">Address Lookup</b>
-
-        <div id="search">
-            <input type = "text" name="addr" id = "addr" value="addr" size="58">
-            <button type="button" onclick="addr_search(1);"> Search Pick up Point</button>
-            <div id="results">
-
-            </div>
-
-        </div>
-
-        <div id="destsearch">
-            <input type = "text" name="destaddr" id = "destaddr" value="destaddr" size="58">
-            <button type="button" onclick="addr_search(2);"> Search Destination</button>
-            <div id="destresults">
-
-            </div>
-
-        </div>
-
-        <b>Blue marker is the pick up location and green marker is the destination</b> </br>
-
-        <br/>
-
-        <div id="map">
-
-        </div>
-
-    </div>
-
-    {% if data %}
-
-        <p> You have an ongoing ride</p>
-
-
-        <div id="chatbox" style="height: 400px; width: 400px; overflow: auto; float: right; border: 3px solid #000; border-radius: 3px; background: rgba(192,229,228,0.03);position: relative;">
-                {% if messages %}
-                    {% for message in messages %}
-                        {% if message.1 %}
-                            <div class="chatcontainer">
-                                  <img src="{{ data.9.9 }}" alt="User">
-                                <p style="color: #000000; opacity: 1.5;"><b>{{ message.0 }}</b></p>
-                                  <span class="time-left">{{ message.2 }}</span>
-                            </div>
-                        {% else %}
-                            <div class="chatcontainer darker">
-                                  <img src="{{ driverInfo.9 }}" alt="You" class="right">
-                                  <p style="color: #FF0000">{{ message.0 }}</p>
-                                  <span class="time-left">{{ message.2 }}</span>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-
-                <div >
-                    <textarea form="chatform" id="message" name="message" rows="4" cols="40" placeholder="type new message here" maxlength="500"></textarea>
-                    <a class="Refresh" href="{% url 'uber:driverHomePage' driverInfo.0 %}">Reload</a>
-                    <form id = "chatform" action="{% url 'uber:driverMessageUser' driverInfo.0 data.9.0 %}" method="post">
-                        {% csrf_token %}
-                        <input style="float: right;" type="submit" value="Send">
-                    </form>
                 </div>
 
+            </div>
+
+            <div id="destsearch">
+                <input type = "text" name="destaddr" id = "destaddr" value="destaddr" size="58">
+                <button type="button" onclick="addr_search(2);"> Search Destination</button>
+                <div id="destresults">
+
+                </div>
+
+            </div>
+
+           
+
+
+            <div style="width: 100%; height: 100%; overflow: hidden;">
+                <b>Blue marker is the pick up location and green marker is the destination</b>
+                <div id="map" style="height: 100%; width: 100%; display: block;">
+
+                </div>
+            </div>
+
         </div>
+        <div style="margin-right: 50px; box-shadow: 0 0px 30px 0px rgba(63, 63, 91, 0.258); padding: 30px;">
+            {% if data %}
 
-            <!--end of chatbox-->
-
-                <h4> Ride Info: </h4>
-                <!--=============================================================================change=======================================-->
-                <p>Pickup Location: {{ data.10.2 }}</p>
-                <p>Destination: {{ data.11.2 }}</p>
+                <p class="h3 text-center mb-4"> You have an ongoing ride</p>
 
 
-                <button onclick="showLocations(this.value)" value = "0">See Pick up point and destination in map</button>
-                <!--newly added -->
+                <div id="chatbox" style="height: 400px; width: 400px; overflow: auto; float: right; border: 2px solid #067e52; border-radius: 3px; background: rgba(192,229,228,0.03); padding: 5px 5px 0 5px; position: relative;">
+                        <div>
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {% if message.1 %}
+                                        <div class="chatcontainer" style="padding: 5px;">
+                                            <img src="{{ data.9.9 }}" alt="User">
+                                            <p style="color: #000000; opacity: 1.5;">{{ message.0 }}</p>
+                                            <span class="time-left">{{ message.2 }}</span>
+                                        </div>
+                                    {% else %}
+                                        <div class="chatcontainer darker" style="padding: 5px; background-color: #d2ded9;">
+                                            <img src="{{ driverInfo.9 }}" alt="You" class="right">
+                                            <p style="color: black">{{ message.0 }}</p>
+                                            <span class="time-left">{{ message.2 }}</span>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
 
-                <form action="{% url 'uber:driverCancelRequest' data.0 driverInfo.0 %}" method="post">
-                    {% csrf_token %}
-                    <input type="submit" value = "Cancel Request">
-                </form>
+                        <div class="" style=" position: sticky; bottom: 0; background-color: white;">
+                            <textarea form="chatform" id="message" name="message" rows="4" cols="40"
+                                placeholder="type new message here" maxlength="500"
+                                style="width: 100%; height: 80px;"></textarea>
+                            <div class="d-flex justify-content-end" style="width: 100%; padding: 5px 0px 5px 0px;">
+                                <a class="Refresh btn btn-success btn-sm" role="button"
+                                    href="{% url 'uber:driverHomePage' driverInfo.0 %}">Reload</a>
 
-                <form action="{% url 'uber:completeJourney' data.0 driverInfo.0 %}" method="post">
-                    {% csrf_token %}
-                    <input type="submit" value = "Complete Journey">
-                </form>
+                                <form id="chatform" action="{% url 'uber:driverMessageUser' driverInfo.0 data.9.0 %}"
+                                    method="post">
+                                    {% csrf_token %}
+                                    <input role="button" class="btn btn-success btn-sm"
+                                        style="float: right; margin-left: 5px;" type="submit" value="Send">
+                                </form>
+                            </div>
+                        </div>
+
+                </div>
+
+                    <!--end of chatbox-->
+
+                        <h4 class="text-start"> Ride Info </h4>
+                        <!--=============================================================================change=======================================-->
+                        <p>Pickup Location: {{ data.10.2 }}</p>
+                        <p>Destination: {{ data.11.2 }}</p>
+                        <p style="font-size: 100%; font-weight: bolder;"> Approximate Fare: {{ data.5 }}</p>
+                        <details class="mb-4">
+                            <summary>Show User Info</summary>
+                            <p>Name: {{ data.9.1 }}</p>
+                            {% if data.9.7 %}
+                                <p>Rating: {{ data.9.7 }}({{ data.9.8 }} ratings)</p>
+                            {% else %}
+                                <p>Rating: New User</p>
+                            {% endif %}
+                            <p> Mobile Number(s): </p>
+                            {% for num in data.9.12 %}
+                                <p>{{ num }}</p>
+                            {% endfor %}
+                        </details>
+
+
+                        <button class="btn btn-success mb-2 btn-sm" onclick="showLocations(this.value)" value = "0">See locations in map</button>
+                        <!--newly added -->
+                        <div class="d-flex">
+                        <form action="{% url 'uber:driverCancelRequest' data.0 driverInfo.0 %}" method="post">
+                            {% csrf_token %}
+                            <input role="button" class="btn btn-success mb-2 btn-sm me-2" type="submit" value = "Cancel Request">
+                        </form>
+
+                        <form action="{% url 'uber:completeJourney' data.0 driverInfo.0 %}" method="post">
+                            {% csrf_token %}
+                            <input role="button" class="btn btn-success btn-sm" type="submit" value = "Complete Journey">
+                        </form>
+                    </div>
 
 
 
-                <!--newly added end -->
+                        <!--newly added end -->
 
-                <p style="font-size: 100%; font-weight: bolder;"> Approximate Fare: {{ data.5 }}</p>
-                <details>
-                    <summary>Show User Info</summary>
-                    <p>Name: {{ data.9.1 }}</p>
-                    {% if data.9.7 %}
-                        <p>Rating: {{ data.9.7 }}({{ data.9.8 }} ratings)</p>
-                    {% else %}
-                        <p>Rating: New User</p>
-                    {% endif %}
-                    <p> Mobile Number(s): </p>
-                    {% for num in data.9.12 %}
-                        <p>{{ num }}</p>
+                        
+
+            {% else %}
+
+                {% if requestData %}
+                    <h3 class="text-center">Ride requests </h3>
+                    {% for data in requestData %}
+                    <div style="display: grid; grid-template-columns: 50% 50%; margin-top: 40px;">
+                        <div>
+                            <h4> Ride Info {{ forloop.counter}} </h4>
+
+                            <!--=============================================================================change=======================================-->
+                            <p>Pickup Location: {{ data.10.2 }}</p>
+                            <p>Destination: {{ data.11.2 }}</p>
+
+                    
+
+
+                            <p style="font-size: 100%; font-weight: bolder;"> Approximate Fare: {{ data.5 }}</p>
+                            <div class="d-flex justify-content-start">
+                                <form action= "{% url 'uber:acceptRequest' data.0 driverInfo.0 %}" method ="post">
+                                    {% csrf_token %}
+                                    <input role="button" class="btn btn-success me-3" type="submit" value="Respond">
+                                </form>
+                            
+                                <button class="btn btn-success" onclick="showLocations(this.value)" value="{{ forloop.counter }}">See Locations in map</button>
+                            </div>
+                        </div>    
+                        <div>
+                                <p class="h5 mb-3" style="margin-top: 30px;">User Info</p>
+                                <p class="h6">Name: {{ data.9.1 }}</p>
+                                {% if data.9.8 %}
+                                    <p>Rating: {{ data.9.7 }}  <i class="fa fa-star-o" aria-hidden="true"></i> ({{ data.9.8 }} ratings)</p>
+                                {% else %}
+                                    <p >Rating: New User</p>
+                                {% endif %}
+                                <p class="h6"> Mobile Number(s): </p>
+                                {% for num in data.9.12 %}
+                                    <p>{{ num }}</p>
+                                {% endfor %}
+                            
+                        </div>
+                    </div>
+                        
+                        
+
+
                     {% endfor %}
-                </details>
+                {% else %}
+                    <p class="text-center mt-5 h2"> There is no ride request!</p>
+                {% endif %}
 
-    {% else %}
-
-        {% if requestData %}
-            <h3>Ride requests: </h3>
-            {% for data in requestData %}
-                <h4> Ride Info {{ forloop.counter}}: </h4>
-
-                <!--=============================================================================change=======================================-->
-                <p>Pickup Location: {{ data.10.2 }}</p>
-                <p>Destination: {{ data.11.2 }}</p>
-
-               <button onclick="showLocations(this.value)" value="{{ forloop.counter }}">See Pick up point and destination in map</button>
-
-
-                <p style="font-size: 100%; font-weight: bolder;"> Approximate Fare: {{ data.5 }}</p>
-                <details>
-                    <summary>Show User Info</summary>
-                    <p>Name: {{ data.9.1 }}</p>
-                    {% if data.9.8 %}
-                        <p>Rating: {{ data.9.7 }}({{ data.9.8 }} ratings)</p>
-                    {% else %}
-                        <p>Rating: New User</p>
-                    {% endif %}
-                    <p> Mobile Number(s): </p>
-                    {% for num in data.9.12 %}
-                        <p>{{ num }}</p>
-                    {% endfor %}
-                </details>
-                <form action= "{% url 'uber:acceptRequest' data.0 driverInfo.0 %}" method ="post">
-                    {% csrf_token %}
-                    <input type="submit" value="Respond">
-                </form>
-                <hr style="height: 10px; background: #000;">
-
-
-            {% endfor %}
-        {% else %}
-            <p> There is no ride request!</p>
-        {% endif %}
-
-    {% endif %}
-
+            {% endif %}
+        </div>
+    </div>
     {% endif %}
     </section>
 </div>
@@ -452,6 +476,12 @@
         document.getElementById("addr_lookup").style.display = 'none';
         document.getElementById("search").style.display = 'none';
         document.getElementById("destsearch").style.display = 'none';
+
+        window.onload = function () {
+            var objDiv = document.getElementById("chatbox");
+            objDiv.scrollTop = objDiv.scrollHeight;
+        }
+
 
 
 
@@ -637,7 +667,7 @@
 
         }
 
-        document.getElementsByClassName("container")[0].style.display = 'none';
+        document.getElementsByClassName("container")[0].style.display = 'block';
 
         function Show() {
             document.getElementById("mainPage").style.display = 'block';
@@ -653,11 +683,12 @@
             document.getElementById("pickCar").style.display='none';
         {% endif %}
 
-        window.onload=function () {
-            var objDiv = document.getElementById("chatbox");
-            objDiv.scrollTop = objDiv.scrollHeight;
-        }
+        // window.onload=function () {
+        //     var objDiv = document.getElementById("chatbox");
+        //     objDiv.scrollTop = objDiv.scrollHeight;
+        // }
 
+        
 
 
     </script>

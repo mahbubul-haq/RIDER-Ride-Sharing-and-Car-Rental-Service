@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Ride History</title>
@@ -13,28 +14,38 @@
             font-family: "Courier New", Arial, "sans-serif";
             font-family: "Poppins", Arial, "sans-serif";
         }
+
         tr:nth-child(even) {
             background-color: #d2fbeb;
         }
+
         tr:nth-child(odd) {
             background-color: #ebfbf6;
         }
-        th, td {
+
+        th,
+        td {
             border-bottom: 1px solid rgba(103, 78, 58, 0.14);
         }
-        th, td {
+
+        th,
+        td {
             padding: 15px;
-            
+
         }
+
         /*tr:hover {background-color: #f5f5f5;} */
 
 
-        td, th {
-            text-align: center;
-        }
+        td,
         th {
             text-align: center;
         }
+
+        th {
+            text-align: center;
+        }
+
         table {
             width: 100%;
         }
@@ -47,34 +58,33 @@
         }
 
         .topnav input {
-                background: #5dd4ee;
-                overflow: hidden;
-            }
+            background: #5dd4ee;
+            overflow: hidden;
+        }
 
-            .topnav input{
-                float: left;
-                color: #000;
-                text-align: center;
-                padding: 2px 2px;
-                text-decoration: none;
+        .topnav input {
+            float: left;
+            color: #000;
+            text-align: center;
+            padding: 2px 2px;
+            text-decoration: none;
 
-                font-size: 150%;
-                font-family: sans-serif;
-                font-weight: bold;
-            }
+            font-size: 150%;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
 
-            .topnav input:hover {
-                background: #333;
-                color: #f2f2f2;
-            }
-
-
+        .topnav input:hover {
+            background: #333;
+            color: #f2f2f2;
+        }
     </style>
 </head>
-<body onload="window.scroll(0, document.documentElement.scrollHeight);" >
 
-{% extends 'uber/base.html' %}
-{% block body %}
+<body onload="window.scroll(0, document.documentElement.scrollHeight);">
+
+    {% extends 'uber/base.html' %}
+    {% block body %}
 
     <div class="topnav navbar d-flex align-items-center">
         <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
@@ -83,61 +93,66 @@
 
 
     {% if rides %}
-
-    <table>
-        <h2  class="caption text-center mt-4 mb-4"style="color: #067e52;">Your Ride History</h2>
-        <thead>
-            <th class="text-center">No</th>
-            <th class="text-center">Pick Up Location</th>
-            <th class="text-center">Destination</th>
-            <th class="text-center">Ride End time</th>
-            <th class="text-center">Fare</th>
-            <th class="text-center">Driver Info</th>
-        </thead>
-        <tbody>
-            {% for ride in rides %}
+    <div class="d-flex justify-content-center">
+        <div style="width: 95%;">
+        <table
+            style="padding-left: 30px; padding-right: 30px; margin-bottom: 30px; box-shadow:0 0 30px 0px rgba(63, 63, 91, 0.258);">
+            <h2 class="caption text-center mt-4 mb-4" style="color: #067e52;">Your Ride History</h2>
+            <thead>
+                <th class="text-center">No</th>
+                <th class="text-center">Pick Up Location</th>
+                <th class="text-center">Destination</th>
+                <th class="text-center">Ride End time</th>
+                <th class="text-center">Fare</th>
+                <th class="text-center">Driver Info</th>
+            </thead>
+            <tbody>
+                {% for ride in rides %}
                 <tr>
                     <td>{{ forloop.counter }}</td>
                     <td>{{ ride.1 }}</td>
                     <td>{{ ride.2 }}</td>
                     <td>{{ ride.0 }}</td>
                     <td>{{ ride.3 }}</td>
-                    <td ><a href="{% url 'uber:userDriverInfo' userId ride.4 %}"><u><b>{{ ride.5 }}</b></u></a></td>
+                    <td><a href="{% url 'uber:userDriverInfo' userId ride.4 %}"><u><b>{{ ride.5 }}</b></u></a></td>
                 </tr>
 
-            {% endfor %}
+                {% endfor %}
 
 
-        </tbody>
-    </table>
-        {% if not Ended %}
+            </tbody>
+        </table>
+    </div>
+    </div>
+    {% if not Ended %}
 
-        <div class="topnav" style="float: right;">
-            <form action="{% url 'uber:userRideHistory' userId %}" method="post">
-                {% csrf_token %}
+    <div class="topnav" style="float: right;">
+        <form action="{% url 'uber:userRideHistory' userId %}" method="post">
+            {% csrf_token %}
 
-                {% if More %}
-                    <input type="number" name = "More" value="{{ More }}" style="display: none;">
-                    <input type="submit" value="Load More">
-                {% else %}
-                    <input type="number" name = "More" value="1" style="display: none;">
-                    <input type="submit" value="Load More">
-                {% endif %}
+            {% if More %}
+            <input type="number" name="More" value="{{ More }}" style="display: none;">
+            <input type="submit" value="Load More">
+            {% else %}
+            <input type="number" name="More" value="1" style="display: none;">
+            <input type="submit" value="Load More">
+            {% endif %}
 
-            </form>
-        </div>
+        </form>
+    </div>
 
-        {% endif %}
+    {% endif %}
     {% else %}
-        <h3 style="font-size:150%">Nothing to show!</h3>
+    <h3 style="font-size:150%">Nothing to show!</h3>
     {% endif %}
 
-{% endblock %}
+    {% endblock %}
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-</script>
+    </script>
 
 
 </body>
+
 </html>

@@ -190,3 +190,7 @@ body {
   box-shadow: 0 0px 30px 0px rgba(63, 63, 91, 0.258);
   width: 900px;
 }
+
+.chatcontainer {
+  overflow-wrap: anywhere;
+}

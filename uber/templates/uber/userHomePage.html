@@ -139,7 +139,7 @@
                 <div class="h3 text-center mb-4" style="color: #067e52;;">Your Profile</div>
                 <div style="display: grid; grid-template-columns: 50% 50%" class="mb-2 mt-2">
                     <div>
-                        <img style="width: 100%; height: 100%; object-fit: cover;" src="{{ userInfo.9 }}">
+                        <img style="width: 100%; height: 100%; max-height: 400px; object-fit: cover;" src="{{ userInfo.9 }}">
                     </div>
                     <div class="text-start ps-4" >
 
@@ -350,13 +350,13 @@
                             {% if message.1 %}
                             <div class="chatcontainer" style="padding: 5px;">
                                 <img src="{{ riderInfo.9 }}" alt="Driver">
-                                <p style="color: #000000; opacity: 1.5;"><b>{{ message.0 }}</b></p>
+                                <p style="color: #000000; opacity: 1;">{{ message.0 }}</p>
                                 <span class="time-left">{{ message.2 }}</span>
                             </div>
                             {% else %}
-                            <div class="chatcontainer darker" style="padding: 5px; background-color: #067e52;">
+                            <div class="chatcontainer darker" style="padding: 5px; background-color: #d2ded9;">
                                 <img src="{{ userInfo.9 }}" alt="You" class="right">
-                                <p style="color: #ffffff">{{ message.0 }}</p>
+                                <p style="color: black;">{{ message.0 }}</p>
                                 <span class="time-left">{{ message.2 }}</span>
                             </div>
                             {% endif %}

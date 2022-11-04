@@ -12,25 +12,26 @@
 
 {% block body %}
 
-     <div class = "topnav">
-     <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-        <a style="float: right;" href="{%  url 'uber:driverHomePage' driverId %}">GO BACK</a>
+    <div class="topnav navbar d-flex align-items-center">
+        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+        <a class="nav-links" href="{%  url 'uber:driverHomePage' driverId %}">Go Back</a>
+
     </div>
-    <br><br><br>
 
-    <section id="forForm">
-        <h3 align="center"> List of Avilable cars</h3>
-        <br><br>
+    <section id="forForm" class="d-flex justify-content-center">
+        <div class="user-cars-info">
+            <p class="h3 text-center" style="color: #067e52;">available Cars</p>
 
-        <section id = "signUp">
-
+           
             {% if carLst %}
                 {% for car in carLst %}
-
+                <section id="signUp" class="" style="display: grid; grid-template-columns: 50% 50%; margin-top: 40px;">
+                    <div>
                     {% if car.3 %}
-                        <img src="{{ car.3 }}" height="200" width="200">
+                        <img src="{{ car.3 }}" style="width: 100%; height: 100%; object-fit: cover;">
                     {% endif %}
-
+                    </div>
+                    <div class="ps-4">
                     <p>Nameplate: {{ car.0 }}</p>
                     {% if car.1 %}
                         <p> Model: {{ car.1 }}</p>
@@ -50,17 +51,17 @@
                     <form action="{% url 'uber:driverPickCar' driverId %}" method="post">
                         {% csrf_token %}
                         <input name="namePlate" value="{{ car.0 }}" style="display: none;">
-                        <input onclick="return confirm('Are you sure select this one?')" type="submit" value="Select">
+                        <input role="button" class="btn btn-success" onclick="return confirm('Are you sure select this one?')" type="submit" value="Select">
                     </form>
-
-                    <hr>
+                    </div>
+                </section>
 
                 {% endfor %}
             {% else %}
-                <p> Sorry! No car is available right now!</p>
+                <p class="text-center h4 mt-4"> Sorry! No car is available right now!</p>
             {% endif %}
 
-        </section>
+        
     </section>
 
 

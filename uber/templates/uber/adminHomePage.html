@@ -2,26 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
-        label, input {
-            margin-left: 40%;
-        }
-        input[type=submit] {
-            margin-left: 60%;
-        }
-
-        a {
-            text-decoration: none;
-            background: #5dd4ee;
-            color: #000;
-        }
-
-        a:hover{
-            background: #333333;
-            color: #f2f2f2;
-        }
-
 
     </style>
 </head>
@@ -33,65 +15,81 @@
 
     <div class="showUserInfo" id = "showUserInfo" style="display: none;">
 
-        <div class="topnav">
-            <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-            <a href="#" onclick="Show()" style="float: right;">CLOSE</a>
+        <div class="topnav navbar d-flex align-items-center">
+            <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+            <a href="#" onclick="Show()" class="nav-links">Close</a>
 
         </div>
 
-        <img src="{{ userInfo.9 }}" height="200" width="200"><br>
+        <div class="text-center d-flex justify-content-center" style="width: 100%;">
+            <div class="user-driver-info" >
+                <div class="h3 text-center mb-4" style="color: #067e52;;">Your Profile</div>
+                <div style="display: grid; grid-template-columns: 50% 50%" class="mb-2 mt-2">
+                    <div>
+                        <img style="width: 100%; height: 100%; object-fit: cover;" src="{{ userInfo.9 }}">
+                    </div>
+                    <div class="text-start ps-4" >
 
-        {% if userInfo.2 %}
-            {% if userInfo.3 %}
-                <p>Name: {{ userInfo.1 }} {{ userInfo.2 }} {{ userInfo.3 }}</p>
-            {% else %}
-                <p>Name: {{ userInfo.1 }} {{ userInfo.2 }}</p>
-            {% endif %}
-        {% elif userInfo.3 %}
-            <p>Name: {{ userInfo.1 }} {{ userInfo.3 }}</p>
-        {% else %}
-            <p>Name: {{ userInfo.1 }}</p>
-        {% endif %}
+                        {% if userInfo.2 %}
+                        {% if userInfo.3 %}
+                        <p class="h3">{{ userInfo.1 }} {{ userInfo.2 }} {{ userInfo.3 }}</p>
+                        {% else %}
+                        <p class="h3">{{ userInfo.1 }} {{ userInfo.2 }}</p>
+                        {% endif %}
+                        {% elif userInfo.3 %}
+                        <p class="h3">{{ userInfo.1 }} {{ userInfo.3 }}</p>
+                        {% else %}
+                        <p class="h3">{{ userInfo.1 }}</p>
+                        {% endif %}
 
-        <p>Username: {{ userInfo.4 }}</p>
+                        <p class="h6">Username: {{ userInfo.4 }}</p>
 
-        <details>
-            <summary>Show Password</summary>
-            <p>Password: {{ userInfo.5 }}</p>
-        </details>
-        <p>Email: {{ userInfo.6 }}</p>
-        <p>Join Date: {{ userInfo.7 }}</p>
-        <p>Salary: {{ userInfo.8 }}</p>
-        <P>Date of Birth: {{ userInfo.10 }}</P>
+                        <details>
+                            <summary>Show Password</summary>
+                            <p>Password: {{ userInfo.5 }}</p>
+                        </details>
+                        <p>Email: {{ userInfo.6 }}</p>
+                        <P>Date of Birth: {{ userInfo.10 }}</P>
 
-        <p> Mobile Number(s): </p>
+                        <p class="h6"> Mobile Number(s): </p>
+                        {% if userInfo.12|length == 1 %}
+                        {% for num in userInfo.12 %}
+                        <p>{{ num }}</p>
+                        {% endfor %}
+                        {% else %}
 
-        {% if userInfo.12|length == 1 %}
-            {% for num in userInfo.12 %}
-                <p>{{ num }}</p>
-            {% endfor %}
-        {% else %}
+                        {% for num in userInfo.12 %}
+                        <p>{{ num }} <a href="{% url 'uber:adminDeleteMobile' num userInfo.0 %}"><b>delete</b></a></p>
+                        {% endfor %}
+                        {% endif %}
+                        <p>Address: {{ userInfo.13.2 }}</p>
+                    </div>
 
-            {% for num in userInfo.12 %}
-                <p>{{ num }} <a href="{% url 'uber:adminDeleteMobile' num userInfo.0 %}">delete</a></p>
-            {% endfor %}
-        {% endif %}
+                </div>
+                <hr>
+                    <!--=============================================================================change=======================================-->
+                   
+                    <div class="p-4 pb-0 d-flex gap-2 justify-content-start align-items-center">
+                    <form action="{% url 'uber:adminSignUp' %}" method="post">
+                        {% csrf_token %}
+                        <input type="number" name="updateId" value="{{ userInfo.0 }}" style="display: none;">
+                        <input type="submit" value="Update Your Info" role="button" class="btn btn-success">
+                    </form>
+                    
+
+                    <form action="{% url 'uber:adminDeleteAccount' userInfo.0 %}" method="post">
+                        {% csrf_token %}
+                        <input onclick="return confirm('Are you sure you want to delete your account?')" type="submit"
+                            value="Delete Account" role="button" class="btn btn-success">
+                    </form>
+
+                    <a href="{%  url 'uber:index' %}" role="button" class="btn btn-success">Log Out</a>
+                </div>
 
 
-
-        <!--=============================================================================change=======================================-->
-        <p>Address: {{ userInfo.13.2 }}</p>
-
-        <form action="{% url 'uber:adminSignUp' %}" method="post">
-            {% csrf_token %}
-            <input type="number" name="updateId" value="{{ userInfo.0 }}" style="display: none;">
-            <input type="submit" value="Update Your Info">
-        </form> <br><br>
-
-        <form action="{% url 'uber:adminDeleteAccount' userInfo.0 %}" method="post">
-            {% csrf_token %}
-            <input onclick="return confirm('Are you sure you want to delete your account?')" type="submit" value="Delete Account">
-        </form>
+                
+            </div>
+        </div>
 
 
     </div>
@@ -100,94 +98,110 @@
 
     <div id = "mainPage">
 
-    <div class="topnav">
-        <b style="font-size: 250%; padding: 0; margin: 0;">UBER</b>
-
-        <a style="padding: 10px 10px 10px 10px; float: right;" href="#" onclick="Show1()" style="float: right;"><img src="{{ userInfo.9 }}" style="width: 80px; height: 50px; border-radius: 50%; padding-left: 15px; padding-right: 15px; margin: 0 0 0 0;" alt="{{ userInfo.1 }}"></a>
-        <a href="{% url 'uber:index' %}" style="float: right;">LOG OUT</a>
-
+    <div class="topnav navbar d-flex align-items-center">
+        <div class="navbar-brand me-auto h1 fs-2 nav-brand d-flex align-items-center">UBER</div>
+        <a class="nav-links" style="font-size: 160%;" href="{% url 'uber:adminHomePage' userInfo.0 %}">
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+        </a>
+        
+        <a class="nav-links nav-img-container" style="" href="#" onclick="Show1()"><img src="{{ userInfo.9 }}"
+                class="img img-fluid nav-image" style=" border-radius:
+                50%; box-shadow: 0 0 4px 0px #067e52" alt=" {{ userInfo.1 }}" title="profile"></a>
 
     </div>
-    <section id="forForm">
+    <section id="forForm"  style="width: 100%; padding: 40px; display: grid; grid-template-columns: auto 300px; gap: 40px;">
+        <div class="order-2" style="box-shadow:0 0px 30px 0px rgba(63, 63, 91, 0.258); padding: 30px;">
 
-        <form method="post" action="{% url 'uber:carRentRequest' userInfo.0 %}">
-            {% csrf_token %}
-            <input type="submit" value="Car Rent Requests">
-        </form>
+            <form method="post" action="{% url 'uber:carRentRequest' userInfo.0 %}">
+                {% csrf_token %}
+                <input role="button" class="btn btn-success mb-2 w-100" type="submit" value="Car Rent Requests">
+            </form>
 
-        <form method="post" action="{% url 'uber:adminSignUp'%}">
-            {% csrf_token %}
-            <input type="number" name="adminId" value="{{ userInfo.0 }}" style="display: none;">
-            <input type="submit" value="Add Another Admin">
-        </form>
+            <form method="post" action="{% url 'uber:adminSignUp'%}">
+                {% csrf_token %}
+                <input type="number" name="adminId" value="{{ userInfo.0 }}" style="display: none;">
+                <input role="button" class="btn btn-success mb-2 w-100" type="submit" value="Add Another Admin">
+            </form>
 
-        <form method="post" action="{% url 'uber:rentCar' userInfo.0 %}">
-            {% csrf_token %}
-            <input type="number" name="admin" value="{{ userInfo.0 }}" style="display: none;">
-            <input type="submit" value="Add Car">
-        </form>
+            <form method="post" action="{% url 'uber:rentCar' userInfo.0 %}">
+                {% csrf_token %}
+                <input type="number" name="admin" value="{{ userInfo.0 }}" style="display: none;">
+                <input role="button" class="btn btn-success mb-2 w-100" type="submit" value="Add Car">
+            </form>
 
-        <form method="post" action="{% url 'uber:carInfoAdmin' userInfo.0 %}">
-            {% csrf_token %}
-            <input type="submit" value="Car Info">
-        </form>
+            <form method="post" action="{% url 'uber:carInfoAdmin' userInfo.0 %}">
+                {% csrf_token %}
+                <input role="button" class="btn btn-success mb-2 w-100" type="submit" value="Car Info">
+            </form>
 
-        <form method="post" action="{% url 'uber:userInfoAdmin' userInfo.0 %}">
-            {% csrf_token %}
-            <input type="submit" value="User Info">
-        </form>
+            <form method="post" action="{% url 'uber:userInfoAdmin' userInfo.0 %}">
+                {% csrf_token %}
+                <input role="button" class="btn btn-success mb-2 w-100" type="submit" value="User Info">
+            </form>
 
-        <form method="post" action="{% url 'uber:driverInfoAdmin' userInfo.0 %}">
-            {% csrf_token %}
-            <input type="submit" value="Driver Info">
-        </form>
+            <form method="post" action="{% url 'uber:driverInfoAdmin' userInfo.0 %}">
+                {% csrf_token %}
+                <input role="button" class="btn btn-success w-100" type="submit" value="Driver Info">
+            </form>
+
+         </div>
+        <div style="box-shadow:0 0px 30px 0px rgba(63, 63, 91, 0.258); padding: 30px;">
 
 
 
-        {% if carLst %}
-            <h3>Payments to be made</h3>
+            {% if carLst %}
+                <h3 class="text-center mb-4">Payments to be made</h3>
 
-            {% for car in carLst %}
-                {% if car.3 %}
-                    <img src="{{ car.3 }}" height="200" width="250">
-                {% endif %}
+                {% for car in carLst %}
+                <div class="mt-4" style="display:grid; grid-template-columns: 50% 50%;">
+                    <div class="">
+                        {% if car.3 %}
+                            <img src="{{ car.3 }}" style="height: 100%; width: 100%; max-height: 400px;">
+                        {% endif %}
+                    </div>
+                    <div class="ps-4">
 
-                    <p>Nameplate: {{ car.0 }}</p>
-                    {% if car.1 %}
-                        <p> Model: {{ car.1 }}</p>
-                    {% endif %}
+                        <p>Nameplate: {{ car.0 }}</p>
+                        {% if car.1 %}
+                            <p> Model: {{ car.1 }}</p>
+                        {% endif %}
 
-                    {% if car.2 %}
-                        <p> Color: {{ car.2 }}</p>
-                    {% endif %}
-                    {% if car.6 %}
-                        <p> Insurace Type : {{ car.6 }}</p>
-                    {% endif %}
+                        {% if car.2 %}
+                            <p> Color: {{ car.2 }}</p>
+                        {% endif %}
+                        {% if car.6 %}
+                            <p> Insurace Type : {{ car.6 }}</p>
+                        {% endif %}
 
-                        <p> Insurace Start date: {{ car.7 }}</p>
-                        <p> Insurace End date: {{ car.8 }}</p>
-                        <p>Due Payment: {{ car.9 }}</p>
-                        <p>Last Payment date: {{ car.10 }}</p>
+                            <p> Insurace Start date: {{ car.7 }}</p>
+                            <p> Insurace End date: {{ car.8 }}</p>
+                            <p>Due Payment: {{ car.9 }}</p>
+                            <p>Last Payment date: {{ car.10 }}</p>
 
-                    <details>
-                        <summary>See Owner Info</summary>
-                        <img src="{{ car.11.3 }}" width="200" height="200">
-                        <p>Name: {{ car.11.0 }}</p>
-                        <p>Username: {{ car.11.1 }}</p>
-                        <p>Email: {{ car.11.2 }}</p>
-                        <p>Date of Birth: {{ car.11.4 }}</p>
-                        <p>Address: {{ car.11.5 }}</p>
-                    </details>
+                        <details>
+                            <summary>See Owner Info</summary>
+                            <div class="text-center">
+                                <img src="{{ car.11.3 }}" width="150" height="150" style="border-radius: 50%;">
+                            </div>
+                            <p class="text-center h3">{{ car.11.0 }}</p>
+                            <p>Username: {{ car.11.1 }}</p>
+                            <p>Email: {{ car.11.2 }}</p>
+                            <p>Date of Birth: {{ car.11.4 }}</p>
+                            <p>Address: {{ car.11.5 }}</p>
+                        </details>
 
-                    <form action="{% url 'uber:adminPayCar' car.0 userInfo.0 %}" method="post">
-                        {% csrf_token %}
-                        <input type="submit" value="Make Payment">
-                    </form>
-            {% endfor %}
-        {% else %}
-            <p style="font-size:100%">No payment to be made!</p>
+                        <form action="{% url 'uber:adminPayCar' car.0 userInfo.0 %}" method="post">
+                            {% csrf_token %}
+                            <input role="button" class="btn btn-success mt-2" type="submit" value="Make Payment">
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p class="h3 text-center mt-4">No payment to be made!</p>
 
-        {% endif %}
+            {% endif %}
+        </div>
 
     </section>
     </div> <!-- ===================== end of mainPage ==========-->
