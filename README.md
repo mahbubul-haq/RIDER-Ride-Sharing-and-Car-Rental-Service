@@ -1,10 +1,10 @@
-## CSE 216 Term Project - UBER
+## CSE 216 Term Project - RIDER
 
 ### CSE 216 - Database Sessional
 
-#### UBER is an online ride sharing service which provides ride sharing and car rental service.
+#### RIDER is an online ride sharing website which provides ride sharing and car rental service.
 
-Demonstration video: [https://youtu.be/N2EQFUwZ0GY](https://youtu.be/N2EQFUwZ0GY)
+Demonstration video: [https://youtu.be/eiNzZp00KUg](https://youtu.be/eiNzZp00KUg)
 
 ### Contributor
 
